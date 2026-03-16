@@ -46,10 +46,11 @@ const pillars = [
   description="Dr. Beth Motley is a board-certified family and lifestyle medicine physician in Greenville, SC. She helps patients reverse chronic disease through evidence-based lifestyle interventions."
 >
   <!-- Hero -->
-  <section class="bg-gradient-to-b from-brand-50 to-white py-20 md:py-32">
-    <div class="container-page">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="text-center lg:text-left order-2 lg:order-1">
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+    <div class="container-page relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
+        <!-- Text -->
+        <div class="text-center lg:text-left pt-20 md:pt-32 pb-12 lg:pb-32 order-2 lg:order-1">
           <span class="badge mb-6 inline-block">Lifestyle Medicine in Greenville, SC</span>
           <h1 class="font-serif text-h1 md:text-display text-brand-900">
             Reverse Disease. Restore Health. Reclaim Your Life.
@@ -62,14 +63,19 @@ const pillars = [
             <a href="/speaking" class="btn-secondary">Book Beth to Speak</a>
           </div>
         </div>
-        <div class="order-1 lg:order-2 flex justify-center">
-          <div class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl ring-4 ring-brand-100">
+        <!-- Photo — blends into the section, no hard border -->
+        <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end pt-12 lg:pt-16">
+          <div class="relative w-72 md:w-80 lg:w-full max-w-md">
             <img
-              src="/images/headshots/Aragon-Headshot-76.jpg"
+              src="/images/headshots/Aragon-Headshot-7.jpg"
               alt="Dr. Beth Motley, MD, FACLM"
-              class="w-full h-full object-cover"
+              class="w-full h-auto object-cover relative z-10"
               loading="eager"
             />
+            <!-- Soft fade at the bottom so the photo dissolves into the background -->
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
+            <!-- Soft fade on the left edge so it blends with the text side -->
+            <div class="hidden lg:block absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-brand-50/80 to-transparent z-20"></div>
           </div>
         </div>
       </div>
