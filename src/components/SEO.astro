@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  image = '/images/og-default.jpg',
+  type = 'website',
+  publishedDate,
+  noindex = false,
+} = Astro.props;
+
+const siteName = 'Beth Motley, MD — Lifestyle Medicine';
+const fullTitle = title === 'Home' ? siteName : `${title} | Beth Motley, MD`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+---
+
+<!-- Primary -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex,nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteName} />
+{publishedDate && <meta property="article:published_time" content={publishedDate} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+
+<!-- Schema.org: Person / Physician -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Beth Motley, MD, FACLM",
+  "url": "https://www.bethmotleymd.com",
+  "image": imageURL.href,
+  "description": "Board-certified Family & Lifestyle Medicine physician specializing in diabetes reversal and chronic disease prevention through evidence-based lifestyle interventions.",
+  "medicalSpecialty": ["Family Medicine", "Lifestyle Medicine"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Virginia" },
+    { "@type": "CollegeOrUniversity", "name": "Eastern Virginia Medical School" }
+  ],
+  "memberOf": {
+    "@type": "MedicalOrganization",
+    "name": "American College of Lifestyle Medicine"
+  },
+  "sameAs": [
+    "https://www.facebook.com/motleymd",
+    "https://www.instagram.com/bethmotleymd/"
+  ]
+})} />

@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CredentialBar from '../components/CredentialBar.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import NewsletterForm from '../components/NewsletterForm';
+
+const pillars = [
+  {
+    title: 'Nutrition',
+    description: 'Whole-food, plant-predominant eating patterns that prevent and reverse disease.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>`,
+  },
+  {
+    title: 'Physical Activity',
+    description: 'Movement strategies tailored to your body, goals, and medical history.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>`,
+  },
+  {
+    title: 'Sleep',
+    description: 'Restorative sleep habits that support metabolic health and recovery.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg>`,
+  },
+  {
+    title: 'Stress Management',
+    description: 'Evidence-based techniques to lower cortisol and build emotional resilience.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" /></svg>`,
+  },
+  {
+    title: 'Social Connection',
+    description: 'Meaningful relationships that improve outcomes and sustain lasting change.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>`,
+  },
+  {
+    title: 'Avoiding Risky Substances',
+    description: 'Reducing tobacco, excess alcohol, and other substances that drive chronic disease.',
+    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>`,
+  },
+];
+---
+
+<BaseLayout
+  title="Beth Motley, MD — Lifestyle Medicine Physician | Greenville, SC"
+  description="Dr. Beth Motley is a board-certified family and lifestyle medicine physician in Greenville, SC. She helps patients reverse chronic disease through evidence-based lifestyle interventions."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-20 md:py-32">
+    <div class="container-page text-center">
+      <span class="badge mb-6 inline-block">Lifestyle Medicine in Greenville, SC</span>
+      <h1 class="font-serif text-h1 md:text-display text-brand-900 max-w-4xl mx-auto">
+        Reverse Disease. Restore Health. Reclaim Your Life.
+      </h1>
+      <p class="mt-6 text-body-lg text-neutral-600 max-w-2xl mx-auto">
+        Board-certified lifestyle medicine physician helping patients prevent, treat, and reverse chronic disease through evidence-based lifestyle interventions — not just more prescriptions.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/programs/diabetes-reversal" class="btn-primary">Diabetes Reversal Program</a>
+        <a href="/speaking" class="btn-secondary">Book Beth to Speak</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credential Bar -->
+  <CredentialBar />
+
+  <!-- What Is Lifestyle Medicine? -->
+  <section class="section-padding">
+    <div class="container-page">
+      <SectionHeading
+        title="What Is Lifestyle Medicine?"
+        subtitle="Lifestyle medicine uses evidence-based behavioral interventions to treat, reverse, and prevent chronic disease. It addresses the root causes of illness through six foundational pillars."
+        tag="The Science of Getting Well"
+      />
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {pillars.map((pillar) => (
+          <div class="card text-center hover:border-brand-200 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-4">
+              <Fragment set:html={pillar.icon} />
+            </div>
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{pillar.title}</h3>
+            <p class="text-body text-neutral-600">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-padding bg-brand-50/50">
+    <div class="container-page">
+      <SectionHeading
+        title="Programs"
+        subtitle="Structured, physician-led programs designed to produce measurable results. Both programs accept insurance."
+        tag="How We Work Together"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ProgramCard
+          title="Diabetes Reversal Group Visits"
+          description="A 12-week intensive group medical visit program built on the American College of Lifestyle Medicine curriculum. Patients learn to lower blood sugar, reduce medications, and reverse type 2 diabetes through food, movement, and behavioral change."
+          href="/programs/diabetes-reversal"
+          icon="heart"
+          features={[
+            'Insurance-accepted group medical visits',
+            'Evidence-based ACLM curriculum',
+            '12-week intensive program',
+            'Ongoing support community',
+          ]}
+        />
+        <ProgramCard
+          title="Executive MD Program"
+          description="A concierge-level health optimization program for professionals who want proactive, personalized care. Includes comprehensive evaluation, advanced diagnostics, and an individualized lifestyle protocol."
+          href="/programs/executive-md"
+          icon="star"
+          features={[
+            'Comprehensive health optimization',
+            'Direct physician access',
+            'Personalized lifestyle protocol',
+            'Concierge-level care',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section-padding">
+    <div class="container-page">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden order-2 lg:order-1">
+          <img
+            src="/images/headshots/Aragon-Headshot-7.jpg"
+            alt="Dr. Beth Motley, MD"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <!-- Bio -->
+        <div class="order-1 lg:order-2">
+          <span class="badge mb-4 inline-block">Meet Dr. Motley</span>
+          <h2 class="text-h2 font-serif text-brand-900 mb-6">An Engineer's Mind. A Physician's Heart.</h2>
+          <p class="text-body-lg text-neutral-600 mb-6">
+            Dr. Beth Motley brings a unique combination of engineering precision and clinical compassion to medicine. After earning her biomedical engineering degree from the University of Virginia, she pursued her MD and discovered that the most powerful treatments are often the simplest: what we eat, how we move, and the way we live.
+          </p>
+          <p class="text-body text-neutral-600 mb-8">
+            Today, she practices family and lifestyle medicine at Prisma Health in Greenville, SC, where she helps patients reverse type 2 diabetes, lower blood pressure, and reduce their dependence on medications — using evidence-based lifestyle interventions that address the root causes of chronic disease.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="badge">MD</span>
+            <span class="badge">FACLM</span>
+            <span class="badge">Board-Certified Family Medicine</span>
+            <span class="badge">Lifestyle Medicine</span>
+          </div>
+          <a href="/about" class="inline-flex items-center text-body font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+            Learn more about Dr. Motley
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-padding bg-brand-50/50">
+    <div class="container-page">
+      <SectionHeading
+        title="Patient Stories"
+        subtitle="Real results from patients who committed to the process."
+        tag="Testimonials"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <TestimonialCard
+          quote="In 12 weeks, my A1C dropped from 9.2 to 5.8. My doctor took me off two medications. I never believed food could be this powerful until I experienced it firsthand."
+          name="Michael T."
+          role="Diabetes Reversal Program Graduate"
+        />
+        <TestimonialCard
+          quote="Dr. Motley explained the science in a way that finally made sense. The group visits kept me accountable and connected. For the first time in years, I feel like I'm in control of my health."
+          name="Patricia W."
+          role="Diabetes Reversal Program Graduate"
+        />
+        <TestimonialCard
+          quote="I came in skeptical about lifestyle medicine, but the data spoke for itself. My cholesterol, blood pressure, and energy levels all improved within the first month. This is real medicine."
+          name="James R."
+          role="Executive MD Program Member"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-brand-900 py-16 md:py-24">
+    <div class="container-page text-center">
+      <h2 class="text-h2 font-serif text-white mb-4">Stay Connected</h2>
+      <p class="text-body-lg text-brand-300 max-w-xl mx-auto mb-8">
+        Get evidence-based health insights, program updates, and practical lifestyle medicine tips delivered to your inbox. No spam, no gimmicks — just science you can use.
+      </p>
+      <div class="flex justify-center">
+        <NewsletterForm client:visible dark={true} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

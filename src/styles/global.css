@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-body text-neutral-800 bg-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-brand-900;
+  }
+
+  h1 { @apply text-h1 md:text-display; }
+  h2 { @apply text-h2; }
+  h3 { @apply text-h3; }
+  h4 { @apply text-h4; }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500 rounded-sm;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-page mx-auto px-5 md:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           bg-brand-700 text-white font-sans font-medium text-body
+           rounded-brand
+           hover:bg-brand-800 active:bg-brand-900
+           transition-all duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           bg-white text-brand-700 font-sans font-medium text-body
+           border-2 border-brand-700
+           rounded-brand
+           hover:bg-brand-50 active:bg-brand-100
+           transition-all duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           bg-lime-500 text-brand-900 font-sans font-semibold text-body
+           rounded-brand
+           hover:bg-lime-600 active:bg-lime-700
+           transition-all duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-neutral-200 rounded-brand
+           text-body text-neutral-800 bg-white
+           placeholder:text-neutral-400
+           hover:border-brand-300
+           focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none
+           transition-all duration-200;
+  }
+
+  .label-text {
+    @apply block text-small font-medium text-neutral-700 mb-1.5;
+  }
+
+  .card {
+    @apply bg-white border border-neutral-100 rounded-brand p-6 md:p-8
+           shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .prose-brand {
+    @apply text-body-lg text-neutral-600 leading-relaxed;
+  }
+
+  .prose-brand p + p {
+    @apply mt-4;
+  }
+
+  .prose-brand strong {
+    @apply text-neutral-800 font-semibold;
+  }
+
+  .prose-brand a {
+    @apply text-brand-600 underline underline-offset-2 hover:text-brand-800;
+  }
+
+  .prose-brand ul {
+    @apply list-disc list-inside space-y-2 mt-4;
+  }
+
+  .prose-brand ol {
+    @apply list-decimal list-inside space-y-2 mt-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full
+           text-small font-medium bg-brand-50 text-brand-700
+           border border-brand-100;
+  }
+}

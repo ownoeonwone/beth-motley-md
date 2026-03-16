@@ -1,0 +1,50 @@
+---
+interface Props {
+  headline: string;
+  subheadline?: string;
+  badge?: string;
+  align?: 'left' | 'center';
+  size?: 'large' | 'medium';
+  bgColor?: string;
+  dark?: boolean;
+}
+
+const {
+  headline,
+  subheadline,
+  badge,
+  align = 'center',
+  size = 'large',
+  bgColor = 'bg-gradient-to-b from-brand-50 to-white',
+  dark = false,
+} = Astro.props;
+---
+
+<section class:list={[bgColor, size === 'large' ? 'py-20 md:py-32' : 'py-14 md:py-20']}>
+  <div class:list={["container-page", align === 'center' ? 'text-center' : 'text-left']}>
+    {badge && (
+      <span class:list={[
+        "mb-6 inline-block inline-flex items-center px-3 py-1 rounded-full text-small font-medium border",
+        dark ? 'bg-brand-800 text-brand-200 border-brand-600' : 'bg-brand-50 text-brand-700 border-brand-100',
+      ]}>{badge}</span>
+    )}
+    <h1 class:list={[
+      "font-serif",
+      dark ? 'text-white' : 'text-brand-900',
+      size === 'large' ? 'text-h1 md:text-display' : 'text-h2 md:text-h1',
+      align === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl',
+    ]}>
+      {headline}
+    </h1>
+    {subheadline && (
+      <p class:list={[
+        "mt-6 text-body-lg",
+        dark ? 'text-brand-200' : 'text-neutral-600',
+        align === 'center' ? 'max-w-2xl mx-auto' : 'max-w-xl',
+      ]}>
+        {subheadline}
+      </p>
+    )}
+    <slot />
+  </div>
+</section>

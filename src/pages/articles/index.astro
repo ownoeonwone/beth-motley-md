@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles'))
+  .filter((a) => !a.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="Articles"
+  description="Evidence-based articles on lifestyle medicine, nutrition, diabetes reversal, and chronic disease prevention by Dr. Beth Motley."
+>
+  <Hero
+    badge="Articles"
+    headline="Insights & Education"
+    subheadline="Evidence-based writing on lifestyle medicine, nutrition, and chronic disease reversal."
+    size="medium"
+  />
+
+  <section class="section-padding">
+    <div class="container-page">
+      {articles.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {articles.map((article) => (
+            <a href={`/articles/${article.slug}`} class="card group block hover:border-brand-200">
+              {article.data.image && (
+                <div class="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4 bg-neutral-100">
+                  <img src={article.data.image} alt="" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              )}
+              <div class="flex flex-wrap gap-2 mb-3">
+                {article.data.tags.map((tag) => (
+                  <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">{tag}</span>
+                ))}
+              </div>
+              <time class="text-xs text-neutral-400 block mb-2">
+                {article.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <h2 class="text-h4 font-serif text-brand-900 mb-2 group-hover:text-brand-700 transition-colors">
+                {article.data.title}
+              </h2>
+              <p class="text-small text-neutral-600">{article.data.description}</p>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <p class="text-body-lg text-neutral-500">New articles coming soon. Subscribe to the newsletter to be notified.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

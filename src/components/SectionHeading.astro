@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  align?: 'left' | 'center';
+  tag?: string;
+}
+
+const { title, subtitle, align = 'center', tag } = Astro.props;
+---
+
+<div class:list={[align === 'center' ? 'text-center' : 'text-left', 'mb-12']}>
+  {tag && <span class="badge mb-4 inline-block">{tag}</span>}
+  <h2 class:list={[
+    "text-h2 font-serif text-brand-900",
+    align === 'center' && 'max-w-2xl mx-auto',
+  ]}>
+    {title}
+  </h2>
+  {subtitle && (
+    <p class:list={[
+      "mt-3 text-body-lg text-neutral-500",
+      align === 'center' && 'max-w-xl mx-auto',
+    ]}>
+      {subtitle}
+    </p>
+  )}
+</div>

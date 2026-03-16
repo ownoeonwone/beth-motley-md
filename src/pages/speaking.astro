@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import SpeakingForm from '../components/SpeakingForm.tsx';
+---
+
+<BaseLayout
+  title="Speaking | Beth Motley, MD"
+  description="Book Dr. Beth Motley for your next event. Engaging, evidence-based presentations on lifestyle medicine, diabetes reversal, workplace wellness, and more."
+>
+  <!-- Hero -->
+  <Hero
+    badge="Speaking"
+    headline="Bring Lifestyle Medicine to Your Audience"
+    subheadline="Dr. Beth Motley delivers engaging, evidence-based presentations that translate the science of lifestyle medicine into practical, actionable takeaways for any audience."
+  >
+    <div class="mt-8">
+      <a href="#booking-form" class="btn-primary">Book Beth to Speak</a>
+    </div>
+  </Hero>
+
+  <!-- Speaking Topics -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="Speaking Topics"
+        subtitle="Each presentation is grounded in peer-reviewed evidence and tailored to your audience"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card">
+          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Reversing Type 2 Diabetes with Lifestyle Medicine</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            The science behind using nutrition, movement, and behavioral change as first-line therapy
+            for type 2 diabetes — and the group visit model that makes it scalable.
+          </p>
+        </div>
+        <div class="card">
+          <div class="w-10 h-10 rounded-lg bg-lime-100 text-lime-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Food Is Medicine: The Science Behind Whole-Food Nutrition</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            How dietary patterns drive chronic disease — and how whole-food, plant-predominant eating
+            can prevent and reverse conditions that cost billions in healthcare spending each year.
+          </p>
+        </div>
+        <div class="card">
+          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Building a Lifestyle Medicine Practice</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            For physician audiences: practical strategies for integrating lifestyle medicine into
+            your practice, implementing group visits, and creating sustainable revenue models.
+          </p>
+        </div>
+        <div class="card">
+          <div class="w-10 h-10 rounded-lg bg-lime-100 text-lime-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Six Pillars of Lifestyle Medicine</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            A comprehensive overview of the six evidence-based domains — nutrition, physical activity,
+            sleep, stress management, social connection, and avoidance of risky substances — and how they
+            work together to prevent and treat chronic disease.
+          </p>
+        </div>
+        <div class="card">
+          <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Wellness in the Workplace: The ROI of Employee Health</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Why investing in evidence-based employee wellness delivers measurable returns in
+            productivity, retention, and healthcare costs — and what most corporate programs get wrong.
+          </p>
+        </div>
+        <div class="card bg-brand-50 border border-brand-100">
+          <div class="w-10 h-10 rounded-lg bg-brand-200 text-brand-800 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Custom Topics</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Have a specific topic or audience in mind? Dr. Motley can tailor a presentation to
+            your event's theme, goals, and audience. Reach out and let's build something together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audiences -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        title="Audiences"
+        subtitle="Dr. Motley speaks to a wide range of groups and formats"
+      />
+      <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+        {[
+          'Healthcare Conferences',
+          'Corporate Wellness Events',
+          'Medical Education (CME)',
+          'Community Organizations',
+          'Churches & Faith Groups',
+          'Podcasts & Webinars',
+          'Grand Rounds',
+          'Employee Town Halls',
+          'Health System Leadership',
+          'Media & Press',
+        ].map((audience) => (
+          <span class="inline-flex items-center px-5 py-2.5 rounded-full bg-white border border-brand-200 text-body font-medium text-brand-800 shadow-sm">
+            {audience}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="What Event Organizers Say"
+        subtitle="Feedback from those who have hosted Dr. Motley"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <TestimonialCard
+          quote="Dr. Motley made complex medical science feel accessible and inspiring. Our attendees left with practical steps they could implement immediately, and we received more positive feedback for her session than any other speaker at the conference."
+          name="Sarah Whitfield"
+          role="Program Director, Southeast Healthcare Innovation Summit"
+        />
+        <TestimonialCard
+          quote="We brought Dr. Motley in for our annual employee wellness day and the response was overwhelming. She struck the perfect balance between clinical credibility and genuine warmth. Several employees signed up for her diabetes program the same week."
+          name="James Thornton"
+          role="VP of Human Resources, Greenville Manufacturing Co."
+        />
+        <TestimonialCard
+          quote="As a physician myself, I appreciate speakers who respect the evidence. Dr. Motley's grand rounds presentation was rigorous, well-cited, and delivered with the kind of passion that reminds you why you went into medicine. Highly recommend."
+          name="Dr. Michael Chen"
+          role="Chief of Internal Medicine, Upstate Medical Center"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Reel Placeholder -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page max-w-4xl">
+      <SectionHeading
+        title="Speaking Reel"
+        subtitle="See Dr. Motley in action"
+      />
+      <div class="aspect-video rounded-2xl overflow-hidden">
+        <iframe
+          src="https://www.youtube.com/embed/cNI41n_fdSI"
+          title="Dr. Beth Motley — Speaking Reel"
+          class="w-full h-full"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking Inquiry Form -->
+  <section id="booking-form" class="section-padding bg-white">
+    <div class="container-page max-w-2xl">
+      <SectionHeading
+        title="Book Dr. Motley for Your Event"
+        subtitle="Tell us about your event and we will follow up within two business days to discuss availability, topics, and logistics."
+      />
+      <SpeakingForm client:visible />
+    </div>
+  </section>
+</BaseLayout>

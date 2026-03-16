@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import MediaFilter from '../components/MediaFilter.tsx';
+
+const mediaItems = [
+  {
+    title: "Plant-Based Medicine: Dr. Beth Motley's Journey Into Lifestyle Medicine",
+    type: "podcast" as const,
+    source: "American College of Lifestyle Medicine",
+    date: "February 2025",
+    href: "https://lifestylemedicine.org/project/episode-1/",
+  },
+  {
+    title: "Make These 1% Changes to Create Long-Lasting Health",
+    type: "podcast" as const,
+    source: "PLANTSTRONG Podcast",
+    date: "October 2024",
+    href: "https://www.plantstrongpodcast.com/blog/beth-motley-md",
+  },
+  {
+    title: "Dr. Beth Motley on Lifestyle Medicine and Diabetes Reversal",
+    type: "video" as const,
+    source: "YouTube",
+    date: "2025",
+    href: "https://www.youtube.com/watch?v=cNI41n_fdSI",
+    embedId: "cNI41n_fdSI",
+  },
+  {
+    title: "Lifestyle Medicine in Practice",
+    type: "video" as const,
+    source: "YouTube",
+    date: "2025",
+    href: "https://www.youtube.com/watch?v=rU9zkUz-In8",
+    embedId: "rU9zkUz-In8",
+  },
+  {
+    title: "The Science of Plant-Based Nutrition",
+    type: "video" as const,
+    source: "YouTube",
+    date: "2025",
+    href: "https://www.youtube.com/watch?v=qqXwRBY0fmc",
+    embedId: "qqXwRBY0fmc",
+  },
+  {
+    title: "Reversing Chronic Disease with Evidence-Based Lifestyle Change",
+    type: "video" as const,
+    source: "YouTube",
+    date: "2025",
+    href: "https://www.youtube.com/watch?v=SQsDlVRMDpA",
+    embedId: "SQsDlVRMDpA",
+  },
+];
+---
+
+<BaseLayout
+  title="Media & Press"
+  description="Podcasts, videos, articles, and press features with Dr. Beth Motley on lifestyle medicine, diabetes reversal, and evidence-based health."
+>
+  <Hero
+    badge="Media"
+    headline="Media & Appearances"
+    subheadline="Podcasts, videos, articles, and press features on lifestyle medicine and diabetes reversal."
+    size="medium"
+  >
+    <div class="mt-6">
+      <a href="/speaking" class="btn-primary">Book Beth for Your Podcast or Event</a>
+    </div>
+  </Hero>
+
+  <section class="section-padding">
+    <div class="container-page">
+      <MediaFilter items={mediaItems} client:load />
+    </div>
+  </section>
+
+  <!-- Podcast CTA -->
+  <section class="bg-brand-50 section-padding">
+    <div class="container-page text-center">
+      <SectionHeading
+        title="Invite Beth on Your Podcast"
+        subtitle="Dr. Motley is available for podcast interviews, media features, and expert commentary on lifestyle medicine and diabetes reversal."
+      />
+      <a href="/speaking" class="btn-primary">
+        Media & Speaking Inquiries
+      </a>
+    </div>
+  </section>
+</BaseLayout>

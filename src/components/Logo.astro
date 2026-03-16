@@ -1,0 +1,71 @@
+---
+interface Props {
+  variant?: 'horizontal' | 'icon';
+  class?: string;
+}
+
+const { variant = 'horizontal', class: className } = Astro.props;
+---
+
+{variant === 'icon' ? (
+  <svg
+    class={className}
+    viewBox="0 0 80 80"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="Beth Motley MD logo"
+    role="img"
+  >
+    <circle cx="40" cy="40" r="37" stroke="currentColor" stroke-width="2.5" />
+    <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
+      <!-- Stem -->
+      <path d="M40 58 L40 30" />
+      <!-- Bottom leaves -->
+      <path d="M40 52 C34 50 30 46 29 41" />
+      <path d="M29 41 C32 42 36 46 40 52" />
+      <path d="M40 52 C46 50 50 46 51 41" />
+      <path d="M51 41 C48 42 44 46 40 52" />
+      <!-- Middle leaves -->
+      <path d="M40 44 C33 41 28 36 27 30" />
+      <path d="M27 30 C31 32 36 37 40 44" />
+      <path d="M40 44 C47 41 52 36 53 30" />
+      <path d="M53 30 C49 32 44 37 40 44" />
+      <!-- Top leaves -->
+      <path d="M40 36 C35 33 31 28 30 22" />
+      <path d="M30 22 C33 24 37 29 40 36" />
+      <path d="M40 36 C45 33 49 28 50 22" />
+      <path d="M50 22 C47 24 43 29 40 36" />
+    </g>
+  </svg>
+) : (
+  <div class:list={["flex items-center gap-3", className]}>
+    <svg
+      class="h-10 w-10 text-brand-700 flex-shrink-0"
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <circle cx="40" cy="40" r="37" stroke="currentColor" stroke-width="2.5" />
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
+        <path d="M40 58 L40 30" />
+        <path d="M40 52 C34 50 30 46 29 41" />
+        <path d="M29 41 C32 42 36 46 40 52" />
+        <path d="M40 52 C46 50 50 46 51 41" />
+        <path d="M51 41 C48 42 44 46 40 52" />
+        <path d="M40 44 C33 41 28 36 27 30" />
+        <path d="M27 30 C31 32 36 37 40 44" />
+        <path d="M40 44 C47 41 52 36 53 30" />
+        <path d="M53 30 C49 32 44 37 40 44" />
+        <path d="M40 36 C35 33 31 28 30 22" />
+        <path d="M30 22 C33 24 37 29 40 36" />
+        <path d="M40 36 C45 33 49 28 50 22" />
+        <path d="M50 22 C47 24 43 29 40 36" />
+      </g>
+    </svg>
+    <div class="flex flex-col leading-none">
+      <span class="font-serif text-xl font-bold text-brand-900 tracking-tight">Beth Motley, MD</span>
+      <span class="text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-600 mt-0.5">Lifestyle Medicine</span>
+    </div>
+  </div>
+)}

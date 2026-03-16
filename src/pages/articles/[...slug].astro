@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const formattedDate = article.data.date.toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  image={article.data.image}
+  type="article"
+  publishedDate={article.data.date.toISOString()}
+>
+  <article class="section-padding">
+    <div class="container-page max-w-3xl">
+      <!-- Header -->
+      <header class="mb-10">
+        <a href="/articles" class="inline-flex items-center gap-1 text-small text-brand-600 hover:text-brand-800 mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Articles
+        </a>
+        <div class="flex flex-wrap gap-2 mb-3">
+          {article.data.tags.map((tag: string) => (
+            <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">{tag}</span>
+          ))}
+        </div>
+        <h1 class="text-h1 md:text-display font-serif text-brand-900 mb-4">{article.data.title}</h1>
+        <div class="flex items-center gap-3 text-small text-neutral-500">
+          <time datetime={article.data.date.toISOString()}>{formattedDate}</time>
+          <span>&middot;</span>
+          <span>Beth Motley, MD, FACLM</span>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="prose-brand [&_h2]:text-h2 [&_h2]:font-serif [&_h2]:text-brand-900 [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-h3 [&_h3]:font-serif [&_h3]:text-brand-900 [&_h3]:mt-8 [&_h3]:mb-3">
+        <Content />
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-12 pt-8 border-t border-neutral-200">
+        <div class="bg-brand-50 rounded-brand p-6 md:p-8 text-center">
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Ready to Take the Next Step?</h3>
+          <p class="text-body text-neutral-600 mb-4">Explore how lifestyle medicine can help you prevent and reverse chronic disease.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/programs/diabetes-reversal" class="btn-primary">Diabetes Reversal Program</a>
+            <a href="/contact" class="btn-secondary">Contact Dr. Motley</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>

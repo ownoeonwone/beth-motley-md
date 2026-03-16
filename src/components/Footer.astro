@@ -1,0 +1,114 @@
+---
+import Logo from './Logo.astro';
+
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  programs: [
+    { href: '/programs/diabetes-reversal', label: 'Diabetes Reversal' },
+    { href: '/programs/executive-md', label: 'Executive MD Program' },
+  ],
+  connect: [
+    { href: '/speaking', label: 'Book Beth to Speak' },
+    { href: '/consulting', label: 'Consulting' },
+    { href: '/media', label: 'Media & Press' },
+    { href: '/contact', label: 'Contact' },
+  ],
+  social: [
+    { href: 'https://www.facebook.com/MotleyMD/', label: 'Facebook', icon: 'facebook' },
+    { href: 'https://www.instagram.com/bethmotleymd/', label: 'Instagram', icon: 'instagram' },
+    { href: 'https://www.youtube.com/@bethmotleymd', label: 'YouTube', icon: 'youtube' },
+  ],
+};
+---
+
+<footer class="bg-brand-950 text-white" role="contentinfo">
+  <div class="container-page section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      <!-- Brand column -->
+      <div class="lg:col-span-1">
+        <a href="/" aria-label="Beth Motley MD — Home">
+          <div class="flex items-center gap-3">
+            <svg class="h-10 w-10 text-brand-300 flex-shrink-0" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="37" stroke="currentColor" stroke-width="2.5" />
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
+                <path d="M40 58 L40 30" />
+                <path d="M40 52 C34 50 30 46 29 41" /><path d="M29 41 C32 42 36 46 40 52" />
+                <path d="M40 52 C46 50 50 46 51 41" /><path d="M51 41 C48 42 44 46 40 52" />
+                <path d="M40 44 C33 41 28 36 27 30" /><path d="M27 30 C31 32 36 37 40 44" />
+                <path d="M40 44 C47 41 52 36 53 30" /><path d="M53 30 C49 32 44 37 40 44" />
+                <path d="M40 36 C35 33 31 28 30 22" /><path d="M30 22 C33 24 37 29 40 36" />
+                <path d="M40 36 C45 33 49 28 50 22" /><path d="M50 22 C47 24 43 29 40 36" />
+              </g>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="font-serif text-lg font-bold text-white tracking-tight">Beth Motley, MD</span>
+              <span class="text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-300 mt-0.5">Lifestyle Medicine</span>
+            </div>
+          </div>
+        </a>
+        <p class="mt-4 text-small text-brand-300 leading-relaxed">
+          Board-certified Family &amp; Lifestyle Medicine physician. Fellow of the American College of Lifestyle Medicine. Greenville, SC.
+        </p>
+      </div>
+
+      <!-- Programs -->
+      <div>
+        <h3 class="text-small font-sans font-semibold text-white tracking-wide uppercase mb-4">Programs</h3>
+        <ul class="space-y-3">
+          {footerLinks.programs.map((link) => (
+            <li>
+              <a href={link.href} class="text-small text-brand-300 hover:text-lime-400 transition-colors">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <h3 class="text-small font-sans font-semibold text-white tracking-wide uppercase mb-4">Connect</h3>
+        <ul class="space-y-3">
+          {footerLinks.connect.map((link) => (
+            <li>
+              <a href={link.href} class="text-small text-brand-300 hover:text-lime-400 transition-colors">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Social + Newsletter -->
+      <div>
+        <h3 class="text-small font-sans font-semibold text-white tracking-wide uppercase mb-4">Follow</h3>
+        <div class="flex gap-4 mb-6">
+          {footerLinks.social.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-brand-800 text-brand-300 hover:bg-brand-700 hover:text-white transition-colors"
+              aria-label={`Follow on ${link.label}`}
+            >
+              {link.icon === 'facebook' && (
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              )}
+              {link.icon === 'instagram' && (
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              )}
+              {link.icon === 'youtube' && (
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-brand-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-brand-400">&copy; {currentYear} Beth Motley, MD. All rights reserved.</p>
+      <p class="text-xs text-brand-500 max-w-xl text-center md:text-right">
+        This website is for informational purposes only and does not constitute medical advice. Always consult your physician for personal medical decisions.
+      </p>
+    </div>
+  </div>
+</footer>

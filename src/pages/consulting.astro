@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ContactForm from '../components/ContactForm.tsx';
+---
+
+<BaseLayout
+  title="Consulting | Beth Motley, MD"
+  description="Dr. Beth Motley helps healthcare systems, private practices, and corporations implement evidence-based lifestyle medicine programs. Group visit design, provider training, and more."
+>
+  <!-- Hero -->
+  <Hero
+    badge="Consulting"
+    headline="Bring Lifestyle Medicine to Your Organization"
+    subheadline="Dr. Motley partners with healthcare systems, private practices, and employers to design and implement evidence-based lifestyle medicine programs that improve outcomes and reduce costs."
+  >
+    <div class="mt-8">
+      <a href="#consulting-form" class="btn-primary">Schedule a Discovery Call</a>
+    </div>
+  </Hero>
+
+  <!-- Who I Help -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="Who I Help"
+        subtitle="Consulting services for organizations ready to invest in lifestyle medicine"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Healthcare Systems & Hospitals</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Implement lifestyle medicine programs within your health system. From pilot programs to
+            enterprise-wide rollouts, Dr. Motley helps you build group visit models that improve
+            patient outcomes, increase engagement, and generate sustainable revenue.
+          </p>
+        </div>
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-lime-100 text-lime-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Private Practices</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Add group medical visits and lifestyle medicine services to your existing practice.
+            Dr. Motley provides the curriculum, workflow design, and training you need to launch
+            confidently — without starting from scratch.
+          </p>
+        </div>
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Corporate Wellness</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Move beyond step-count challenges and lunch-and-learns. Dr. Motley helps employers
+            build evidence-based wellness programs that measurably improve employee health,
+            reduce healthcare spending, and boost productivity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Offer -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        title="What I Offer"
+        subtitle="Practical, hands-on consulting built on real clinical experience"
+      />
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            {
+              title: 'Program Design & Curriculum Development',
+              description: 'Turnkey curriculum for group medical visits, diabetes reversal programs, and lifestyle medicine interventions — built on evidence and tested in practice.',
+            },
+            {
+              title: 'Group Visit Implementation & Training',
+              description: 'Step-by-step guidance on launching group visits in your setting, including scheduling, billing, documentation, and the flipped classroom methodology.',
+            },
+            {
+              title: 'Provider Education & CME',
+              description: 'Training for physicians, advanced practice providers, and care teams on lifestyle medicine principles, motivational interviewing, and group facilitation.',
+            },
+            {
+              title: 'Workflow & Operations Consulting',
+              description: 'Optimize your clinical workflows, EHR templates, patient enrollment processes, and team roles to make lifestyle medicine sustainable within your organization.',
+            },
+            {
+              title: 'Remote & In-Person Options',
+              description: 'Consulting is available virtually or on-site depending on your needs. Many engagements combine both for maximum flexibility and impact.',
+            },
+            {
+              title: 'Outcomes Measurement & Reporting',
+              description: 'Establish the metrics that matter, build data collection into your workflows, and create reporting frameworks that demonstrate program value to leadership.',
+            },
+          ].map((service) => (
+            <div class="card">
+              <h3 class="text-body font-semibold text-brand-900 mb-2">{service.title}</h3>
+              <p class="text-small text-neutral-600 leading-relaxed">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="How It Works"
+        subtitle="A straightforward process from first conversation to implementation"
+      />
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
+            1
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Discovery Call</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            A complimentary 30-minute conversation to understand your organization, your goals,
+            and the challenges you are trying to solve. No pitch, no pressure — just a candid
+            discussion about whether working together makes sense.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
+            2
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Custom Proposal</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Based on our conversation, Dr. Motley prepares a detailed proposal outlining
+            the scope of work, timeline, deliverables, and investment. Every engagement is
+            tailored to your specific situation — there are no off-the-shelf packages.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
+            3
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Implementation & Support</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Once we agree on a plan, Dr. Motley works alongside your team to bring it to life.
+            This is not a report that sits on a shelf — it is hands-on partnership with ongoing
+            support until your program is running confidently.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact Form -->
+  <section id="consulting-form" class="section-padding bg-brand-50/40">
+    <div class="container-page max-w-2xl">
+      <SectionHeading
+        title="Start the Conversation"
+        subtitle="Interested in bringing lifestyle medicine to your organization? Tell us about your goals and we will be in touch to schedule a discovery call."
+      />
+      <p class="text-center text-small text-neutral-500 -mt-8 mb-8">
+        Please select "Consulting inquiry" as your inquiry type below.
+      </p>
+      <ContactForm client:visible />
+    </div>
+  </section>
+</BaseLayout>

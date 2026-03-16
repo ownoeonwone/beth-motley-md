@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import FAQ from '../../components/FAQ.astro';
+import DiabetesForm from '../../components/DiabetesForm.tsx';
+
+const faqItems = [
+  {
+    question: 'Is this covered by insurance?',
+    answer: 'Yes. Our group visits are billed as medical visits, not wellness coaching, which means most commercial insurance plans, Medicare, and many Medicaid plans cover them. We verify your benefits before you begin so there are no surprises. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit.',
+  },
+  {
+    question: 'Do I need a referral from my doctor?',
+    answer: 'A referral is not required to join the program, though some insurance plans may request one. You are welcome to self-refer. We also coordinate closely with your existing primary care provider so everyone stays on the same page regarding your care.',
+  },
+  {
+    question: 'What if I am on insulin?',
+    answer: 'Patients on insulin are welcome and often see significant results. Dr. Motley monitors your blood glucose closely throughout the program and adjusts medications as your numbers improve. Safety is our top priority, and medication changes are always made under direct physician supervision.',
+  },
+  {
+    question: 'How is this different from a diet program?',
+    answer: 'This is not a diet program. It is a physician-led medical program that uses evidence-based lifestyle interventions as the primary treatment for metabolic disease. You receive real medical care including lab work, medication management, and ongoing physician oversight. The lifestyle changes we teach are grounded in peer-reviewed research from the American College of Lifestyle Medicine.',
+  },
+  {
+    question: 'Can I keep seeing my current doctor while doing this?',
+    answer: 'Absolutely. We encourage it. Dr. Motley works alongside your existing healthcare team, not as a replacement. After each visit cycle, we send a summary to your primary care provider so they can see your progress and coordinate any ongoing care.',
+  },
+  {
+    question: 'What happens after the 12 weeks?',
+    answer: 'Graduation is just the beginning. After the initial 12-week program, you will have the option to join our maintenance group visits, which meet monthly to help you sustain your progress, troubleshoot challenges, and stay connected with your cohort. Many of our patients continue in maintenance for a year or more.',
+  },
+];
+---
+
+<BaseLayout
+  title="Diabetes Reversal Group Visits | Beth Motley, MD"
+  description="Evidence-based group medical visits that help patients reverse type 2 diabetes through lifestyle medicine. Insurance-accepted program in Greenville, SC led by Dr. Beth Motley."
+>
+  <!-- Hero -->
+  <Hero
+    badge="Program"
+    headline="Diabetes Reversal Group Visits"
+    subheadline="Evidence-based group medical visits designed to help you lower your A1c, reduce medications, and take control of type 2 diabetes — led by a board-certified lifestyle medicine physician and covered by insurance."
+  />
+
+  <!-- What Are Group Visits? -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="What Are Group Visits?"
+        subtitle="A smarter model for diabetes care that actually works"
+      />
+      <div class="max-w-3xl mx-auto prose-brand">
+        <p class="text-body-lg text-neutral-700 leading-relaxed">
+          Group medical visits bring together a small cohort of patients who share a common diagnosis
+          and walk through a structured curriculum together — led by Dr. Motley, a board-certified
+          lifestyle medicine physician.
+        </p>
+        <p class="text-body text-neutral-600 mt-4 leading-relaxed">
+          Using a <strong class="text-brand-800">flipped classroom approach</strong>, you review
+          educational materials before each session so that your time with Dr. Motley is spent on
+          discussion, problem-solving, and hands-on application rather than passive lectures. Each
+          visit includes a medical check-in, lab review, and medication adjustment as needed.
+        </p>
+        <p class="text-body text-neutral-600 mt-4 leading-relaxed">
+          This is not a diet program or a wellness seminar. It is <strong class="text-brand-800">real
+          medical care</strong> — billed to your insurance just like a standard physician visit — with
+          the added benefit of peer support, longer face time with your doctor, and a proven curriculum
+          rooted in the science of lifestyle medicine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Is This For? -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        title="Who Is This For?"
+        subtitle="If any of the following describe you, this program may be a fit"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card text-center">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-3-3v6m-7 4h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Type 2 Diabetes</h3>
+          <p class="text-body text-neutral-600">
+            You have been diagnosed with type 2 diabetes and want to lower your A1c,
+            reduce or eliminate medications, and regain control of your health.
+          </p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 rounded-full bg-lime-100 text-lime-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Prediabetes</h3>
+          <p class="text-body text-neutral-600">
+            Your labs show prediabetes or insulin resistance, and you want to reverse course
+            before it progresses to a full diabetes diagnosis.
+          </p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">Metabolic Syndrome</h3>
+          <p class="text-body text-neutral-600">
+            You are dealing with a combination of high blood pressure, elevated blood sugar,
+            excess weight, or abnormal cholesterol and want a comprehensive, evidence-based plan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect / Curriculum -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="What to Expect"
+        subtitle="A 12-week curriculum built on the six pillars of lifestyle medicine"
+      />
+      <div class="max-w-3xl mx-auto space-y-6">
+        {[
+          {
+            weeks: 'Weeks 1-2',
+            title: 'Assessment & Foundation',
+            description: 'Comprehensive baseline labs, health history review, and goal setting. You will learn how to read your own numbers and understand the metabolic drivers behind your diagnosis.',
+          },
+          {
+            weeks: 'Weeks 3-4',
+            title: 'Nutrition Deep Dive',
+            description: 'The science and practice of whole-food, plant-predominant eating. We focus on practical, sustainable changes — not perfection — with meal planning strategies you can use immediately.',
+          },
+          {
+            weeks: 'Weeks 5-6',
+            title: 'Movement & Exercise Prescription',
+            description: 'A personalized exercise plan that meets you where you are. We cover aerobic activity, resistance training, and simple ways to reduce sedentary time throughout your day.',
+          },
+          {
+            weeks: 'Weeks 7-8',
+            title: 'Sleep & Stress Optimization',
+            description: 'How poor sleep and chronic stress sabotage your blood sugar — and what to do about it. Practical tools for sleep hygiene, mindfulness, and nervous system regulation.',
+          },
+          {
+            weeks: 'Weeks 9-10',
+            title: 'Building Sustainable Habits',
+            description: 'Behavior change science applied to your daily life. We address social support, managing setbacks, navigating restaurants and holidays, and building a lifestyle that sticks.',
+          },
+          {
+            weeks: 'Weeks 11-12',
+            title: 'Maintenance Plan & Community Support',
+            description: 'Final labs, progress review, and a personalized maintenance plan. We map out your path forward including ongoing group visit options to keep you supported long-term.',
+          },
+        ].map((phase, i) => (
+          <div class="flex gap-5 items-start">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-700 text-white flex items-center justify-center font-semibold text-small">
+              {i + 1}
+            </div>
+            <div class="flex-1 pb-6 border-b border-neutral-100 last:border-0 last:pb-0">
+              <span class="text-small font-medium text-brand-600 uppercase tracking-wide">{phase.weeks}</span>
+              <h3 class="text-h4 font-serif text-brand-900 mt-1">{phase.title}</h3>
+              <p class="text-body text-neutral-600 mt-2 leading-relaxed">{phase.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section-padding bg-brand-900">
+    <div class="container-page">
+      <div class="text-center mb-12">
+        <h2 class="text-h2 font-serif text-white">Real Results, Real Patients</h2>
+        <p class="mt-3 text-body-lg text-brand-200 max-w-xl mx-auto">
+          Outcomes from lifestyle medicine group visit programs across the country consistently show meaningful improvements.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="text-center p-6 rounded-xl bg-brand-800/50">
+          <div class="text-display font-serif text-lime-400">1.5%</div>
+          <p class="text-small text-brand-200 mt-2">Average A1c Reduction</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-brand-800/50">
+          <div class="text-display font-serif text-lime-400">62%</div>
+          <p class="text-small text-brand-200 mt-2">Patients Reducing Medications</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-brand-800/50">
+          <div class="text-display font-serif text-lime-400">15 lbs</div>
+          <p class="text-small text-brand-200 mt-2">Average Weight Loss</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-brand-800/50">
+          <div class="text-display font-serif text-lime-400">97%</div>
+          <p class="text-small text-brand-200 mt-2">Patient Satisfaction</p>
+        </div>
+      </div>
+      <p class="text-center text-small text-brand-300 mt-8 max-w-lg mx-auto">
+        Statistics reflect published outcomes from lifestyle medicine group visit programs nationally.
+        Individual results vary based on adherence, baseline health, and other factors.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-3xl">
+      <SectionHeading
+        title="Frequently Asked Questions"
+        subtitle="Common questions about the Diabetes Reversal Group Visit program"
+      />
+      <FAQ items={faqItems} />
+    </div>
+  </section>
+
+  <!-- CTA / Application Form -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page max-w-2xl">
+      <SectionHeading
+        title="Ready to Get Started?"
+        subtitle="Complete a brief application and our team will reach out to discuss next steps, verify your insurance, and answer any questions."
+      />
+      <DiabetesForm client:visible />
+    </div>
+  </section>
+</BaseLayout>
