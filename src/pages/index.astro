@@ -63,19 +63,15 @@ const pillars = [
             <a href="/speaking" class="btn-secondary">Book Beth to Speak</a>
           </div>
         </div>
-        <!-- Photo — blends into the section, no hard border -->
-        <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end pt-12 lg:pt-16">
-          <div class="relative w-72 md:w-80 lg:w-full max-w-md">
+        <!-- Photo -->
+        <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+          <div class="w-72 md:w-80 lg:w-full max-w-md pt-12 lg:pt-8">
             <img
               src="/images/headshots/Aragon-Headshot-7.jpg"
               alt="Dr. Beth Motley, MD, FACLM"
-              class="w-full h-auto object-cover relative z-10"
+              class="w-full h-auto rounded-t-2xl lg:rounded-2xl shadow-lg"
               loading="eager"
             />
-            <!-- Soft fade at the bottom so the photo dissolves into the background -->
-            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
-            <!-- Soft fade on the left edge so it blends with the text side -->
-            <div class="hidden lg:block absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-brand-50/80 to-transparent z-20"></div>
           </div>
         </div>
       </div>
@@ -150,7 +146,7 @@ const pillars = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div class="aspect-[4/5] rounded-2xl overflow-hidden order-2 lg:order-1">
           <img
-            src="/images/headshots/Aragon-Headshot-7.jpg"
+            src="/images/headshots/Aragon-Headshot-27.jpg"
             alt="Dr. Beth Motley, MD"
             class="w-full h-full object-cover"
             loading="lazy"
@@ -191,21 +187,26 @@ const pillars = [
         subtitle="Real results from patients who committed to the process."
         tag="Testimonials"
       />
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <TestimonialCard
-          quote="In 12 weeks, my A1C dropped from 9.2 to 5.8. My doctor took me off two medications. I never believed food could be this powerful until I experienced it firsthand."
-          name="Michael T."
-          role="Diabetes Reversal Program Graduate"
+          quote="Dr Motley is amazing! I have recommended her to many of my friends, family, and coworkers. Very knowledgeable, professional and kind. I'm thankful to have her as my primary care doctor!"
+          name="A.K."
+          role="Patient"
         />
         <TestimonialCard
-          quote="Dr. Motley explained the science in a way that finally made sense. The group visits kept me accountable and connected. For the first time in years, I feel like I'm in control of my health."
-          name="Patricia W."
-          role="Diabetes Reversal Program Graduate"
+          quote="Beth is passionate about helping people improve their lives through lifestyle changes — treating the problems not the symptoms. She's knowledgeable and gets results. If you want to improve your health and your life, she's the doctor for you!"
+          name="H.M.W."
+          role="Patient"
         />
         <TestimonialCard
-          quote="I came in skeptical about lifestyle medicine, but the data spoke for itself. My cholesterol, blood pressure, and energy levels all improved within the first month. This is real medicine."
-          name="James R."
-          role="Executive MD Program Member"
+          quote="She not only is an awesome doctor but specializes in lifestyle medicine! She listens well and then analyzes your situation giving you a diagnosis that brings health and healing. She truly cares!!"
+          name="P.F."
+          role="Patient"
+        />
+        <TestimonialCard
+          quote="She is personable and has helped me eliminate the inflammation that was feeding the cancer in my body. Since I've gone plant based my last two check ups for the oncologist have shown no inflammation in that area. Thank you Dr. Motley for your help by simply sharing how to eat clean in a life sustaining way!"
+          name="S.L.G."
+          role="Patient"
         />
       </div>
     </div>

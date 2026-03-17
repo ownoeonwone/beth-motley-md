@@ -10,16 +10,35 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   title="Speaking | Beth Motley, MD"
   description="Book Dr. Beth Motley for your next event. Engaging, evidence-based presentations on lifestyle medicine, diabetes reversal, workplace wellness, and more."
 >
-  <!-- Hero -->
-  <Hero
-    badge="Speaking"
-    headline="Bring Lifestyle Medicine to Your Audience"
-    subheadline="Dr. Beth Motley delivers engaging, evidence-based presentations that translate the science of lifestyle medicine into practical, actionable takeaways for any audience."
-  >
-    <div class="mt-8">
-      <a href="#booking-form" class="btn-primary">Book Beth to Speak</a>
+  <!-- Hero with speaking photo -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-16 md:py-24">
+    <div class="container-page">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <span class="badge mb-6 inline-block">Speaking</span>
+          <h1 class="font-serif text-h1 md:text-display text-brand-900">
+            Bring Lifestyle Medicine to Your Audience
+          </h1>
+          <p class="mt-6 text-body-lg text-neutral-600 max-w-2xl">
+            Dr. Beth Motley delivers engaging, evidence-based presentations that translate the science of lifestyle medicine into practical, actionable takeaways for any audience.
+          </p>
+          <div class="mt-8">
+            <a href="#booking-form" class="btn-primary">Book Beth to Speak</a>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="rounded-2xl overflow-hidden shadow-lg max-w-sm">
+            <img
+              src="/images/speaking/aclm-2019.jpg"
+              alt="Dr. Beth Motley speaking at the American College of Lifestyle Medicine 2019 conference"
+              class="w-full h-auto"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  </Hero>
+  </section>
 
   <!-- Speaking Topics -->
   <section class="section-padding bg-white">

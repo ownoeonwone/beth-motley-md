@@ -5,84 +5,143 @@ import SectionHeading from '../components/SectionHeading.astro';
 import MediaFilter from '../components/MediaFilter.tsx';
 
 const mediaItems = [
+  // --- Podcasts ---
   {
-    title: "Plant-Based Medicine: Dr. Beth Motley's Journey Into Lifestyle Medicine",
+    title: "Plant-Based Medicine: Dr. Beth Motley's Journey to Lifestyle Medicine",
     type: "podcast" as const,
-    source: "American College of Lifestyle Medicine",
+    source: "Next Gen LM Podcast (ACLM)",
     date: "February 2025",
     href: "https://lifestylemedicine.org/project/episode-1/",
   },
   {
-    title: "Preventing and Reversing Disease with Lifestyle Medicine",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2025",
-    href: "https://www.youtube.com/watch?v=FwDOTERNe5I",
-    embedId: "FwDOTERNe5I",
-  },
-
-  {
     title: "Make These 1% Changes to Create Long-Lasting Health",
     type: "podcast" as const,
-    source: "PLANTSTRONG Podcast",
-    date: "October 2024",
+    source: "PLANTSTRONG Podcast with Rip Esselstyn",
+    date: "August 2024",
     href: "https://www.plantstrongpodcast.com/blog/beth-motley-md",
   },
   {
-    title: "Dr. Beth Motley on Lifestyle Medicine and Diabetes Reversal",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2025",
-    href: "https://www.youtube.com/watch?v=cNI41n_fdSI",
-    embedId: "cNI41n_fdSI",
+    title: "Plant-Based Lifestyle Medicine with Beth Motley, MD",
+    type: "podcast" as const,
+    source: "The Jazzy Vegetarian",
+    date: "March 2023",
+    href: "https://jazzyvegetarian.com/",
   },
   {
-    title: "Lifestyle Medicine in Practice",
+    title: "Meet Dr. Beth Morris: The Country's Youngest Board-Certified Lifestyle Medicine Physician",
+    type: "podcast" as const,
+    source: "Veggie Doctor Radio",
+    date: "March 2018",
+    href: "https://veggiedoctor.com/",
+  },
+  // --- Videos ---
+  {
+    title: "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition",
+    type: "video" as const,
+    source: "US Department of Defense Presentation",
+    date: "May 2023",
+    href: "https://www.youtube.com/watch?v=FwDOTERNe5I",
+    embedId: "FwDOTERNe5I",
+  },
+  {
+    title: "Heart Disease is a Foodborne Illness",
+    type: "video" as const,
+    source: "Upstate Heart Forum",
+    date: "November 2019",
+    href: "https://www.youtube.com/watch?v=5O79xow0l8g",
+    embedId: "5O79xow0l8g",
+  },
+  {
+    title: "11 Reasons Why People Struggle on a Plant-Based Diet",
     type: "video" as const,
     source: "YouTube",
-    date: "2025",
+    date: "2024",
+    href: "https://www.youtube.com/watch?v=SogG2FtVd1U",
+    embedId: "SogG2FtVd1U",
+  },
+  {
+    title: "Reversing Diabetes with a Plant-Based Diet",
+    type: "video" as const,
+    source: "YouTube",
+    date: "2024",
+    href: "https://www.youtube.com/watch?v=PXtgBAEKJ_8",
+    embedId: "PXtgBAEKJ_8",
+  },
+  {
+    title: "Cancer Prevention & Wellness: Plant-Based Nutrition for Cancer Prevention and Treatment",
+    type: "video" as const,
+    source: "Cancer Survivors Park",
+    date: "2023",
+    href: "https://www.youtube.com/watch?v=uyOFEIf0w28",
+    embedId: "uyOFEIf0w28",
+  },
+  {
+    title: "Four Plant-Based from Birth — Raising Kids on a Plant-Based Diet",
+    type: "video" as const,
+    source: "YouTube Interview",
+    date: "2023",
     href: "https://www.youtube.com/watch?v=rU9zkUz-In8",
     embedId: "rU9zkUz-In8",
   },
   {
-    title: "The Science of Plant-Based Nutrition",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2025",
-    href: "https://www.youtube.com/watch?v=qqXwRBY0fmc",
-    embedId: "qqXwRBY0fmc",
-  },
-  {
-    title: "Reversing Chronic Disease with Evidence-Based Lifestyle Change",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2025",
-    href: "https://www.youtube.com/watch?v=SQsDlVRMDpA",
-    embedId: "SQsDlVRMDpA",
-  },
-  {
-    title: "Heart Health without the Pills? Plant-Based Diets & The Statin Question",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2025",
-    href: "https://www.youtube.com/watch?v=oYwlcqt4JT8",
-    embedId: "oYwlcqt4JT8",
-  },
-  {
     title: "Make These 1% Changes to Create Long-Lasting Health",
     type: "video" as const,
-    source: "YouTube",
-    date: "2025",
+    source: "PLANTSTRONG with Rip Esselstyn",
+    date: "August 2024",
     href: "https://www.youtube.com/watch?v=FfjfBd_baqU",
     embedId: "FfjfBd_baqU",
   },
   {
-    title: "A Message from a Lifestyle Medicine Physician",
+    title: "Heart Health Without the Pills? Plant-Based Diets & The Statin Question",
     type: "video" as const,
     source: "YouTube",
-    date: "2025",
+    date: "2024",
+    href: "https://www.youtube.com/watch?v=oYwlcqt4JT8",
+    embedId: "oYwlcqt4JT8",
+  },
+  {
+    title: "A Message from a Lifestyle Medicine Physician",
+    type: "video" as const,
+    source: "ACLM Professionals in Training",
+    date: "2024",
     href: "https://www.youtube.com/watch?v=A3vaEMEwNuo",
     embedId: "A3vaEMEwNuo",
+  },
+  // --- Articles & Press ---
+  {
+    title: "Best Blood Sugar-Friendly Foods To Buy at Costco",
+    type: "article" as const,
+    source: "Woman's World Magazine",
+    date: "October 2025",
+    href: "https://www.womansworld.com/wellness/diabetes/best-blood-sugar-friendly-foods-at-costco-safe-for-diabetics",
+  },
+  {
+    title: "Plant Power: One of Greenville's First Lifestyle Medicine Physicians",
+    type: "article" as const,
+    source: "TOWN Magazine",
+    date: "January 2019",
+    href: "https://towncarolina.com/plant-power/",
+  },
+  {
+    title: "Building a Thriving Lifestyle Medicine Practice within a Primary Care Clinic",
+    type: "article" as const,
+    source: "American Journal of Lifestyle Medicine",
+    date: "March 2020",
+    href: "https://pubmed.ncbi.nlm.nih.gov/",
+  },
+  {
+    title: "Experts Weigh In on the Protein Craze and How Much Our Bodies Need",
+    type: "article" as const,
+    source: "WYFF4 News",
+    date: "November 2025",
+    href: "https://www.wyff4.com/",
+  },
+  {
+    title: "Shifting Toward SC Crops and Orchards Could Help Curb Our Bird Flu Crisis",
+    type: "article" as const,
+    source: "SC Daily Gazette",
+    date: "February 2025",
+    href: "https://scdailygazette.com/",
   },
 ];
 ---
@@ -102,8 +161,60 @@ const mediaItems = [
     </div>
   </Hero>
 
+  <!-- Featured In -->
+  <section class="py-10 bg-white border-b border-neutral-100">
+    <div class="container-page">
+      <p class="text-center text-small font-semibold text-neutral-400 uppercase tracking-widest mb-6">Featured In</p>
+      <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-neutral-500 font-medium text-body">
+        <span>ACLM</span>
+        <span>PLANTSTRONG</span>
+        <span>Woman's World</span>
+        <span>TOWN Magazine</span>
+        <span>WYFF4</span>
+        <span>WSPA Channel 7</span>
+        <span>AAFP</span>
+        <span>US Dept. of Defense</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press Highlight -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="/images/press/town-magazine.jpg"
+            alt="Dr. Beth Motley featured in TOWN Magazine - Plant Power article"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <span class="badge mb-4 inline-block">Press Feature</span>
+          <h2 class="text-h2 font-serif text-brand-900 mb-4">Plant Power</h2>
+          <p class="text-body-lg text-neutral-600 mb-4">
+            "One of Greenville's first board-certified lifestyle medicine physicians promotes the healing benefits of food."
+          </p>
+          <p class="text-body text-neutral-500 mb-6">
+            Featured in TOWN Carolina magazine, this profile explores Dr. Motley's approach to reversing chronic disease through plant-based nutrition and lifestyle interventions.
+          </p>
+          <a href="https://towncarolina.com/plant-power/" target="_blank" rel="noopener" class="btn-secondary inline-flex items-center gap-2">
+            Read the Article
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Media -->
   <section class="section-padding">
     <div class="container-page">
+      <SectionHeading
+        title="All Media"
+        subtitle="Podcasts, videos, articles, and press features"
+      />
       <MediaFilter items={mediaItems} client:load />
     </div>
   </section>
