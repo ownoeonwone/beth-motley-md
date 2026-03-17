@@ -45,34 +45,46 @@ const pillars = [
   title="Beth Motley, MD — Lifestyle Medicine Physician | Greenville, SC"
   description="Dr. Beth Motley is a board-certified family and lifestyle medicine physician in Greenville, SC. She helps patients reverse chronic disease through evidence-based lifestyle interventions."
 >
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
-    <div class="container-page relative">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
-        <!-- Text -->
-        <div class="text-center lg:text-left pt-20 md:pt-32 pb-12 lg:pb-32 order-2 lg:order-1">
-          <span class="badge mb-6 inline-block">Lifestyle Medicine in Greenville, SC</span>
-          <h1 class="font-serif text-h1 md:text-display text-brand-900">
-            Reverse Disease. Restore Health. Reclaim Your Life.
-          </h1>
-          <p class="mt-6 text-body-lg text-neutral-600 max-w-2xl">
-            Board-certified lifestyle medicine physician helping patients prevent, treat, and reverse chronic disease through evidence-based lifestyle interventions — not just more prescriptions.
-          </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="/programs/diabetes-reversal" class="btn-primary">Diabetes Reversal Program</a>
-            <a href="/speaking" class="btn-secondary">Book Beth to Speak</a>
-          </div>
+  <!-- Hero — text only -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-20 md:py-32">
+    <div class="container-page text-center max-w-4xl">
+      <span class="badge mb-6 inline-block">Lifestyle Medicine in Greenville, SC</span>
+      <h1 class="font-serif text-h1 md:text-display text-brand-900">
+        Reverse Disease. Restore Health. Reclaim Your Life.
+      </h1>
+      <p class="mt-6 text-body-lg text-neutral-600 max-w-2xl mx-auto">
+        Board-certified lifestyle medicine physician helping patients prevent, treat, and reverse chronic disease through evidence-based lifestyle interventions — not just more prescriptions.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/programs/diabetes-reversal" class="btn-primary">Diabetes Reversal Program</a>
+        <a href="/speaking" class="btn-secondary">Book Beth to Speak</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dr. Motley Photo -->
+  <section class="bg-white">
+    <div class="container-page max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12 md:py-16">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="/images/headshots/Aragon-Headshot-7.jpg"
+            alt="Dr. Beth Motley, MD, FACLM"
+            class="w-full h-auto"
+            loading="eager"
+          />
         </div>
-        <!-- Photo -->
-        <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
-          <div class="w-72 md:w-80 lg:w-full max-w-md pt-12 lg:pt-8">
-            <img
-              src="/images/headshots/Aragon-Headshot-7.jpg"
-              alt="Dr. Beth Motley, MD, FACLM"
-              class="w-full h-auto rounded-t-2xl lg:rounded-2xl shadow-lg"
-              loading="eager"
-            />
-          </div>
+        <div class="text-center md:text-left">
+          <h2 class="font-serif text-h2 text-brand-900 mb-4">Beth Motley, MD, FACLM</h2>
+          <p class="text-body-lg text-neutral-600 mb-6">
+            Board-certified in both family medicine and lifestyle medicine. Fellow of the American College of Lifestyle Medicine. Helping patients in Greenville, SC reverse chronic disease through the way they live.
+          </p>
+          <a href="/about" class="inline-flex items-center text-body font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+            Learn more about Dr. Motley
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
