@@ -16,6 +16,12 @@ const typeColors: Record<string, string> = {
   press: 'bg-amber-50 text-amber-700 border-amber-100',
 };
 
+const thumbnailGradients: Record<string, string> = {
+  podcast: 'from-purple-600 to-purple-800',
+  article: 'from-blue-600 to-brand-800',
+  press: 'from-amber-600 to-amber-800',
+};
+
 const typeIcons: Record<string, string> = {
   podcast: 'M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z',
   video: 'M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
@@ -53,7 +59,7 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((item, i) => (
           <div key={i} className="card group">
-            {item.embedId && (
+            {item.embedId ? (
               <div className="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4">
                 <iframe
                   src={`https://www.youtube.com/embed/${item.embedId}`}
@@ -63,6 +69,14 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
                   loading="lazy"
                   className="w-full h-full"
                 />
+              </div>
+            ) : (
+              <div className={`aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4 bg-gradient-to-br ${thumbnailGradients[item.type] || 'from-neutral-600 to-neutral-800'} flex flex-col items-center justify-center text-white/90 p-6`}>
+                <svg className="w-10 h-10 mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={typeIcons[item.type]} />
+                </svg>
+                <span className="text-xs font-semibold uppercase tracking-widest opacity-70">{item.type}</span>
+                <span className="text-sm font-medium mt-1 text-center leading-tight opacity-90">{item.source}</span>
               </div>
             )}
             <div className="flex items-center gap-2 mb-3">
