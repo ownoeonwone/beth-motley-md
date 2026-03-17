@@ -10,30 +10,28 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   title="Speaking | Beth Motley, MD"
   description="Book Dr. Beth Motley for your next event. Engaging, evidence-based presentations on lifestyle medicine, diabetes reversal, workplace wellness, and more."
 >
-  <!-- Hero with speaking photo -->
-  <section class="bg-gradient-to-b from-brand-50 to-white py-16 md:py-24">
-    <div class="container-page">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="text-center lg:text-left">
-          <span class="badge mb-6 inline-block">Speaking</span>
-          <h1 class="font-serif text-h1 md:text-display text-brand-900">
+  <!-- Hero — full-width speaking photo -->
+  <section class="relative">
+    <!-- Hero image -->
+    <div class="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <img
+        src="/images/speaking/aclm-2019-wide.png"
+        alt="Dr. Beth Motley speaking to a packed audience at the American College of Lifestyle Medicine 2019 conference"
+        class="w-full h-full object-cover object-top"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+        <div class="container-page">
+          <span class="badge bg-white/20 text-white border-white/30 mb-4 inline-block">Speaking</span>
+          <h1 class="font-serif text-h1 md:text-display text-white max-w-3xl">
             Bring Lifestyle Medicine to Your Audience
           </h1>
-          <p class="mt-6 text-body-lg text-neutral-600 max-w-2xl">
-            Dr. Beth Motley delivers engaging, evidence-based presentations that translate the science of lifestyle medicine into practical, actionable takeaways for any audience.
+          <p class="mt-4 text-body-lg text-white/80 max-w-2xl">
+            Engaging, evidence-based presentations that translate science into practical, actionable takeaways.
           </p>
-          <div class="mt-8">
-            <a href="#booking-form" class="btn-primary">Book Beth to Speak</a>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <div class="rounded-2xl overflow-hidden shadow-lg max-w-sm">
-            <img
-              src="/images/speaking/aclm-2019.jpg"
-              alt="Dr. Beth Motley speaking at the American College of Lifestyle Medicine 2019 conference"
-              class="w-full h-auto"
-              loading="eager"
-            />
+          <div class="mt-6">
+            <a href="#booking-form" class="btn-primary bg-white text-brand-900 hover:bg-brand-50">Book Beth to Speak</a>
           </div>
         </div>
       </div>
