@@ -44,7 +44,7 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
                 : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
             }`}
           >
-            {f === 'all' ? 'All' : f.charAt(0).toUpperCase() + f.slice(1) + 's'}
+            {f === 'all' ? 'All' : f === 'press' ? 'Press' : f.charAt(0).toUpperCase() + f.slice(1) + 's'}
           </button>
         ))}
       </div>
