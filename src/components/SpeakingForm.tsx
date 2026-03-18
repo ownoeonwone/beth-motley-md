@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { submitToGhl } from '../lib/utils';
 
 const audienceTypes = [
   'Corporate / Workplace wellness',
@@ -24,12 +25,7 @@ export default function SpeakingForm() {
     e.preventDefault();
     setStatus('loading');
     try {
-      const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || '#';
-      await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, formName: 'speaking' }),
-      });
+      await submitToGhl('speaking', form);
       setStatus('success');
     } catch {
       setStatus('error');
