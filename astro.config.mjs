@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://www.bethmotleymd.com',
+  site: 'https://beth-motley-md.pages.dev',
   output: 'static',
   integrations: [
     react(),

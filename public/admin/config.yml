@@ -15,8 +15,8 @@ public_folder: /images/uploads
 publish_mode: editorial_workflow
 
 # Site URL for preview links
-site_url: https://www.bethmotleymd.com
-display_url: https://www.bethmotleymd.com
+site_url: https://beth-motley-md.pages.dev
+display_url: https://beth-motley-md.pages.dev
 
 collections:
   - name: articles
