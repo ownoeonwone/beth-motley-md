@@ -53,6 +53,7 @@ const faqField = {
 export default defineConfig({
   branch:
     process.env.GITHUB_BRANCH ||
+    process.env.CF_PAGES_BRANCH ||
     process.env.VERCEL_GIT_COMMIT_REF ||
     process.env.HEAD ||
     "main",
