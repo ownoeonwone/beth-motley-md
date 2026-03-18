@@ -15,6 +15,7 @@ This guide explains how to update and maintain the site without a developer.
 | Update navigation | Edit `navLinks` in `src/components/Header.astro` |
 | Update footer links | Edit `footerLinks` in `src/components/Footer.astro` |
 | Change form endpoint | Update `PUBLIC_FORM_ENDPOINT` in `.env` |
+| Use the CMS | Go to `bethmotleymd.com/admin` and log in with GitHub |
 | Deploy | Push to GitHub → auto-deploys to Vercel/Cloudflare |
 
 ---
@@ -218,3 +219,58 @@ src/
 5. **Update credentials**: Edit `src/components/CredentialBar.astro`
 
 All changes go live automatically after pushing to GitHub.
+
+---
+
+## Content Management System (Decap CMS)
+
+The site includes a browser-based CMS at `/admin` that makes it easy to create and edit articles and media appearances without touching code.
+
+### Accessing the CMS
+
+1. Go to `https://www.bethmotleymd.com/admin`
+2. Log in with your GitHub account
+3. You'll see collections for **Articles** and **Media Appearances**
+4. Create, edit, or delete entries using the visual editor
+5. Changes are saved as commits to GitHub and auto-deploy
+
+### Setting Up GitHub OAuth (Required Once)
+
+For the CMS login to work, you need a GitHub OAuth app. The easiest approach:
+
+**Option A: Use Decap's free OAuth proxy (quickest)**
+
+1. Open `public/admin/config.yml`
+2. Uncomment the line: `base_url: https://decap-oauth.netlify.app`
+3. Commit and push — the CMS login will work immediately
+
+**Option B: Cloudflare Workers OAuth (more control)**
+
+1. Create a GitHub OAuth App at `github.com/settings/developers`:
+   - Application name: `Beth Motley CMS`
+   - Homepage URL: `https://www.bethmotleymd.com`
+   - Authorization callback URL: `https://www.bethmotleymd.com/api/auth/callback`
+2. Note the **Client ID** and **Client Secret**
+3. Deploy an OAuth provider (e.g. [decap-cms-github-backend](https://github.com/decaporg/decap-cms-github-backend)) as a Cloudflare Worker
+4. Update `public/admin/config.yml` with the Worker URL as `base_url`
+
+### Using the CMS
+
+- **Articles**: Click "Articles" → "New Article". Fill in title, description, date, tags, and write the body in the Markdown editor. Click "Publish" when ready.
+- **Media Appearances**: Click "Media Appearances" → "New Media Appearance". Select the type (podcast, video, article, press), fill in the details, and publish.
+- **Drafts**: Use the editorial workflow — save as "Draft", move to "In Review", then "Ready" to publish.
+- **Images**: Upload images directly through the CMS. They are stored in `public/images/uploads/`.
+
+### Local Testing
+
+To test the CMS locally without GitHub auth, you can use the local backend:
+
+1. Add to the top of `public/admin/config.yml`:
+   ```yaml
+   local_backend: true
+   ```
+2. In a separate terminal, run: `npx decap-server`
+3. Start the dev server: `npm run dev`
+4. Visit `http://localhost:4321/admin`
+
+Remove `local_backend: true` before pushing to production.
