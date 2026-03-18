@@ -2,10 +2,8 @@ backend:
   name: github
   repo: ownoeonwone/beth-motley-md
   branch: main
-  # For Cloudflare Pages OAuth, see setup instructions below.
-  # Option A: Use Decap's free OAuth proxy (easiest to start):
-  base_url: https://decap-oauth.netlify.app
-  # Option B: Self-host an OAuth app on Cloudflare Workers (see MAINTENANCE.md)
+  auth_type: pkce
+  app_id: Ov23lilDQySNQ9ItALyc
 
 # Store uploaded images in public/images/uploads
 media_folder: public/images/uploads
