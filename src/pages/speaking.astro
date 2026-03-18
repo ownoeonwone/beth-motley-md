@@ -21,16 +21,27 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
     </div>
   </Hero>
 
-  <!-- Speaking photo -->
+  <!-- ACLM 2019 Keynote Highlight -->
   <section class="bg-white py-12 md:py-16">
     <div class="container-page max-w-5xl">
-      <div class="rounded-2xl overflow-hidden shadow-lg">
+      <div class="rounded-2xl overflow-hidden shadow-lg mb-8">
         <img
           src="/images/speaking/aclm-2019-podium.png"
           alt="Dr. Motley presenting at the podium at the American College of Lifestyle Medicine 2019 conference"
           class="w-full h-auto"
           loading="eager"
         />
+      </div>
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="badge mb-4 inline-block">Keynote Highlight</span>
+        <h2 class="text-h2 font-serif text-brand-900 mb-3">ACLM National Conference 2019</h2>
+        <p class="text-body-lg text-neutral-600 mb-2">Orlando, FL</p>
+        <p class="text-body-lg text-neutral-700 font-medium italic mb-2">
+          "How Providers Can Integrate Lifestyle Medicine into Their Existing Practice"
+        </p>
+        <p class="text-body text-neutral-500">
+          A standing-ovation keynote on practical tools for bringing lifestyle medicine into any clinical setting — without building a separate practice from scratch.
+        </p>
       </div>
     </div>
   </section>
@@ -99,67 +110,145 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- Testimonials from ACLM 2019 -->
   <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
-        title="What People Are Saying"
-        subtitle="Feedback from medical professionals and community members"
+        title="What Attendees Are Saying"
+        subtitle="Feedback from the ACLM 2019 National Conference keynote and other events"
       />
-      <div class="mb-8">
-        <h3 class="text-body font-semibold text-brand-600 uppercase tracking-wide text-center mb-6">From Medical Professionals</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <TestimonialCard
-            quote="Fantastic! This is what I was interested in when I started wanting to get into medicine and I want to grow my practice with this basis."
-            name="Conference Attendee"
-            role="Medical Professional"
-          />
-          <TestimonialCard
-            quote="Excellent choice for keynote speaker! Her excitement was infectious for the topic of lifestyle medicine. I appreciated the resources shared."
-            name="Conference Attendee"
-            role="Medical Professional"
-          />
-          <TestimonialCard
-            quote="Engaging speaker. Loved getting the resources and recommendations. Seemed like a good presentation for the wide spectrum of familiarity with lifestyle medicine in the audience."
-            name="Conference Attendee"
-            role="Medical Professional"
-          />
-          <TestimonialCard
-            quote="I cannot thank you enough for the 'Provider Tools for Implementing Lifestyle Medicine in Clinical Practice' talk you gave at ACLM last year. You gave me everything I needed to get started."
-            name="ACLM Attendee"
-            role="Medical Professional"
-          />
+
+      <!-- Headline quotes -->
+      <div class="max-w-3xl mx-auto mb-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div class="card bg-brand-50/60 border-brand-100">
+            <p class="text-h3 font-serif text-brand-800 italic">"Best of the whole conference."</p>
+          </div>
+          <div class="card bg-brand-50/60 border-brand-100">
+            <p class="text-h3 font-serif text-brand-800 italic">"Outstanding!!!"</p>
+            <p class="text-small text-neutral-500 mt-2">(Standing ovation.)</p>
+          </div>
+          <div class="card bg-brand-50/60 border-brand-100">
+            <p class="text-h3 font-serif text-brand-800 italic">"What a dynamo!!!"</p>
+          </div>
         </div>
       </div>
-      <div>
-        <h3 class="text-body font-semibold text-brand-600 uppercase tracking-wide text-center mb-6">From Community Members</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <TestimonialCard
-            quote="Approachable, practical, and excellent at simplifying complex topics into something anyone can understand."
-            name="Community Member"
-            role="Talk Attendee"
-          />
-        </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+        <TestimonialCard
+          quote="This was hands down the most useful presentation I attended. Thank you for this one!"
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="Excellent presentation. Practical, energetic, inspiring. Very impressive, especially for a young physician."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="The most engaging, practical presentation of the entire conference. So much information packed into this presentation! Specific and targeted to patient contact. Kudos."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="So great to hear from a family doctor in solo practice utilizing resources from around her, rather than hearing from a team-based lifestyle medicine practice. This was great to get us headed in the right direction."
+          name="ACLM 2019 Attendee"
+          role="Family Physician"
+        />
+        <TestimonialCard
+          quote="Fantastic! So helpful. The Google Drive may be the most helpful tool I take away from the conference. Very practical."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="She is an amazing presenter. Very informative and useful. Will implement in my practice."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="Excellent engaging speaker who offered real advice on how to incorporate LM into practice. Practical advice on coding. Love that she has given us her own resources for free! Impressed that she has mastered this area so early in her career."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="This was fantastic and very helpful. I hope to incorporate info from this session into my practice as a future NP."
+          name="ACLM 2019 Attendee"
+          role="Nurse Practitioner Student"
+        />
+        <TestimonialCard
+          quote="Absolutely by far my favorite session. She needs to come to every conference — allow more time!"
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
+        <TestimonialCard
+          quote="Best speaker of the conference. What is your secret to unlimited energy? You just radiate energy."
+          name="ACLM 2019 Attendee"
+          role="Medical Professional"
+        />
       </div>
     </div>
   </section>
 
-  <!-- Media Reel Placeholder -->
+  <!-- Speaking Reel -->
   <section class="section-padding bg-brand-50/40">
-    <div class="container-page max-w-4xl">
+    <div class="container-page max-w-5xl">
       <SectionHeading
-        title="Speaking Reel"
-        subtitle="See Dr. Motley in action"
+        title="See Dr. Motley in Action"
+        subtitle="Selected talks and interviews"
       />
-      <div class="aspect-video rounded-2xl overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/5O79xow0l8g"
-          title="Beth Motley, MD: Heart Disease is a Foodborne Illness"
-          class="w-full h-full"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <div class="space-y-10">
+        <!-- Primary video - DoD Talk -->
+        <div>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/Ts1LKLXqvCo"
+              title="Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — US Department of Defense"
+              class="w-full h-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="text-body text-neutral-600 mt-3 text-center">
+            <strong>Preventing and Reversing Chronic Disease with Plant-Powered Nutrition</strong> — CME presentation for the US Department of Defense
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 11 Reasons video -->
+          <div>
+            <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/SogG2FtVd1U"
+                title="11 Reasons Why People Struggle on a Plant-Based Diet"
+                class="w-full h-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="text-body text-neutral-600 mt-3 text-center">
+              <strong>11 Reasons Why People Struggle on a Plant-Based Diet</strong>
+            </p>
+          </div>
+
+          <!-- Beth's personal favorite -->
+          <div>
+            <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/39y6CHHCTxM"
+                title="Beth Motley, MD — Personal Favorite Talk"
+                class="w-full h-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="text-body text-neutral-600 mt-3 text-center">
+              <strong>Dr. Motley on Lifestyle Medicine</strong>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

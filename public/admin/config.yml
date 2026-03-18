@@ -2,8 +2,6 @@ backend:
   name: github
   repo: ownoeonwone/beth-motley-md
   branch: main
-  auth_type: pkce
-  app_id: Ov23lilDQySNQ9ItALyc
 
 # Store uploaded images in public/images/uploads
 media_folder: public/images/uploads
