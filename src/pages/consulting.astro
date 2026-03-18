@@ -3,20 +3,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import ContactForm from '../components/ContactForm.tsx';
+import consultingData from '../../content/pages/consulting.json';
+
+const d = consultingData;
+
+const whoIHelpIcons = [
+  `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+  </svg>`,
+  `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+  </svg>`,
+  `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>`,
+];
+
+const whoIHelpColors = [
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+  'bg-brand-100 text-brand-700',
+];
+
+const providerToolIcons = [
+  `<svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg>`,
+  `<svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+  </svg>`,
+  `<svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+  </svg>`,
+];
 ---
 
 <BaseLayout
-  title="Consulting | Beth Motley, MD"
-  description="Dr. Motley helps healthcare systems, private practices, and corporations implement evidence-based lifestyle medicine programs. Group visit design, provider training, and more."
+  title={d.seo.title}
+  description={d.seo.description}
 >
   <!-- Hero -->
   <Hero
-    badge="Consulting"
-    headline="Bring Lifestyle Medicine to Your Organization"
-    subheadline="Dr. Motley partners with healthcare systems, private practices, and employers to design and implement evidence-based lifestyle medicine programs that improve outcomes and reduce costs."
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
   >
     <div class="mt-8">
-      <a href="#consulting-form" class="btn-primary">Schedule a Discovery Call</a>
+      <a href={d.hero.ctaHref} class="btn-primary">{d.hero.ctaText}</a>
     </div>
   </Hero>
 
@@ -24,49 +57,21 @@ import ContactForm from '../components/ContactForm.tsx';
   <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
-        title="Who I Help"
-        subtitle="Consulting services for organizations ready to invest in lifestyle medicine"
+        title={d.whoIHelp.title}
+        subtitle={d.whoIHelp.subtitle}
       />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="card text-center border border-brand-100">
-          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
+        {d.whoIHelp.items.map((item, i) => (
+          <div class="card text-center border border-brand-100">
+            <div class={`w-14 h-14 rounded-full ${whoIHelpColors[i]} flex items-center justify-center mx-auto mb-4`}>
+              <Fragment set:html={whoIHelpIcons[i]} />
+            </div>
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{item.title}</h3>
+            <p class="text-body text-neutral-600 leading-relaxed">
+              {item.description}
+            </p>
           </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Healthcare Systems & Hospitals</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Implement lifestyle medicine programs within your health system. From pilot programs to
-            enterprise-wide rollouts, Dr. Motley helps you build group visit models that improve
-            patient outcomes, increase engagement, and generate sustainable revenue.
-          </p>
-        </div>
-        <div class="card text-center border border-brand-100">
-          <div class="w-14 h-14 rounded-full bg-lime-100 text-lime-700 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Private Practices</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Add group medical visits and lifestyle medicine services to your existing practice.
-            Dr. Motley provides the curriculum, workflow design, and training you need to launch
-            confidently — without starting from scratch.
-          </p>
-        </div>
-        <div class="card text-center border border-brand-100">
-          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Corporate Wellness</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Move beyond step-count challenges and lunch-and-learns. Dr. Motley helps employers
-            build evidence-based wellness programs that measurably improve employee health,
-            reduce healthcare spending, and boost productivity.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -75,37 +80,12 @@ import ContactForm from '../components/ContactForm.tsx';
   <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
-        title="What I Offer"
-        subtitle="Practical, hands-on consulting built on real clinical experience"
+        title={d.whatIOffer.title}
+        subtitle={d.whatIOffer.subtitle}
       />
       <div class="max-w-3xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            {
-              title: 'Program Design & Curriculum Development',
-              description: 'Turnkey curriculum for group medical visits, diabetes reversal programs, and lifestyle medicine interventions — built on evidence and tested in practice.',
-            },
-            {
-              title: 'Group Visit Implementation & Training',
-              description: 'Step-by-step guidance on launching shared medical appointments in your setting, including scheduling, billing, documentation, and group facilitation.',
-            },
-            {
-              title: 'Provider Education & CME',
-              description: 'Training for physicians, advanced practice providers, and care teams on lifestyle medicine principles, motivational interviewing, and group facilitation.',
-            },
-            {
-              title: 'Workflow & Operations Consulting',
-              description: 'Optimize your clinical workflows, EHR templates, patient enrollment processes, and team roles to make lifestyle medicine sustainable within your organization.',
-            },
-            {
-              title: 'Remote & In-Person Options',
-              description: 'Consulting is available virtually or on-site depending on your needs. Many engagements combine both for maximum flexibility and impact.',
-            },
-            {
-              title: 'Outcomes Measurement & Reporting',
-              description: 'Establish the metrics that matter, build data collection into your workflows, and create reporting frameworks that demonstrate program value to leadership.',
-            },
-          ].map((service) => (
+          {d.whatIOffer.items.map((service) => (
             <div class="card">
               <h3 class="text-body font-semibold text-brand-900 mb-2">{service.title}</h3>
               <p class="text-small text-neutral-600 leading-relaxed">{service.description}</p>
@@ -120,43 +100,21 @@ import ContactForm from '../components/ContactForm.tsx';
   <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
-        title="How It Works"
-        subtitle="A straightforward process from first conversation to implementation"
+        title={d.howItWorks.title}
+        subtitle={d.howItWorks.subtitle}
       />
       <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
-            1
+        {d.howItWorks.steps.map((step, i) => (
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
+              {i + 1}
+            </div>
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{step.title}</h3>
+            <p class="text-body text-neutral-600 leading-relaxed">
+              {step.description}
+            </p>
           </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Discovery Call</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            A complimentary 30-minute conversation to understand your organization, your goals,
-            and the challenges you are trying to solve. No pitch, no pressure — just a candid
-            discussion about whether working together makes sense.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
-            2
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Custom Proposal</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Based on our conversation, Dr. Motley prepares a detailed proposal outlining
-            the scope of work, timeline, deliverables, and investment. Every engagement is
-            tailored to your specific situation — there are no off-the-shelf packages.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-brand-700 text-white flex items-center justify-center mx-auto mb-5 text-h3 font-serif">
-            3
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Implementation & Support</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Once we agree on a plan, Dr. Motley works alongside your team to bring it to life.
-            This is not a report that sits on a shelf — it is hands-on partnership with ongoing
-            support until your program is running confidently.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -165,39 +123,21 @@ import ContactForm from '../components/ContactForm.tsx';
   <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
-        title="Free Provider Tools"
-        subtitle="Resources for physicians and healthcare professionals implementing lifestyle medicine"
-        tag="For Providers"
+        title={d.providerTools.title}
+        subtitle={d.providerTools.subtitle}
+        tag={d.providerTools.tag}
       />
       <div class="max-w-3xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <a href="https://drive.google.com/drive/u/0/folders/149MSQkGk_QkDZ3RS28T-QmHXiC7sRTDE" target="_blank" rel="noopener" class="card text-center hover:border-brand-300 transition-colors group">
-            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
-              <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-              </svg>
-            </div>
-            <h3 class="text-h4 font-serif text-brand-900 mb-2">Handouts & Teaching Aids</h3>
-            <p class="text-small text-neutral-600">Patient handouts, teaching materials, and clinical tools for incorporating lifestyle medicine into your practice.</p>
-          </a>
-          <a href="https://vimeo.com/ondemand/aclm2019/379068602" target="_blank" rel="noopener" class="card text-center hover:border-brand-300 transition-colors group">
-            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
-              <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-              </svg>
-            </div>
-            <h3 class="text-h4 font-serif text-brand-900 mb-2">Implementation Talk</h3>
-            <p class="text-small text-neutral-600">"Provider Tools for Implementing Lifestyle Medicine in Clinical Practice" — comprehensive ACLM conference presentation.</p>
-          </a>
-          <a href="https://vimeo.com/564252346" target="_blank" rel="noopener" class="card text-center hover:border-brand-300 transition-colors group">
-            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
-              <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-              </svg>
-            </div>
-            <h3 class="text-h4 font-serif text-brand-900 mb-2">ACLM Interview</h3>
-            <p class="text-small text-neutral-600">Dr. Motley's interview with the American College of Lifestyle Medicine on her career path and guidance for aspiring LM physicians.</p>
-          </a>
+          {d.providerTools.items.map((item, i) => (
+            <a href={item.href} target="_blank" rel="noopener" class="card text-center hover:border-brand-300 transition-colors group">
+              <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
+                <Fragment set:html={providerToolIcons[i]} />
+              </div>
+              <h3 class="text-h4 font-serif text-brand-900 mb-2">{item.title}</h3>
+              <p class="text-small text-neutral-600">{item.description}</p>
+            </a>
+          ))}
         </div>
       </div>
     </div>
@@ -207,11 +147,11 @@ import ContactForm from '../components/ContactForm.tsx';
   <section id="consulting-form" class="section-padding bg-white">
     <div class="container-page max-w-2xl">
       <SectionHeading
-        title="Start the Conversation"
-        subtitle="Interested in bringing lifestyle medicine to your organization? Tell us about your goals and we will be in touch to schedule a discovery call."
+        title={d.contactForm.title}
+        subtitle={d.contactForm.subtitle}
       />
       <p class="text-center text-small text-neutral-500 -mt-8 mb-8">
-        Please select "Consulting inquiry" as your inquiry type below.
+        {d.contactForm.note}
       </p>
       <ContactForm client:visible />
     </div>

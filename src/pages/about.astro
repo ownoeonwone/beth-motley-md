@@ -2,68 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
+import aboutData from '../../content/pages/about.json';
 
-const timeline = [
-  {
-    years: '2006 - 2010',
-    title: 'BS Biomedical Engineering',
-    institution: 'University of Virginia',
-    description: 'Developed a foundation in systems thinking, data analysis, and evidence-based problem solving that would later shape her clinical approach.',
-  },
-  {
-    years: '2010 - 2014',
-    title: 'Doctor of Medicine',
-    institution: 'EVMS / Old Dominion University',
-    description: 'Trained in a community-oriented medical school with a strong emphasis on primary care, clinical reasoning, and patient-centered communication.',
-  },
-  {
-    years: '2014 - 2017',
-    title: 'Family Medicine Residency',
-    institution: 'Prisma Health / University of South Carolina Greenville',
-    description: 'Completed residency training in full-spectrum family medicine, building expertise across inpatient, outpatient, and procedural care.',
-  },
-  {
-    years: '2017 - Present',
-    title: 'Family & Lifestyle Medicine Physician',
-    institution: 'Prisma Health, Greenville, SC',
-    description: 'Practices both family and lifestyle medicine, integrating evidence-based behavioral interventions into primary care to help patients reverse chronic disease.',
-  },
-  {
-    years: 'Designation',
-    title: 'Fellow, American College of Lifestyle Medicine',
-    institution: 'FACLM',
-    description: 'Recognized by the ACLM for demonstrated expertise and commitment to the practice and advancement of lifestyle medicine.',
-  },
-];
+const d = aboutData;
 
-const approaches = [
-  {
-    title: 'Evidence-Based',
-    description: 'Every recommendation is grounded in peer-reviewed research and aligned with the American College of Lifestyle Medicine clinical guidelines. No fads, no guesswork — just science that has been validated in clinical trials and real-world practice.',
-    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>`,
-  },
-  {
-    title: 'Patient-Centered',
-    description: 'Dr. Motley leads shared medical appointments that combine medical care, education, and group discussion. This approach empowers patients to take ownership of their health rather than passively receiving instructions.',
-    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>`,
-  },
-  {
-    title: 'Whole-Person',
-    description: 'Rather than treating symptoms in isolation, Dr. Motley addresses the root causes of chronic disease across all six pillars of lifestyle medicine. The goal is not just better lab values, but a fundamentally healthier, more resilient life.',
-    icon: `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>`,
-  },
+const approachIcons = [
+  `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>`,
+  `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>`,
+  `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>`,
 ];
 ---
 
 <BaseLayout
-  title="About Beth Motley, MD, FACLM — Lifestyle Medicine Physician"
-  description="Learn about Dr. Motley's journey from biomedical engineering to lifestyle medicine. Board-certified family and lifestyle medicine physician in Greenville, SC."
+  title={d.seo.title}
+  description={d.seo.description}
 >
   <!-- Hero -->
   <Hero
-    badge="About Dr. Motley"
-    headline="Physician. Educator. Advocate."
-    subheadline="Combining an engineer's analytical rigor with a physician's compassion, Dr. Motley helps patients use the most powerful medicine available: the way they live."
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
   />
 
   <!-- Photo + Story -->
@@ -72,8 +30,8 @@ const approaches = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <div class="aspect-[3/4] rounded-2xl overflow-hidden">
           <img
-            src="/images/headshots/beth-motley-blue-top.jpg"
-            alt="Beth Motley, MD, FACLM — Lifestyle Medicine Physician"
+            src={d.story.image}
+            alt={d.story.imageAlt}
             class="w-full h-full object-cover"
             loading="eager"
           />
@@ -81,22 +39,15 @@ const approaches = [
 
         <!-- Story -->
         <div class="prose-brand">
-          <h2 class="text-h2 font-serif text-brand-900 mb-6">From Engineering to Medicine</h2>
-          <p class="text-body-lg text-neutral-700 mb-6">
-            Dr. Motley did not take the typical path to medicine. She began her career studying biomedical engineering at the University of Virginia, where she learned to approach complex systems with precision, data, and a relentless focus on outcomes. That analytical foundation would become one of her greatest strengths as a physician.
-          </p>
-          <p class="text-body text-neutral-600 mb-6">
-            During her medical training at EVMS / Old Dominion University, she noticed a pattern that troubled her: patients with type 2 diabetes, hypertension, and heart disease were being managed with escalating medications, but the underlying causes — poor nutrition, inactivity, chronic stress, inadequate sleep — were rarely addressed in any meaningful way. The standard model treated symptoms. She wanted to treat the source.
-          </p>
-          <p class="text-body text-neutral-600 mb-6">
-            That realization led her to lifestyle medicine, a rapidly growing medical specialty built on a straightforward premise: the leading causes of chronic disease are largely driven by lifestyle, and they can be reversed by changing it. The evidence was compelling, the outcomes were measurable, and the approach aligned perfectly with her engineering instincts — identify the root cause, intervene at the source, and measure the results.
-          </p>
-          <p class="text-body text-neutral-600 mb-6">
-            After completing her family medicine residency at Prisma Health in Greenville, SC, Dr. Motley built a practice that integrates traditional primary care with intensive lifestyle interventions. Her Diabetes Reversal Shared Medical Appointments bring together small groups of patients who share a common diagnosis and walk through a structured curriculum together, combining medical care, education, and group discussion in each session.
-          </p>
-          <p class="text-body text-neutral-600">
-            The results have been striking. Patients in her program routinely lower their A1C, reduce or eliminate medications, lose weight, and report dramatic improvements in energy and quality of life. She is a Fellow of the American College of Lifestyle Medicine and is committed to advancing the field through clinical practice, medical education, and public speaking.
-          </p>
+          <h2 class="text-h2 font-serif text-brand-900 mb-6">{d.story.title}</h2>
+          {d.story.paragraphs.map((paragraph, i) => (
+            <p class:list={[
+              i === 0 ? 'text-body-lg text-neutral-700' : 'text-body text-neutral-600',
+              i < d.story.paragraphs.length - 1 ? 'mb-6' : '',
+            ]}>
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </div>
@@ -106,9 +57,9 @@ const approaches = [
   <section class="section-padding bg-brand-50/50">
     <div class="container-page">
       <SectionHeading
-        title="Education & Credentials"
-        subtitle="A rigorous academic foundation paired with advanced training in lifestyle medicine."
-        tag="Background"
+        title={d.credentials.title}
+        subtitle={d.credentials.subtitle}
+        tag={d.credentials.tag}
       />
       <div class="max-w-3xl mx-auto">
         <div class="relative">
@@ -116,7 +67,7 @@ const approaches = [
           <div class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-brand-200"></div>
 
           <div class="space-y-10">
-            {timeline.map((item) => (
+            {d.credentials.timeline.map((item) => (
               <div class="relative pl-12 md:pl-20">
                 <!-- Timeline dot -->
                 <div class="absolute left-2.5 md:left-6.5 top-1.5 w-3 h-3 rounded-full bg-brand-500 ring-4 ring-brand-50"></div>
@@ -138,18 +89,18 @@ const approaches = [
   <section class="section-padding">
     <div class="container-page">
       <SectionHeading
-        title="My Approach"
-        subtitle="Three principles guide every patient interaction, program design, and clinical decision."
-        tag="Philosophy"
+        title={d.approach.title}
+        subtitle={d.approach.subtitle}
+        tag={d.approach.tag}
       />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {approaches.map((approach) => (
+        {d.approach.items.map((item, i) => (
           <div class="card text-center hover:border-brand-200 transition-colors">
             <div class="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-5">
-              <Fragment set:html={approach.icon} />
+              <Fragment set:html={approachIcons[i]} />
             </div>
-            <h3 class="text-h3 font-serif text-brand-900 mb-3">{approach.title}</h3>
-            <p class="text-body text-neutral-600">{approach.description}</p>
+            <h3 class="text-h3 font-serif text-brand-900 mb-3">{item.title}</h3>
+            <p class="text-body text-neutral-600">{item.description}</p>
           </div>
         ))}
       </div>
@@ -160,29 +111,29 @@ const approaches = [
   <section class="bg-brand-50 section-padding">
     <div class="container-page">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="text-h2 font-serif text-brand-900 mb-4">Ready to Get Started?</h2>
+        <h2 class="text-h2 font-serif text-brand-900 mb-4">{d.cta.title}</h2>
         <p class="text-body-lg text-neutral-600">
-          Whether you are looking to reverse a chronic condition or bring evidence-based health education to your audience, Dr. Motley is here to help.
+          {d.cta.description}
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-        <a href="/programs/diabetes-reversal" class="card text-center hover:border-brand-300 transition-colors group">
+        <a href={d.cta.links[0].href} class="card text-center hover:border-brand-300 transition-colors group">
           <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
             <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
           </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Explore Programs</h3>
-          <p class="text-small text-neutral-600">Learn about the Diabetes Reversal and Executive MD programs.</p>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">{d.cta.links[0].title}</h3>
+          <p class="text-small text-neutral-600">{d.cta.links[0].description}</p>
         </a>
-        <a href="/speaking" class="card text-center hover:border-brand-300 transition-colors group">
+        <a href={d.cta.links[1].href} class="card text-center hover:border-brand-300 transition-colors group">
           <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
             <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
             </svg>
           </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Book Dr. Motley to Speak</h3>
-          <p class="text-small text-neutral-600">Invite Dr. Motley to your event, podcast, or conference.</p>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">{d.cta.links[1].title}</h3>
+          <p class="text-small text-neutral-600">{d.cta.links[1].description}</p>
         </a>
       </div>
     </div>

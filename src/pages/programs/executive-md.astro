@@ -4,62 +4,68 @@ import Hero from '../../components/Hero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
 import ExecutiveForm from '../../components/ExecutiveForm.tsx';
+import execData from '../../../content/pages/executive-md.json';
 
-const faqItems = [
-  {
-    question: 'How is the Executive MD Program priced?',
-    answer: 'The Executive MD Program operates on a membership model with an annual fee that covers your comprehensive assessment, quarterly reviews, direct physician access, and all included services. Because this is a premium, high-touch program, it is not billed through insurance. We provide a detailed investment overview during your confidential consultation.',
-  },
-  {
-    question: 'How much time does this require?',
-    answer: 'Your initial comprehensive assessment takes approximately two to three hours. After that, quarterly reviews are about 60 minutes each. Between visits, communication with Dr. Motley happens on your schedule via text or email. The program is designed to fit into a demanding professional life, not add to it.',
-  },
-  {
-    question: 'How is this different from concierge medicine?',
-    answer: 'Most concierge medicine practices offer faster access to the same reactive, symptom-based care. The Executive MD Program is fundamentally different: it is proactive, prevention-focused, and built on the science of lifestyle medicine. Dr. Motley does not just manage problems as they arise — she identifies risks early, optimizes your health at every level, and creates a personalized protocol to keep you performing at your best for decades.',
-  },
-  {
-    question: 'Is my information kept confidential?',
-    answer: 'Absolutely. All health information is protected under HIPAA, and the Executive MD Program adds an additional layer of discretion. Your records are maintained separately, communication channels are private, and we never share your participation in the program with anyone — including employers — without your explicit consent.',
-  },
-  {
-    question: 'How do I get started?',
-    answer: 'Complete the inquiry form below and a member of Dr. Motley\'s team will reach out within 48 hours to schedule a brief, confidential phone consultation. During that call, we will learn about your goals, answer your questions, and determine whether the program is the right fit. There is no obligation.',
-  },
+const d = execData;
+
+const icons = [
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>`,
+];
+
+const iconColors = [
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
 ];
 ---
 
 <BaseLayout
-  title="Executive MD Program | Beth Motley, MD"
-  description="High-touch, physician-led health optimization for executives and leaders. Comprehensive assessment, personalized lifestyle protocol, and direct access to Dr. Motley."
+  title={d.seo.title}
+  description={d.seo.description}
 >
   <!-- Hero -->
   <Hero
-    badge="Coming Soon"
-    headline="Executive MD Program"
-    subheadline="High-touch, physician-led health optimization for leaders who refuse to leave their most important asset to chance."
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
     bgColor="bg-gradient-to-b from-brand-950 via-brand-900 to-brand-800"
     dark
   >
-    <p class="mt-4 text-small text-brand-300 uppercase tracking-widest font-medium">By Application Only</p>
+    <p class="mt-4 text-small text-brand-300 uppercase tracking-widest font-medium">{d.hero.note}</p>
   </Hero>
 
   <!-- The Problem -->
   <section class="section-padding bg-white">
     <div class="container-page max-w-3xl text-center">
       <SectionHeading
-        title="Your Health Deserves the Same Attention as Your Business"
+        title={d.problem.title}
       />
       <div class="prose-brand max-w-2xl mx-auto">
         <p class="text-body-lg text-neutral-700 leading-relaxed">
-          You have world-class advisors for your finances, your legal strategy, and your business operations.
-          But when it comes to your health — the foundation everything else depends on — most high-performers
-          settle for annual physicals that catch problems only after they have already started.
+          {d.problem.intro}
         </p>
         <p class="text-body text-neutral-600 mt-4 leading-relaxed">
-          The Executive MD Program is built for leaders who want more than reactive care. It is a proactive,
-          evidence-based partnership with a physician who understands the unique demands of executive life
-          and has the expertise to optimize your health for sustained performance, energy, and longevity.
+          {d.problem.body}
         </p>
       </div>
     </div>
@@ -69,82 +75,21 @@ const faqItems = [
   <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
-        title="What's Included"
-        subtitle="A comprehensive, physician-led health optimization experience"
+        title={d.included.title}
+        subtitle={d.included.subtitle}
       />
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-            </svg>
+        {d.included.items.map((item, i) => (
+          <div class="card border border-brand-100">
+            <div class={`w-12 h-12 rounded-lg ${iconColors[i]} flex items-center justify-center mb-4`}>
+              <Fragment set:html={icons[i]} />
+            </div>
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{item.title}</h3>
+            <p class="text-body text-neutral-600 leading-relaxed">
+              {item.description}
+            </p>
           </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Comprehensive Health Assessment</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Advanced lab panels, cardiovascular screening, body composition analysis, and a thorough
-            lifestyle evaluation that goes far beyond a standard physical.
-          </p>
-        </div>
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-lime-100 text-lime-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Personalized Lifestyle Protocol</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            A tailored plan covering nutrition, exercise, sleep, and stress management — designed
-            around your schedule, preferences, and goals rather than a one-size-fits-all template.
-          </p>
-        </div>
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Direct Physician Access</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Reach Dr. Motley directly via text or email for questions, adjustments, or guidance
-            between visits. No phone trees, no waiting rooms, no gatekeepers.
-          </p>
-        </div>
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-lime-100 text-lime-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Quarterly Health Reviews</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Dedicated, unhurried visits every quarter to review your progress, update labs, refine
-            your protocol, and ensure you stay on the optimal trajectory.
-          </p>
-        </div>
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Executive Health Reports</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Clear, detailed reporting that translates your data into actionable insights. Understand
-            exactly where you stand, what is improving, and what to focus on next.
-          </p>
-        </div>
-        <div class="card border border-brand-100">
-          <div class="w-12 h-12 rounded-lg bg-lime-100 text-lime-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Priority Scheduling</h3>
-          <p class="text-body text-neutral-600 leading-relaxed">
-            Same-week appointments when you need them. Your time is valuable, and the Executive MD
-            Program is designed to respect it at every step.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -153,25 +98,15 @@ const faqItems = [
   <section class="section-padding bg-white">
     <div class="container-page max-w-3xl">
       <SectionHeading
-        title="Who This Is For"
-        subtitle="The Executive MD Program is designed for a specific kind of patient"
+        title={d.whoThisIsFor.title}
+        subtitle={d.whoThisIsFor.subtitle}
       />
       <div class="prose-brand max-w-2xl mx-auto">
-        <p class="text-body-lg text-neutral-700 leading-relaxed">
-          This program is built for C-suite executives, business owners, physicians, attorneys, and
-          other high-performing professionals who recognize that sustained success requires sustained health.
-        </p>
-        <p class="text-body text-neutral-600 mt-4 leading-relaxed">
-          You may be managing the early signs of metabolic disease, navigating the health impacts of
-          chronic stress, or simply unwilling to accept the standard approach of waiting until something
-          breaks before paying attention. You want a physician who will invest the time to understand
-          your life, your goals, and your risks — and build a plan that keeps you performing at your
-          best for decades.
-        </p>
-        <p class="text-body text-neutral-600 mt-4 leading-relaxed">
-          The Executive MD Program accepts a limited number of patients to ensure every member
-          receives the attention and access they deserve.
-        </p>
+        {d.whoThisIsFor.paragraphs.map((text, i) => (
+          <p class={`${i === 0 ? 'text-body-lg text-neutral-700' : 'text-body text-neutral-600 mt-4'} leading-relaxed`}>
+            {text}
+          </p>
+        ))}
       </div>
     </div>
   </section>
@@ -180,10 +115,10 @@ const faqItems = [
   <section class="section-padding bg-brand-50/40">
     <div class="container-page max-w-3xl">
       <SectionHeading
-        title="Frequently Asked Questions"
-        subtitle="What to know before applying"
+        title={d.faq.title}
+        subtitle={d.faq.subtitle}
       />
-      <FAQ items={faqItems} />
+      <FAQ items={d.faq.items} />
     </div>
   </section>
 
@@ -192,8 +127,8 @@ const faqItems = [
     <div class="container-page max-w-2xl">
       <div class="border border-brand-200 rounded-2xl bg-brand-50/30 p-8 md:p-12">
         <SectionHeading
-          title="Request a Confidential Consultation"
-          subtitle="Complete the form below and a member of Dr. Motley's team will reach out within 48 hours to schedule a private phone consultation."
+          title={d.ctaForm.title}
+          subtitle={d.ctaForm.subtitle}
         />
         <ExecutiveForm client:visible />
       </div>

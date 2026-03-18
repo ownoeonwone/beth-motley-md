@@ -1,0 +1,106 @@
+{
+  "seo": {
+    "title": "Consulting | Beth Motley, MD",
+    "description": "Dr. Motley helps healthcare systems, private practices, and corporations implement evidence-based lifestyle medicine programs. Group visit design, provider training, and more."
+  },
+  "hero": {
+    "badge": "Consulting",
+    "headline": "Bring Lifestyle Medicine to Your Organization",
+    "subheadline": "Dr. Motley partners with healthcare systems, private practices, and employers to design and implement evidence-based lifestyle medicine programs that improve outcomes and reduce costs.",
+    "ctaText": "Schedule a Discovery Call",
+    "ctaHref": "#consulting-form"
+  },
+  "whoIHelp": {
+    "title": "Who I Help",
+    "subtitle": "Consulting services for organizations ready to invest in lifestyle medicine",
+    "items": [
+      {
+        "title": "Healthcare Systems & Hospitals",
+        "description": "Implement lifestyle medicine programs within your health system. From pilot programs to enterprise-wide rollouts, Dr. Motley helps you build group visit models that improve patient outcomes, increase engagement, and generate sustainable revenue."
+      },
+      {
+        "title": "Private Practices",
+        "description": "Add group medical visits and lifestyle medicine services to your existing practice. Dr. Motley provides the curriculum, workflow design, and training you need to launch confidently — without starting from scratch."
+      },
+      {
+        "title": "Corporate Wellness",
+        "description": "Move beyond step-count challenges and lunch-and-learns. Dr. Motley helps employers build evidence-based wellness programs that measurably improve employee health, reduce healthcare spending, and boost productivity."
+      }
+    ]
+  },
+  "whatIOffer": {
+    "title": "What I Offer",
+    "subtitle": "Practical, hands-on consulting built on real clinical experience",
+    "items": [
+      {
+        "title": "Program Design & Curriculum Development",
+        "description": "Turnkey curriculum for group medical visits, diabetes reversal programs, and lifestyle medicine interventions — built on evidence and tested in practice."
+      },
+      {
+        "title": "Group Visit Implementation & Training",
+        "description": "Step-by-step guidance on launching shared medical appointments in your setting, including scheduling, billing, documentation, and group facilitation."
+      },
+      {
+        "title": "Provider Education & CME",
+        "description": "Training for physicians, advanced practice providers, and care teams on lifestyle medicine principles, motivational interviewing, and group facilitation."
+      },
+      {
+        "title": "Workflow & Operations Consulting",
+        "description": "Optimize your clinical workflows, EHR templates, patient enrollment processes, and team roles to make lifestyle medicine sustainable within your organization."
+      },
+      {
+        "title": "Remote & In-Person Options",
+        "description": "Consulting is available virtually or on-site depending on your needs. Many engagements combine both for maximum flexibility and impact."
+      },
+      {
+        "title": "Outcomes Measurement & Reporting",
+        "description": "Establish the metrics that matter, build data collection into your workflows, and create reporting frameworks that demonstrate program value to leadership."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "A straightforward process from first conversation to implementation",
+    "steps": [
+      {
+        "title": "Discovery Call",
+        "description": "A complimentary 30-minute conversation to understand your organization, your goals, and the challenges you are trying to solve. No pitch, no pressure — just a candid discussion about whether working together makes sense."
+      },
+      {
+        "title": "Custom Proposal",
+        "description": "Based on our conversation, Dr. Motley prepares a detailed proposal outlining the scope of work, timeline, deliverables, and investment. Every engagement is tailored to your specific situation — there are no off-the-shelf packages."
+      },
+      {
+        "title": "Implementation & Support",
+        "description": "Once we agree on a plan, Dr. Motley works alongside your team to bring it to life. This is not a report that sits on a shelf — it is hands-on partnership with ongoing support until your program is running confidently."
+      }
+    ]
+  },
+  "providerTools": {
+    "tag": "For Providers",
+    "title": "Free Provider Tools",
+    "subtitle": "Resources for physicians and healthcare professionals implementing lifestyle medicine",
+    "items": [
+      {
+        "title": "Handouts & Teaching Aids",
+        "description": "Patient handouts, teaching materials, and clinical tools for incorporating lifestyle medicine into your practice.",
+        "href": "https://drive.google.com/drive/u/0/folders/149MSQkGk_QkDZ3RS28T-QmHXiC7sRTDE"
+      },
+      {
+        "title": "Implementation Talk",
+        "description": "\"Provider Tools for Implementing Lifestyle Medicine in Clinical Practice\" — comprehensive ACLM conference presentation.",
+        "href": "https://vimeo.com/ondemand/aclm2019/379068602"
+      },
+      {
+        "title": "ACLM Interview",
+        "description": "Dr. Motley's interview with the American College of Lifestyle Medicine on her career path and guidance for aspiring LM physicians.",
+        "href": "https://vimeo.com/564252346"
+      }
+    ]
+  },
+  "contactForm": {
+    "title": "Start the Conversation",
+    "subtitle": "Interested in bringing lifestyle medicine to your organization? Tell us about your goals and we will be in touch to schedule a discovery call.",
+    "note": "Please select \"Consulting inquiry\" as your inquiry type below."
+  }
+}

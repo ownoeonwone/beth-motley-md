@@ -4,20 +4,23 @@ import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import SpeakingForm from '../components/SpeakingForm.tsx';
+import speakingData from '../../content/pages/speaking.json';
+
+const d = speakingData;
 ---
 
 <BaseLayout
-  title="Speaking | Beth Motley, MD"
-  description="Book Dr. Motley for your next event. Engaging, evidence-based presentations on lifestyle medicine, diabetes reversal, workplace wellness, and more."
+  title={d.seo.title}
+  description={d.seo.description}
 >
   <!-- Hero -->
   <Hero
-    badge="Speaking"
-    headline="Bring Lifestyle Medicine to Your Audience"
-    subheadline="Engaging, evidence-based presentations that translate science into practical, actionable takeaways."
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
   >
     <div class="mt-8">
-      <a href="#booking-form" class="btn-primary">Book Dr. Motley to Speak</a>
+      <a href={d.hero.ctaHref} class="btn-primary">{d.hero.ctaText}</a>
     </div>
   </Hero>
 
@@ -26,21 +29,21 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
     <div class="container-page max-w-5xl">
       <div class="rounded-2xl overflow-hidden shadow-lg mb-8">
         <img
-          src="/images/speaking/aclm-2019-podium.png"
-          alt="Dr. Motley presenting at the podium at the American College of Lifestyle Medicine 2019 conference"
+          src={d.keynoteHighlight.image}
+          alt={d.keynoteHighlight.imageAlt}
           class="w-full h-auto"
           loading="eager"
         />
       </div>
       <div class="text-center max-w-3xl mx-auto">
-        <span class="badge mb-4 inline-block">Keynote Highlight</span>
-        <h2 class="text-h2 font-serif text-brand-900 mb-3">ACLM National Conference 2019</h2>
-        <p class="text-body-lg text-neutral-600 mb-2">Orlando, FL</p>
+        <span class="badge mb-4 inline-block">{d.keynoteHighlight.tag}</span>
+        <h2 class="text-h2 font-serif text-brand-900 mb-3">{d.keynoteHighlight.title}</h2>
+        <p class="text-body-lg text-neutral-600 mb-2">{d.keynoteHighlight.location}</p>
         <p class="text-body-lg text-neutral-700 font-medium italic mb-2">
-          "How Providers Can Integrate Lifestyle Medicine into Their Existing Practice"
+          "{d.keynoteHighlight.talkTitle}"
         </p>
         <p class="text-body text-neutral-500">
-          A standing-ovation keynote on practical tools for bringing lifestyle medicine into any clinical setting — without building a separate practice from scratch.
+          {d.keynoteHighlight.description}
         </p>
       </div>
     </div>
@@ -50,34 +53,18 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
-        title="Speaking Topics"
-        subtitle="Each presentation is grounded in peer-reviewed evidence and tailored to your audience"
+        title={d.topics.title}
+        subtitle={d.topics.subtitle}
       />
       <div class="max-w-3xl mx-auto mb-8">
-        <p class="text-body-lg text-neutral-600 text-center italic">My favorite topics...</p>
+        <p class="text-body-lg text-neutral-600 text-center italic">{d.topics.intro}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Provider Tools for Implementing Lifestyle Medicine in Clinical Practice</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Lifestyle Medicine: Adding Years to Life and Life to Years</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Prescribing Plants: The Role of Plant-Based Nutrition in Cardiovascular Disease</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Plant-Based Protocol for Reversing Type 2 Diabetes</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">Preventing and Reversing Chronic Disease with Lifestyle Medicine: Translating the Evidence into Practical Application in the Clinic</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">How to Raise an Adult: Promoting Healthful Eating for the Whole Family</h3>
-        </div>
-        <div class="card">
-          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Science of Sustainable Change: Rewiring Habits, Food, and Environment</h3>
-        </div>
+        {d.topics.items.map((topic) => (
+          <div class="card">
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{topic}</h3>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -86,22 +73,11 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
-        title="Audiences"
-        subtitle="Dr. Motley speaks to a wide range of groups and formats"
+        title={d.audiences.title}
+        subtitle={d.audiences.subtitle}
       />
       <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-        {[
-          'Healthcare Conferences',
-          'Corporate Wellness Events',
-          'Medical Education (CME)',
-          'Community Organizations',
-          'Churches & Faith Groups',
-          'Podcasts & Webinars',
-          'Grand Rounds',
-          'Employee Town Halls',
-          'Health System Leadership',
-          'Media & Press',
-        ].map((audience) => (
+        {d.audiences.items.map((audience) => (
           <span class="inline-flex items-center px-5 py-2.5 rounded-full bg-white border border-brand-200 text-body font-medium text-brand-800 shadow-sm">
             {audience}
           </span>
@@ -114,77 +90,30 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
-        title="What Attendees Are Saying"
-        subtitle="Feedback from the ACLM 2019 National Conference keynote and other events"
+        title={d.testimonials.title}
+        subtitle={d.testimonials.subtitle}
       />
 
       <!-- Headline quotes -->
       <div class="max-w-3xl mx-auto mb-10">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div class="card bg-brand-50/60 border-brand-100">
-            <p class="text-h3 font-serif text-brand-800 italic">"Best of the whole conference."</p>
-          </div>
-          <div class="card bg-brand-50/60 border-brand-100">
-            <p class="text-h3 font-serif text-brand-800 italic">"Outstanding!!!"</p>
-            <p class="text-small text-neutral-500 mt-2">(Standing ovation.)</p>
-          </div>
-          <div class="card bg-brand-50/60 border-brand-100">
-            <p class="text-h3 font-serif text-brand-800 italic">"What a dynamo!!!"</p>
-          </div>
+          {d.testimonials.headlineQuotes.map((hq) => (
+            <div class="card bg-brand-50/60 border-brand-100">
+              <p class="text-h3 font-serif text-brand-800 italic">"{hq.text}"</p>
+              {hq.note && <p class="text-small text-neutral-500 mt-2">{hq.note}</p>}
+            </div>
+          ))}
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
-        <TestimonialCard
-          quote="This was hands down the most useful presentation I attended. Thank you for this one!"
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="Excellent presentation. Practical, energetic, inspiring. Very impressive, especially for a young physician."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="The most engaging, practical presentation of the entire conference. So much information packed into this presentation! Specific and targeted to patient contact. Kudos."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="So great to hear from a family doctor in solo practice utilizing resources from around her, rather than hearing from a team-based lifestyle medicine practice. This was great to get us headed in the right direction."
-          name="ACLM 2019 Attendee"
-          role="Family Physician"
-        />
-        <TestimonialCard
-          quote="Fantastic! So helpful. The Google Drive may be the most helpful tool I take away from the conference. Very practical."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="She is an amazing presenter. Very informative and useful. Will implement in my practice."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="Excellent engaging speaker who offered real advice on how to incorporate LM into practice. Practical advice on coding. Love that she has given us her own resources for free! Impressed that she has mastered this area so early in her career."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="This was fantastic and very helpful. I hope to incorporate info from this session into my practice as a future NP."
-          name="ACLM 2019 Attendee"
-          role="Nurse Practitioner Student"
-        />
-        <TestimonialCard
-          quote="Absolutely by far my favorite session. She needs to come to every conference — allow more time!"
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
-        <TestimonialCard
-          quote="Best speaker of the conference. What is your secret to unlimited energy? You just radiate energy."
-          name="ACLM 2019 Attendee"
-          role="Medical Professional"
-        />
+        {d.testimonials.items.map((t) => (
+          <TestimonialCard
+            quote={t.quote}
+            name={t.name}
+            role={t.role}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -193,61 +122,43 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   <section class="section-padding bg-brand-50/40">
     <div class="container-page max-w-5xl">
       <SectionHeading
-        title="See Dr. Motley in Action"
-        subtitle="Selected talks and interviews"
+        title={d.videos.title}
+        subtitle={d.videos.subtitle}
       />
       <div class="space-y-10">
-        <!-- Primary video - DoD Talk -->
+        <!-- Primary video -->
         <div>
           <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/Ts1LKLXqvCo"
-              title="Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — US Department of Defense"
+              src={`https://www.youtube.com/embed/${d.videos.primary.embedId}`}
+              title={d.videos.primary.title}
               class="w-full h-full"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
-          <p class="text-body text-neutral-600 mt-3 text-center">
-            <strong>Preventing and Reversing Chronic Disease with Plant-Powered Nutrition</strong> — CME presentation for the US Department of Defense
-          </p>
+          <p class="text-body text-neutral-600 mt-3 text-center" set:html={`<strong>${d.videos.primary.caption.split(' — ')[0]}</strong>${d.videos.primary.caption.includes(' — ') ? ' — ' + d.videos.primary.caption.split(' — ').slice(1).join(' — ') : ''}`} />
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- 11 Reasons video -->
-          <div>
-            <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/SogG2FtVd1U"
-                title="11 Reasons Why People Struggle on a Plant-Based Diet"
-                class="w-full h-full"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+          {d.videos.secondary.map((video) => (
+            <div>
+              <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.embedId}`}
+                  title={video.title}
+                  class="w-full h-full"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="text-body text-neutral-600 mt-3 text-center">
+                <strong>{video.caption}</strong>
+              </p>
             </div>
-            <p class="text-body text-neutral-600 mt-3 text-center">
-              <strong>11 Reasons Why People Struggle on a Plant-Based Diet</strong>
-            </p>
-          </div>
-
-          <!-- Beth's personal favorite -->
-          <div>
-            <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/39y6CHHCTxM"
-                title="Beth Motley, MD — Personal Favorite Talk"
-                class="w-full h-full"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p class="text-body text-neutral-600 mt-3 text-center">
-              <strong>Dr. Motley on Lifestyle Medicine</strong>
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -257,8 +168,8 @@ import SpeakingForm from '../components/SpeakingForm.tsx';
   <section id="booking-form" class="section-padding bg-white">
     <div class="container-page max-w-2xl">
       <SectionHeading
-        title="Book Dr. Motley for Your Event"
-        subtitle="Tell us about your event and we will follow up within two business days to discuss availability, topics, and logistics."
+        title={d.bookingForm.title}
+        subtitle={d.bookingForm.subtitle}
       />
       <SpeakingForm client:visible />
     </div>

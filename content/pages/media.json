@@ -1,0 +1,178 @@
+{
+  "seo": {
+    "title": "Media & Press",
+    "description": "Podcasts, videos, articles, and press features with Dr. Motley on lifestyle medicine, diabetes reversal, and evidence-based health."
+  },
+  "hero": {
+    "badge": "Media",
+    "headline": "Media & Appearances",
+    "subheadline": "Podcasts, videos, articles, and press features on lifestyle medicine and diabetes reversal.",
+    "ctaText": "Book Dr. Motley for Your Podcast or Event",
+    "ctaHref": "/speaking"
+  },
+  "featuredLogos": [
+    { "src": "/images/logos/dod-seal.png", "alt": "US Department of Defense" },
+    { "src": "/images/logos/aclm.png", "alt": "American College of Lifestyle Medicine" },
+    { "src": "/images/logos/aafp.png", "alt": "American Academy of Family Physicians" },
+    { "src": "/images/logos/plantstrong.png", "alt": "PlantStrong" },
+    { "src": "/images/logos/womans-world.png", "alt": "Woman's World Magazine" },
+    { "src": "/images/logos/talk-greenville.png", "alt": "Talk Greenville" }
+  ],
+  "pressHighlight": {
+    "tag": "Press Feature",
+    "image": "/images/press/town-magazine.jpg",
+    "imageAlt": "Dr. Motley featured in TOWN Magazine - Plant Power article",
+    "title": "Plant Power",
+    "pullQuote": "One of Greenville's first board-certified lifestyle medicine physicians promotes the healing benefits of food.",
+    "description": "Featured in TOWN Carolina magazine, this profile explores Dr. Motley's approach to reversing chronic disease through plant-based nutrition and lifestyle interventions.",
+    "linkText": "Read the Article",
+    "linkHref": "https://towncarolina.com/plant-power/"
+  },
+  "allMedia": {
+    "title": "All Media",
+    "subtitle": "Podcasts, videos, articles, and press features",
+    "items": [
+      {
+        "title": "Plant-Based Medicine: Dr. Beth Motley's Journey to Lifestyle Medicine",
+        "type": "podcast",
+        "source": "Next Gen LM Podcast (ACLM)",
+        "date": "February 2025",
+        "href": "https://lifestylemedicine.org/project/episode-1/"
+      },
+      {
+        "title": "Make These 1% Changes to Create Long-Lasting Health",
+        "type": "podcast",
+        "source": "PLANTSTRONG Podcast with Rip Esselstyn",
+        "date": "August 2024",
+        "href": "https://www.plantstrongpodcast.com/blog/beth-motley-md"
+      },
+      {
+        "title": "Plant-Based Lifestyle Medicine with Beth Motley, MD",
+        "type": "podcast",
+        "source": "The Jazzy Vegetarian",
+        "date": "March 2023",
+        "href": "https://jazzyvegetarian.com/"
+      },
+      {
+        "title": "Meet Dr. Beth Motley: The Country's Youngest Board-Certified Lifestyle Medicine Physician",
+        "type": "podcast",
+        "source": "Veggie Doctor Radio",
+        "date": "March 2018",
+        "href": "https://veggiedoctor.com/"
+      },
+      {
+        "title": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition",
+        "type": "video",
+        "source": "US Department of Defense Presentation",
+        "date": "May 2023",
+        "href": "https://www.youtube.com/watch?v=Ts1LKLXqvCo",
+        "embedId": "Ts1LKLXqvCo"
+      },
+      {
+        "title": "Dr. Motley on Lifestyle Medicine",
+        "type": "video",
+        "source": "YouTube",
+        "date": "2024",
+        "href": "https://www.youtube.com/watch?v=39y6CHHCTxM",
+        "embedId": "39y6CHHCTxM"
+      },
+      {
+        "title": "11 Reasons Why People Struggle on a Plant-Based Diet",
+        "type": "video",
+        "source": "YouTube",
+        "date": "2024",
+        "href": "https://www.youtube.com/watch?v=SogG2FtVd1U",
+        "embedId": "SogG2FtVd1U"
+      },
+      {
+        "title": "Reversing Diabetes with a Plant-Based Diet",
+        "type": "video",
+        "source": "YouTube",
+        "date": "2024",
+        "href": "https://www.youtube.com/watch?v=PXtgBAEKJ_8",
+        "embedId": "PXtgBAEKJ_8"
+      },
+      {
+        "title": "Cancer Prevention & Wellness: Plant-Based Nutrition for Cancer Prevention and Treatment",
+        "type": "video",
+        "source": "Cancer Survivors Park",
+        "date": "2023",
+        "href": "https://www.youtube.com/watch?v=uyOFEIf0w28",
+        "embedId": "uyOFEIf0w28"
+      },
+      {
+        "title": "Four Plant-Based from Birth — Raising Kids on a Plant-Based Diet",
+        "type": "video",
+        "source": "YouTube Interview",
+        "date": "2023",
+        "href": "https://www.youtube.com/watch?v=rU9zkUz-In8",
+        "embedId": "rU9zkUz-In8"
+      },
+      {
+        "title": "Make These 1% Changes to Create Long-Lasting Health",
+        "type": "video",
+        "source": "PLANTSTRONG with Rip Esselstyn",
+        "date": "August 2024",
+        "href": "https://www.youtube.com/watch?v=FfjfBd_baqU",
+        "embedId": "FfjfBd_baqU"
+      },
+      {
+        "title": "Heart Health Without the Pills? Plant-Based Diets & The Statin Question",
+        "type": "video",
+        "source": "YouTube",
+        "date": "2024",
+        "href": "https://www.youtube.com/watch?v=oYwlcqt4JT8",
+        "embedId": "oYwlcqt4JT8"
+      },
+      {
+        "title": "A Message from a Lifestyle Medicine Physician",
+        "type": "video",
+        "source": "ACLM Professionals in Training",
+        "date": "2024",
+        "href": "https://www.youtube.com/watch?v=A3vaEMEwNuo",
+        "embedId": "A3vaEMEwNuo"
+      },
+      {
+        "title": "Best Blood Sugar-Friendly Foods To Buy at Costco",
+        "type": "article",
+        "source": "Woman's World Magazine",
+        "date": "October 2025",
+        "href": "https://www.womansworld.com/wellness/diabetes/best-blood-sugar-friendly-foods-at-costco-safe-for-diabetics"
+      },
+      {
+        "title": "Plant Power: One of Greenville's First Lifestyle Medicine Physicians",
+        "type": "article",
+        "source": "TOWN Magazine",
+        "date": "January 2019",
+        "href": "https://towncarolina.com/plant-power/"
+      },
+      {
+        "title": "Building a Thriving Lifestyle Medicine Practice within a Primary Care Clinic",
+        "type": "article",
+        "source": "American Journal of Lifestyle Medicine",
+        "date": "March 2020",
+        "href": "https://pubmed.ncbi.nlm.nih.gov/"
+      },
+      {
+        "title": "Experts Weigh In on the Protein Craze and How Much Our Bodies Need",
+        "type": "article",
+        "source": "WYFF4 News",
+        "date": "November 2025",
+        "href": "https://www.wyff4.com/"
+      },
+      {
+        "title": "Shifting Toward SC Crops and Orchards Could Help Curb Our Bird Flu Crisis",
+        "type": "article",
+        "source": "SC Daily Gazette",
+        "date": "February 2025",
+        "href": "https://scdailygazette.com/"
+      }
+    ]
+  },
+  "podcastCta": {
+    "title": "Invite Dr. Motley on Your Podcast",
+    "subtitle": "Dr. Motley is available for podcast interviews, media features, and expert commentary on lifestyle medicine and diabetes reversal.",
+    "ctaText": "Media & Speaking Inquiries",
+    "ctaHref": "/speaking"
+  }
+}

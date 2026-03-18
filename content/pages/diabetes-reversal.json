@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "Diabetes Reversal Shared Medical Appointments | Beth Motley, MD",
+    "description": "Evidence-based shared medical appointments that help patients reverse type 2 diabetes through lifestyle medicine. Insurance-accepted program in Greenville, SC led by Dr. Motley."
+  },
+  "hero": {
+    "badge": "Program",
+    "headline": "Diabetes Reversal Shared Medical Appointments",
+    "subheadline": "Evidence-based shared medical appointments designed to help you improve blood sugars, reduce medications, and work toward diabetes remission — led by a board-certified lifestyle medicine physician and covered by insurance."
+  },
+  "about": {
+    "title": "About This Program",
+    "subtitle": "A fundamentally different approach to diabetes care",
+    "intro": "This program is fundamentally different from the traditional approach to \"controlling\" diabetes. Rather than simply managing blood sugars with medications or avoiding carbohydrates to work around insulin resistance, this model focuses on addressing the root cause: insulin resistance itself.",
+    "body": "We do this through an evidence-based, plant-forward approach, aligned with the recommendations of the American College of Lifestyle Medicine. The goal is not better numbers; it is getting diabetes off your diagnosis list."
+  },
+  "whoIsThisFor": {
+    "title": "Who Is This For?",
+    "subtitle": "If any of the following describe you, this program may be a fit",
+    "items": [
+      {
+        "title": "Type 2 Diabetes",
+        "description": "You have been diagnosed with type 2 diabetes and want to improve your blood sugars, reduce medications, and work toward remission."
+      },
+      {
+        "title": "Prediabetes",
+        "description": "Your labs show prediabetes or insulin resistance, and you want to reverse course before it progresses to a full diabetes diagnosis."
+      }
+    ]
+  },
+  "format": {
+    "title": "Program Format",
+    "subtitle": "Hosted at Prisma Stone & Main Primary Care",
+    "stats": [
+      { "value": "8-12", "label": "Participants per cohort" },
+      { "value": "75 min", "label": "Per visit: medical care, education, and group discussion" },
+      { "value": "6", "label": "Sessions, meeting every two weeks" }
+    ],
+    "description": "This small-group, physician-led program is designed to help individuals improve blood sugars, reduce medications, and work toward diabetes remission through evidence-based Lifestyle Medicine. Led by Dr. Beth Motley."
+  },
+  "schedule": {
+    "title": "Schedule",
+    "subtitle": "Meets every two weeks for six sessions",
+    "dates": "Next cohort dates pending",
+    "classTimes": "8:30 – 9:45 AM or 10:15 – 11:30 AM"
+  },
+  "curriculum": {
+    "title": "What to Expect",
+    "subtitle": "Six sessions built on the pillars of lifestyle medicine",
+    "sessions": [
+      { "session": "SMA 1", "title": "What Causes Diabetes? Reversing Insulin Resistance" },
+      { "session": "SMA 2", "title": "Calorie Density, Satiety, and Alcohol" },
+      { "session": "SMA 3", "title": "The Whole Grain Hierarchy and the Glycemic Index" },
+      { "session": "SMA 4", "title": "Exercise and Sleep as Insulin Sensitivity Medicine" },
+      { "session": "SMA 5", "title": "The Food Environment, Habits, and Long Term Adherence" },
+      { "session": "SMA 6", "title": "Diabetes as a Vascular Disease: Protecting the Heart and Kidneys" }
+    ]
+  },
+  "eligibility": {
+    "title": "Eligibility",
+    "subtitle": "Requirements to participate",
+    "items": [
+      "Current diagnosis of type 2 diabetes or prediabetes",
+      "Established with any Prisma primary care provider and last visit within the past 12 months",
+      "Active MyChart account for eCheck-In prior to appointments",
+      "Willing to participate in a shared-visit format"
+    ]
+  },
+  "billing": {
+    "title": "Billing",
+    "subtitle": "Billed as standard office visits through your insurance",
+    "description": "These are billed as standard office visits through your insurance, just like when you go in for an A1c check and have medication adjusted."
+  },
+  "results": {
+    "title": "Real Results, Real Patients",
+    "subtitle": "Outcomes from lifestyle medicine group visit programs across the country consistently show meaningful improvements.",
+    "stats": [
+      { "value": "1.5%", "label": "Average A1c Reduction" },
+      { "value": "62%", "label": "Patients Reducing Medications" },
+      { "value": "15 lbs", "label": "Average Weight Loss" },
+      { "value": "97%", "label": "Patient Satisfaction" }
+    ],
+    "disclaimer": "Statistics reflect published outcomes from lifestyle medicine group visit programs nationally. Individual results vary based on adherence, baseline health, and other factors."
+  },
+  "video": {
+    "title": "Dr. Motley on Diabetes Reversal",
+    "subtitle": "Watch Dr. Motley explain the science behind reversing type 2 diabetes with lifestyle medicine",
+    "embedId": "cNI41n_fdSI"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about the Diabetes Reversal Shared Medical Appointments",
+    "items": [
+      {
+        "question": "Is this covered by insurance?",
+        "answer": "Yes. Our group visits are billed as medical visits, not wellness coaching, which means most commercial insurance plans, Medicare, and many Medicaid plans cover them. We verify your benefits before you begin so there are no surprises. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
+      },
+      {
+        "question": "Do I need a referral from my doctor?",
+        "answer": "A referral is not required to join the program, though some insurance plans may request one. You are welcome to self-refer. We also coordinate closely with your existing primary care provider so everyone stays on the same page regarding your care."
+      },
+      {
+        "question": "What if I am on insulin?",
+        "answer": "Patients on insulin are welcome and often see significant results. Dr. Motley monitors your blood glucose closely throughout the program and adjusts medications as your numbers improve. Safety is our top priority, and medication changes are always made under direct physician supervision."
+      },
+      {
+        "question": "How is this different from a diet program?",
+        "answer": "This is not a diet program. It is a physician-led medical program that uses evidence-based lifestyle interventions as the primary treatment for type 2 diabetes. You receive real medical care including lab work, medication management, and ongoing physician oversight. The lifestyle changes we teach are grounded in peer-reviewed research from the American College of Lifestyle Medicine."
+      },
+      {
+        "question": "Can I keep seeing my current doctor while doing this?",
+        "answer": "Absolutely. We encourage it. Dr. Motley works alongside your existing healthcare team, not as a replacement. After each visit cycle, we send a summary to your primary care provider so they can see your progress and coordinate any ongoing care."
+      },
+      {
+        "question": "What happens after the six sessions?",
+        "answer": "Graduation is just the beginning. After the initial program, you will have the option to join our maintenance shared medical appointments, which meet periodically to help you sustain your progress, troubleshoot challenges, and stay connected with your cohort."
+      }
+    ]
+  },
+  "ctaForm": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Space is limited. Please contact the office directly to enroll or request a referral from your PCP.",
+    "note": "Please do NOT enroll if you are not serious about participation."
+  }
+}

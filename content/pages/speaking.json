@@ -1,0 +1,98 @@
+{
+  "seo": {
+    "title": "Speaking | Beth Motley, MD",
+    "description": "Book Dr. Motley for your next event. Engaging, evidence-based presentations on lifestyle medicine, diabetes reversal, workplace wellness, and more."
+  },
+  "hero": {
+    "badge": "Speaking",
+    "headline": "Bring Lifestyle Medicine to Your Audience",
+    "subheadline": "Engaging, evidence-based presentations that translate science into practical, actionable takeaways.",
+    "ctaText": "Book Dr. Motley to Speak",
+    "ctaHref": "#booking-form"
+  },
+  "keynoteHighlight": {
+    "image": "/images/speaking/aclm-2019-podium.png",
+    "imageAlt": "Dr. Motley presenting at the podium at the American College of Lifestyle Medicine 2019 conference",
+    "tag": "Keynote Highlight",
+    "title": "ACLM National Conference 2019",
+    "location": "Orlando, FL",
+    "talkTitle": "How Providers Can Integrate Lifestyle Medicine into Their Existing Practice",
+    "description": "A standing-ovation keynote on practical tools for bringing lifestyle medicine into any clinical setting — without building a separate practice from scratch."
+  },
+  "topics": {
+    "title": "Speaking Topics",
+    "subtitle": "Each presentation is grounded in peer-reviewed evidence and tailored to your audience",
+    "intro": "My favorite topics...",
+    "items": [
+      "Provider Tools for Implementing Lifestyle Medicine in Clinical Practice",
+      "Lifestyle Medicine: Adding Years to Life and Life to Years",
+      "Prescribing Plants: The Role of Plant-Based Nutrition in Cardiovascular Disease",
+      "The Plant-Based Protocol for Reversing Type 2 Diabetes",
+      "Preventing and Reversing Chronic Disease with Lifestyle Medicine: Translating the Evidence into Practical Application in the Clinic",
+      "How to Raise an Adult: Promoting Healthful Eating for the Whole Family",
+      "The Science of Sustainable Change: Rewiring Habits, Food, and Environment"
+    ]
+  },
+  "audiences": {
+    "title": "Audiences",
+    "subtitle": "Dr. Motley speaks to a wide range of groups and formats",
+    "items": [
+      "Healthcare Conferences",
+      "Corporate Wellness Events",
+      "Medical Education (CME)",
+      "Community Organizations",
+      "Churches & Faith Groups",
+      "Podcasts & Webinars",
+      "Grand Rounds",
+      "Employee Town Halls",
+      "Health System Leadership",
+      "Media & Press"
+    ]
+  },
+  "testimonials": {
+    "title": "What Attendees Are Saying",
+    "subtitle": "Feedback from the ACLM 2019 National Conference keynote and other events",
+    "headlineQuotes": [
+      { "text": "Best of the whole conference." },
+      { "text": "Outstanding!!!", "note": "(Standing ovation.)" },
+      { "text": "What a dynamo!!!" }
+    ],
+    "items": [
+      { "quote": "This was hands down the most useful presentation I attended. Thank you for this one!", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "Excellent presentation. Practical, energetic, inspiring. Very impressive, especially for a young physician.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "The most engaging, practical presentation of the entire conference. So much information packed into this presentation! Specific and targeted to patient contact. Kudos.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "So great to hear from a family doctor in solo practice utilizing resources from around her, rather than hearing from a team-based lifestyle medicine practice. This was great to get us headed in the right direction.", "name": "ACLM 2019 Attendee", "role": "Family Physician" },
+      { "quote": "Fantastic! So helpful. The Google Drive may be the most helpful tool I take away from the conference. Very practical.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "She is an amazing presenter. Very informative and useful. Will implement in my practice.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "Excellent engaging speaker who offered real advice on how to incorporate LM into practice. Practical advice on coding. Love that she has given us her own resources for free! Impressed that she has mastered this area so early in her career.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "This was fantastic and very helpful. I hope to incorporate info from this session into my practice as a future NP.", "name": "ACLM 2019 Attendee", "role": "Nurse Practitioner Student" },
+      { "quote": "Absolutely by far my favorite session. She needs to come to every conference — allow more time!", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "Best speaker of the conference. What is your secret to unlimited energy? You just radiate energy.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" }
+    ]
+  },
+  "videos": {
+    "title": "See Dr. Motley in Action",
+    "subtitle": "Selected talks and interviews",
+    "primary": {
+      "embedId": "Ts1LKLXqvCo",
+      "title": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — US Department of Defense",
+      "caption": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — CME presentation for the US Department of Defense"
+    },
+    "secondary": [
+      {
+        "embedId": "SogG2FtVd1U",
+        "title": "11 Reasons Why People Struggle on a Plant-Based Diet",
+        "caption": "11 Reasons Why People Struggle on a Plant-Based Diet"
+      },
+      {
+        "embedId": "39y6CHHCTxM",
+        "title": "Beth Motley, MD — Personal Favorite Talk",
+        "caption": "Dr. Motley on Lifestyle Medicine"
+      }
+    ]
+  },
+  "bookingForm": {
+    "title": "Book Dr. Motley for Your Event",
+    "subtitle": "Tell us about your event and we will follow up within two business days to discuss availability, topics, and logistics."
+  }
+}

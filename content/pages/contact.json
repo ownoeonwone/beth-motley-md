@@ -1,0 +1,52 @@
+{
+  "seo": {
+    "title": "Contact Beth Motley, MD — Lifestyle Medicine | Greenville, SC",
+    "description": "Get in touch with Dr. Motley for speaking engagements, program inquiries, consulting, or media appearances. Based in Greenville, SC."
+  },
+  "hero": {
+    "badge": "Contact",
+    "headline": "Get in Touch",
+    "subheadline": "Whether you have questions about a program, want to book Dr. Motley for a speaking engagement, or are exploring lifestyle medicine for the first time — we would love to hear from you."
+  },
+  "form": {
+    "title": "Send a Message",
+    "subtitle": "Fill out the form below and a member of Dr. Motley's team will respond within two business days."
+  },
+  "location": {
+    "title": "Location",
+    "name": "Greenville, SC",
+    "detail": "Prisma Health System"
+  },
+  "responseTime": {
+    "title": "Response Time",
+    "time": "Within 2 business days",
+    "detail": "We review every message and will direct your inquiry to the appropriate team member."
+  },
+  "social": {
+    "title": "Connect Online",
+    "links": [
+      { "platform": "Facebook", "href": "https://facebook.com" },
+      { "platform": "Instagram", "href": "https://instagram.com" }
+    ]
+  },
+  "quickLinks": {
+    "title": "Looking for Something Specific?",
+    "items": [
+      {
+        "title": "Speaking & Media",
+        "description": "Book Dr. Motley for conferences, podcasts, or media appearances.",
+        "href": "/speaking"
+      },
+      {
+        "title": "Diabetes Reversal Program",
+        "description": "Learn about our 12-week group medical visit program.",
+        "href": "/programs/diabetes-reversal"
+      },
+      {
+        "title": "Executive MD Program",
+        "description": "Explore concierge-level health optimization.",
+        "href": "/programs/executive-md"
+      }
+    ]
+  }
+}

@@ -4,3 +4,6 @@ dist/
 .env
 .DS_Store
 *.log
+
+# TinaCMS
+/tina/__generated__

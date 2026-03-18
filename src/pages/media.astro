@@ -3,161 +3,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import MediaFilter from '../components/MediaFilter.tsx';
+import mediaData from '../../content/pages/media.json';
 
-const mediaItems = [
-  // --- Podcasts ---
-  {
-    title: "Plant-Based Medicine: Dr. Beth Motley's Journey to Lifestyle Medicine",
-    type: "podcast" as const,
-    source: "Next Gen LM Podcast (ACLM)",
-    date: "February 2025",
-    href: "https://lifestylemedicine.org/project/episode-1/",
-  },
-  {
-    title: "Make These 1% Changes to Create Long-Lasting Health",
-    type: "podcast" as const,
-    source: "PLANTSTRONG Podcast with Rip Esselstyn",
-    date: "August 2024",
-    href: "https://www.plantstrongpodcast.com/blog/beth-motley-md",
-  },
-  {
-    title: "Plant-Based Lifestyle Medicine with Beth Motley, MD",
-    type: "podcast" as const,
-    source: "The Jazzy Vegetarian",
-    date: "March 2023",
-    href: "https://jazzyvegetarian.com/",
-  },
-  {
-    title: "Meet Dr. Beth Motley: The Country's Youngest Board-Certified Lifestyle Medicine Physician",
-    type: "podcast" as const,
-    source: "Veggie Doctor Radio",
-    date: "March 2018",
-    href: "https://veggiedoctor.com/",
-  },
-  // --- Videos ---
-  {
-    title: "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition",
-    type: "video" as const,
-    source: "US Department of Defense Presentation",
-    date: "May 2023",
-    href: "https://www.youtube.com/watch?v=Ts1LKLXqvCo",
-    embedId: "Ts1LKLXqvCo",
-  },
-  {
-    title: "Dr. Motley on Lifestyle Medicine",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2024",
-    href: "https://www.youtube.com/watch?v=39y6CHHCTxM",
-    embedId: "39y6CHHCTxM",
-  },
-  {
-    title: "11 Reasons Why People Struggle on a Plant-Based Diet",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2024",
-    href: "https://www.youtube.com/watch?v=SogG2FtVd1U",
-    embedId: "SogG2FtVd1U",
-  },
-  {
-    title: "Reversing Diabetes with a Plant-Based Diet",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2024",
-    href: "https://www.youtube.com/watch?v=PXtgBAEKJ_8",
-    embedId: "PXtgBAEKJ_8",
-  },
-  {
-    title: "Cancer Prevention & Wellness: Plant-Based Nutrition for Cancer Prevention and Treatment",
-    type: "video" as const,
-    source: "Cancer Survivors Park",
-    date: "2023",
-    href: "https://www.youtube.com/watch?v=uyOFEIf0w28",
-    embedId: "uyOFEIf0w28",
-  },
-  {
-    title: "Four Plant-Based from Birth — Raising Kids on a Plant-Based Diet",
-    type: "video" as const,
-    source: "YouTube Interview",
-    date: "2023",
-    href: "https://www.youtube.com/watch?v=rU9zkUz-In8",
-    embedId: "rU9zkUz-In8",
-  },
-  {
-    title: "Make These 1% Changes to Create Long-Lasting Health",
-    type: "video" as const,
-    source: "PLANTSTRONG with Rip Esselstyn",
-    date: "August 2024",
-    href: "https://www.youtube.com/watch?v=FfjfBd_baqU",
-    embedId: "FfjfBd_baqU",
-  },
-  {
-    title: "Heart Health Without the Pills? Plant-Based Diets & The Statin Question",
-    type: "video" as const,
-    source: "YouTube",
-    date: "2024",
-    href: "https://www.youtube.com/watch?v=oYwlcqt4JT8",
-    embedId: "oYwlcqt4JT8",
-  },
-  {
-    title: "A Message from a Lifestyle Medicine Physician",
-    type: "video" as const,
-    source: "ACLM Professionals in Training",
-    date: "2024",
-    href: "https://www.youtube.com/watch?v=A3vaEMEwNuo",
-    embedId: "A3vaEMEwNuo",
-  },
-  // --- Articles & Press ---
-  {
-    title: "Best Blood Sugar-Friendly Foods To Buy at Costco",
-    type: "article" as const,
-    source: "Woman's World Magazine",
-    date: "October 2025",
-    href: "https://www.womansworld.com/wellness/diabetes/best-blood-sugar-friendly-foods-at-costco-safe-for-diabetics",
-  },
-  {
-    title: "Plant Power: One of Greenville's First Lifestyle Medicine Physicians",
-    type: "article" as const,
-    source: "TOWN Magazine",
-    date: "January 2019",
-    href: "https://towncarolina.com/plant-power/",
-  },
-  {
-    title: "Building a Thriving Lifestyle Medicine Practice within a Primary Care Clinic",
-    type: "article" as const,
-    source: "American Journal of Lifestyle Medicine",
-    date: "March 2020",
-    href: "https://pubmed.ncbi.nlm.nih.gov/",
-  },
-  {
-    title: "Experts Weigh In on the Protein Craze and How Much Our Bodies Need",
-    type: "article" as const,
-    source: "WYFF4 News",
-    date: "November 2025",
-    href: "https://www.wyff4.com/",
-  },
-  {
-    title: "Shifting Toward SC Crops and Orchards Could Help Curb Our Bird Flu Crisis",
-    type: "article" as const,
-    source: "SC Daily Gazette",
-    date: "February 2025",
-    href: "https://scdailygazette.com/",
-  },
-];
+const d = mediaData;
 ---
 
 <BaseLayout
-  title="Media & Press"
-  description="Podcasts, videos, articles, and press features with Dr. Motley on lifestyle medicine, diabetes reversal, and evidence-based health."
+  title={d.seo.title}
+  description={d.seo.description}
 >
   <Hero
-    badge="Media"
-    headline="Media & Appearances"
-    subheadline="Podcasts, videos, articles, and press features on lifestyle medicine and diabetes reversal."
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
     size="medium"
   >
     <div class="mt-6">
-      <a href="/speaking" class="btn-primary">Book Dr. Motley for Your Podcast or Event</a>
+      <a href={d.hero.ctaHref} class="btn-primary">{d.hero.ctaText}</a>
     </div>
   </Hero>
 
@@ -166,12 +28,9 @@ const mediaItems = [
     <div class="container-page">
       <p class="text-center text-small font-semibold text-neutral-400 uppercase tracking-widest mb-8">As Featured In</p>
       <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-        <img src="/images/logos/dod-seal.png" alt="US Department of Defense" class="h-16 md:h-20 w-auto object-contain" loading="lazy" />
-        <img src="/images/logos/aclm.png" alt="American College of Lifestyle Medicine" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
-        <img src="/images/logos/aafp.png" alt="American Academy of Family Physicians" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
-        <img src="/images/logos/plantstrong.png" alt="PlantStrong" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
-        <img src="/images/logos/womans-world.png" alt="Woman's World Magazine" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
-        <img src="/images/logos/talk-greenville.png" alt="Talk Greenville" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
+        {d.featuredLogos.map((logo) => (
+          <img src={logo.src} alt={logo.alt} class="h-16 md:h-20 w-auto object-contain" loading="lazy" />
+        ))}
       </div>
     </div>
   </section>
@@ -182,23 +41,23 @@ const mediaItems = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
         <div class="rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/images/press/town-magazine.jpg"
-            alt="Dr. Motley featured in TOWN Magazine - Plant Power article"
+            src={d.pressHighlight.image}
+            alt={d.pressHighlight.imageAlt}
             class="w-full h-auto"
             loading="lazy"
           />
         </div>
         <div>
-          <span class="badge mb-4 inline-block">Press Feature</span>
-          <h2 class="text-h2 font-serif text-brand-900 mb-4">Plant Power</h2>
+          <span class="badge mb-4 inline-block">{d.pressHighlight.tag}</span>
+          <h2 class="text-h2 font-serif text-brand-900 mb-4">{d.pressHighlight.title}</h2>
           <p class="text-body-lg text-neutral-600 mb-4">
-            "One of Greenville's first board-certified lifestyle medicine physicians promotes the healing benefits of food."
+            "{d.pressHighlight.pullQuote}"
           </p>
           <p class="text-body text-neutral-500 mb-6">
-            Featured in TOWN Carolina magazine, this profile explores Dr. Motley's approach to reversing chronic disease through plant-based nutrition and lifestyle interventions.
+            {d.pressHighlight.description}
           </p>
-          <a href="https://towncarolina.com/plant-power/" target="_blank" rel="noopener" class="btn-secondary inline-flex items-center gap-2">
-            Read the Article
+          <a href={d.pressHighlight.linkHref} target="_blank" rel="noopener" class="btn-secondary inline-flex items-center gap-2">
+            {d.pressHighlight.linkText}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </a>
         </div>
@@ -210,10 +69,10 @@ const mediaItems = [
   <section class="section-padding">
     <div class="container-page">
       <SectionHeading
-        title="All Media"
-        subtitle="Podcasts, videos, articles, and press features"
+        title={d.allMedia.title}
+        subtitle={d.allMedia.subtitle}
       />
-      <MediaFilter items={mediaItems} client:load />
+      <MediaFilter items={d.allMedia.items} client:load />
     </div>
   </section>
 
@@ -221,11 +80,11 @@ const mediaItems = [
   <section class="bg-brand-50 section-padding">
     <div class="container-page text-center">
       <SectionHeading
-        title="Invite Dr. Motley on Your Podcast"
-        subtitle="Dr. Motley is available for podcast interviews, media features, and expert commentary on lifestyle medicine and diabetes reversal."
+        title={d.podcastCta.title}
+        subtitle={d.podcastCta.subtitle}
       />
-      <a href="/speaking" class="btn-primary">
-        Media & Speaking Inquiries
+      <a href={d.podcastCta.ctaHref} class="btn-primary">
+        {d.podcastCta.ctaText}
       </a>
     </div>
   </section>
