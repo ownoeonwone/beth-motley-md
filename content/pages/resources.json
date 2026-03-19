@@ -1,0 +1,293 @@
+{
+  "seo": {
+    "title": "Lifestyle Medicine Resources | Dr. Beth Motley, MD",
+    "description": "Evidence-based tools, guides, and research organized around the six pillars of lifestyle medicine. Curated by Dr. Beth Motley, FACLM."
+  },
+  "hero": {
+    "badge": "Evidence-Based Resources",
+    "headline": "Tools, Guides & Research",
+    "subheadline": "Curated by Dr. Beth — organized around the six pillars of lifestyle medicine that the evidence shows matter most."
+  },
+  "pillars": [
+    {
+      "id": "nutrition",
+      "label": "Nutrition",
+      "color": "green",
+      "resources": [
+        {
+          "title": "PCRM 21-Day Kickstart",
+          "type": "Starter guide",
+          "href": "https://www.pcrm.org/kickstart",
+          "badges": ["Free", "Patient-friendly"],
+          "bethPick": false,
+          "description": "A free, structured 21-day whole food plant-based program with meal plans and recipes. The most effective on-ramp for patients new to plant-based eating."
+        },
+        {
+          "title": "NutritionFacts.org Daily Dozen",
+          "type": "Tool / app",
+          "href": "https://nutritionfacts.org/daily-dozen",
+          "badges": ["Free"],
+          "bethPick": true,
+          "description": "Dr. Michael Greger's free app tracking the 12 healthiest food groups daily. Simple, evidence-based, and habit-forming in the best way."
+        },
+        {
+          "title": "BROAD Study (2017)",
+          "type": "Key study",
+          "href": "https://doi.org/10.1111/nure.12229",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "A landmark randomized trial showing WFPB eating produced greater weight loss and cardiometabolic improvement than standard care — without calorie restriction."
+        },
+        {
+          "title": "How Not to Die",
+          "type": "Book or film",
+          "href": "https://nutritionfacts.org/book/how-not-to-die",
+          "badges": ["Patient-friendly"],
+          "bethPick": false,
+          "description": "The most comprehensive evidence-based guide to using nutrition to prevent the leading causes of death. Required reading for motivated patients."
+        },
+        {
+          "title": "Forks Over Knives",
+          "type": "Book or film",
+          "href": "https://www.forksoverknives.com",
+          "badges": ["Free", "Patient-friendly"],
+          "bethPick": false,
+          "description": "The documentary and recipe site that has introduced more people to plant-based eating than any other resource. Start here for skeptical family members."
+        },
+        {
+          "title": "Cronometer",
+          "type": "Tool / app",
+          "href": "https://cronometer.com",
+          "badges": ["Free"],
+          "bethPick": false,
+          "description": "The gold-standard nutrition tracking app for plant-based eaters — tracks micronutrients often missed, including B12, omega-3s, and zinc."
+        }
+      ]
+    },
+    {
+      "id": "movement",
+      "label": "Movement",
+      "color": "amber",
+      "resources": [
+        {
+          "title": "WHO Physical Activity Guidelines",
+          "type": "Starter guide",
+          "href": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+          "badges": ["Free", "Evidence-based"],
+          "bethPick": false,
+          "description": "The official 150 minutes/week framework, explained clearly. Great for patients who want to understand the minimum effective dose of movement."
+        },
+        {
+          "title": "Exercise is Medicine — ACSM",
+          "type": "Tool / app",
+          "href": "https://www.exerciseismedicine.org",
+          "badges": ["Free"],
+          "bethPick": false,
+          "description": "The American College of Sports Medicine's patient-facing platform connecting movement to chronic disease management with provider resources."
+        },
+        {
+          "title": "Zone 2 Training — Peter Attia",
+          "type": "Starter guide",
+          "href": "https://peterattiamd.com/zone2",
+          "badges": ["Evidence-based"],
+          "bethPick": true,
+          "description": "The clearest lay explanation of why low-intensity aerobic training is foundational for metabolic health. Ideal for runners and cyclists."
+        },
+        {
+          "title": "10,000 Steps Evidence Review",
+          "type": "Key study",
+          "href": "https://nutritionfacts.org/topics/exercise",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "An accessible review of the walking and steps research — what the evidence actually shows about daily movement targets."
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "label": "Sleep",
+      "color": "indigo",
+      "resources": [
+        {
+          "title": "Sleep Foundation Guides",
+          "type": "Starter guide",
+          "href": "https://www.sleepfoundation.org",
+          "badges": ["Free", "Patient-friendly"],
+          "bethPick": false,
+          "description": "Comprehensive, evidence-based guides on sleep hygiene, sleep disorders, and CBT-I — the first-line non-medication treatment for insomnia."
+        },
+        {
+          "title": "Why We Sleep — Matthew Walker",
+          "type": "Book or film",
+          "href": "https://www.sleepdiplomat.com/book",
+          "badges": ["Patient-friendly"],
+          "bethPick": true,
+          "description": "The most important popular book on sleep published in the last decade. Powerful for motivating real behavior change around sleep habits."
+        },
+        {
+          "title": "AHA Essential 8 Sleep Statement",
+          "type": "Key study",
+          "href": "https://www.heart.org/en/healthy-living/healthy-lifestyle/sleep/sleep-and-heart-health",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "The American Heart Association's landmark statement adding sleep to the Essential 8 cardiovascular health metrics."
+        },
+        {
+          "title": "CBT-I Coach App",
+          "type": "Tool / app",
+          "href": "https://mobile.va.gov/app/cbt-i-coach",
+          "badges": ["Free"],
+          "bethPick": false,
+          "description": "A free VA-developed app that guides patients through Cognitive Behavioral Therapy for Insomnia — the evidence-based non-drug treatment for chronic insomnia."
+        }
+      ]
+    },
+    {
+      "id": "stress",
+      "label": "Stress",
+      "color": "teal",
+      "resources": [
+        {
+          "title": "MBSR — UMass",
+          "type": "Starter guide",
+          "href": "https://www.umassmed.edu/cfm/mindfulness-based-stress-reduction",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "The original 8-week Mindfulness-Based Stress Reduction program, now available online. The most evidence-backed behavioral intervention for chronic stress."
+        },
+        {
+          "title": "Insight Timer",
+          "type": "Tool / app",
+          "href": "https://insighttimer.com",
+          "badges": ["Free"],
+          "bethPick": true,
+          "description": "The largest free meditation library available. Excellent for patients who want guided practice without a subscription commitment."
+        },
+        {
+          "title": "Social Isolation Meta-analysis",
+          "type": "Key study",
+          "href": "https://doi.org/10.1177/1745691614568352",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "The landmark study showing social isolation carries a mortality risk equivalent to smoking 15 cigarettes/day."
+        },
+        {
+          "title": "Full Catastrophe Living",
+          "type": "Book or film",
+          "href": "https://www.amazon.com/Full-Catastrophe-Living-Wisdom-Illness/dp/0345536932",
+          "badges": ["Patient-friendly"],
+          "bethPick": false,
+          "description": "The definitive guide to MBSR practice. Accessible for motivated patients and rigorous enough to satisfy clinicians."
+        }
+      ]
+    },
+    {
+      "id": "substances",
+      "label": "Substances",
+      "color": "slate",
+      "resources": [
+        {
+          "title": "Rethinking Drinking — NIAAA",
+          "type": "Starter guide",
+          "href": "https://www.rethinkingdrinking.niaaa.nih.gov",
+          "badges": ["Free", "Patient-friendly"],
+          "bethPick": false,
+          "description": "The National Institute on Alcohol Abuse's interactive tool for assessing alcohol use and understanding its health effects."
+        },
+        {
+          "title": "No Safe Level of Alcohol (Lancet 2018)",
+          "type": "Key study",
+          "href": "https://doi.org/10.1016/S0140-6736(18)31310-2",
+          "badges": ["Evidence-based"],
+          "bethPick": false,
+          "description": "The definitive global study establishing no safe level of alcohol consumption for overall health."
+        },
+        {
+          "title": "This Naked Mind",
+          "type": "Book or film",
+          "href": "https://thisnakedmind.com",
+          "badges": ["Patient-friendly"],
+          "bethPick": false,
+          "description": "The most effective lay book on alcohol's neurological effects. Particularly valuable for patients not yet ready for an abstinence-framing approach."
+        },
+        {
+          "title": "Smokefree.gov",
+          "type": "Tool / app",
+          "href": "https://smokefree.gov",
+          "badges": ["Free"],
+          "bethPick": false,
+          "description": "The CDC's comprehensive smoking cessation platform with text support, apps, and evidence-based quit programs."
+        }
+      ]
+    },
+    {
+      "id": "connection",
+      "label": "Connection",
+      "color": "rose",
+      "resources": [
+        {
+          "title": "Surgeon General's Loneliness Advisory",
+          "type": "Key study",
+          "href": "https://www.hhs.gov/surgeongeneral/priorities/connection/index.html",
+          "badges": ["Free", "Evidence-based"],
+          "bethPick": false,
+          "description": "The landmark U.S. Surgeon General's report on the loneliness epidemic and its health consequences."
+        },
+        {
+          "title": "Blue Zones",
+          "type": "Starter guide",
+          "href": "https://www.bluezones.com",
+          "badges": ["Free", "Patient-friendly"],
+          "bethPick": true,
+          "description": "Research and practical guides from the world's longest-lived communities, sharing social connection and purpose as universal threads."
+        },
+        {
+          "title": "The Village Effect",
+          "type": "Book or film",
+          "href": "https://www.amazon.com/Village-Effect-Susan-Pinker/dp/0385679645",
+          "badges": ["Patient-friendly"],
+          "bethPick": false,
+          "description": "A beautifully written exploration of how face-to-face social contact is the single strongest predictor of long life."
+        },
+        {
+          "title": "VIA Character Strengths",
+          "type": "Tool / app",
+          "href": "https://www.viacharacter.org",
+          "badges": ["Free"],
+          "bethPick": false,
+          "description": "A validated free assessment helping patients identify their core strengths — a useful entry point for conversations about purpose and meaning."
+        }
+      ]
+    }
+  ],
+  "bethPicks": {
+    "badge": "Where to Start",
+    "title": "Beth's Recommendations",
+    "subtitle": "If you're not sure where to begin, these are the resources I recommend most often to patients and colleagues."
+  },
+  "aclm": {
+    "title": "Official ACLM Resources",
+    "subtitle": "From the American College of Lifestyle Medicine",
+    "items": [
+      {
+        "title": "ACLM Patient Resources",
+        "href": "https://lifestylemedicine.org/patients",
+        "description": "Educational materials and tools for patients interested in lifestyle medicine."
+      },
+      {
+        "title": "Find a Lifestyle Medicine Physician",
+        "href": "https://lifestylemedicine.org/find-a-physician",
+        "description": "Search the ACLM directory for board-certified lifestyle medicine physicians near you."
+      },
+      {
+        "title": "ACLM Evidence Library",
+        "href": "https://lifestylemedicine.org/evidence-based-resources",
+        "description": "Peer-reviewed research and clinical guidelines supporting lifestyle medicine interventions."
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Get my latest resource additions",
+    "description": "I update this page regularly as new evidence emerges. Subscribe to be notified."
+  }
+}

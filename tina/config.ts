@@ -1070,6 +1070,113 @@ export default defineConfig({
           },
         ],
       },
+
+      // ========================================================
+      // RESOURCES PAGE
+      // ========================================================
+      {
+        name: "resources",
+        label: "Resources Page",
+        path: "content/pages",
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        match: { include: "resources" },
+        fields: [
+          ...seoFields,
+          {
+            type: "object",
+            name: "hero",
+            label: "Hero",
+            fields: [
+              { type: "string", name: "badge", label: "Badge" },
+              { type: "string", name: "headline", label: "Headline" },
+              { type: "string", name: "subheadline", label: "Subheadline", ui: { component: "textarea" } },
+            ],
+          },
+          {
+            type: "object",
+            name: "pillars",
+            label: "Pillars",
+            list: true,
+            fields: [
+              { type: "string", name: "id", label: "ID (anchor slug)", required: true },
+              { type: "string", name: "label", label: "Label", required: true },
+              {
+                type: "string",
+                name: "color",
+                label: "Color",
+                required: true,
+                options: ["green", "amber", "indigo", "teal", "slate", "rose"],
+              },
+              {
+                type: "object",
+                name: "resources",
+                label: "Resources",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title", required: true },
+                  {
+                    type: "string",
+                    name: "type",
+                    label: "Type",
+                    required: true,
+                    options: ["Starter guide", "Tool / app", "Key study", "Book or film"],
+                  },
+                  { type: "string", name: "href", label: "URL", required: true },
+                  { type: "string", name: "badges", label: "Badges", list: true },
+                  { type: "boolean", name: "bethPick", label: "Beth's Pick" },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    required: true,
+                    ui: { component: "textarea" },
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "bethPicks",
+            label: "Beth's Picks Section",
+            fields: [
+              { type: "string", name: "badge", label: "Badge" },
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "subtitle", label: "Subtitle", ui: { component: "textarea" } },
+            ],
+          },
+          {
+            type: "object",
+            name: "aclm",
+            label: "ACLM Resources Section",
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
+              {
+                type: "object",
+                name: "items",
+                label: "Items",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title", required: true },
+                  { type: "string", name: "href", label: "URL", required: true },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "newsletter",
+            label: "Newsletter Section",
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+            ],
+          },
+        ],
+      },
     ],
   },
 });
