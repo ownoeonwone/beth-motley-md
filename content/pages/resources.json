@@ -261,6 +261,31 @@
       }
     ]
   },
+  "providers": {
+    "badge": "For Providers & Students",
+    "title": "Clinical Tools & Training",
+    "subtitle": "Resources for clinicians and learners looking to incorporate lifestyle medicine into practice.",
+    "items": [
+      {
+        "id": "handouts",
+        "title": "Teaching Aids & Handouts",
+        "platform": "Google Drive",
+        "href": "https://drive.google.com/drive/u/0/folders/149MSQkGk_QkDZ3RS28T-QmHXiC7sRTDE",
+        "cta": "Open Google Drive",
+        "icon": "folder",
+        "description": "A curated collection of patient handouts and teaching materials available for public use — free to download and adapt for your own practice."
+      },
+      {
+        "id": "training",
+        "title": "Getting Into Lifestyle Medicine",
+        "platform": "Vimeo — ACLM Interview",
+        "href": "https://vimeo.com/564252346",
+        "cta": "Watch the interview",
+        "icon": "video",
+        "description": "Dr. Beth's interview with the American College of Lifestyle Medicine covering pathways into the field, how she structured her practice, and what to expect — essential viewing for students and residents considering a lifestyle medicine career."
+      }
+    ]
+  },
   "newsletter": {
     "title": "Get my latest resource additions",
     "description": "I update this page regularly as new evidence emerges. Subscribe to be notified."
