@@ -74,6 +74,14 @@ export default defineConfig({
     },
   },
 
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN || "",
+      stopwordLanguages: ["eng"],
+    },
+    maxSearchIndexFieldLength: 100,
+  },
+
   schema: {
     collections: [
       // ========================================================
