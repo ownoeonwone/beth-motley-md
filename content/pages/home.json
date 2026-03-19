@@ -95,7 +95,12 @@
       "Dr. Motley brings a unique combination of engineering precision and clinical compassion to medicine. After earning her biomedical engineering degree from the University of Virginia, she pursued her MD and discovered that the most powerful treatments are often the simplest: what we eat, how we move, and the way we live.",
       "Today, she practices family and lifestyle medicine at Prisma Health in Greenville, SC, where she helps patients reverse type 2 diabetes, lower blood pressure, and reduce their dependence on medications — using evidence-based lifestyle interventions that address the root causes of chronic disease."
     ],
-    "badges": ["MD", "FACLM", "Board-Certified Family Medicine", "Lifestyle Medicine"],
+    "badges": [
+      "MD",
+      "FACLM",
+      "Board-Certified Family Medicine",
+      "Lifestyle Medicine"
+    ],
     "linkText": "Learn more about Dr. Motley",
     "linkHref": "/about"
   },
@@ -106,7 +111,7 @@
     "items": [
       {
         "quote": "Dr. Motley is truly a phenomenal doctor. Willing to listen and help. So thankful for her.",
-        "name": "Patient",
+        "name": "Dr. Motley",
         "role": "Patient"
       },
       {
