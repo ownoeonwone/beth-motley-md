@@ -6,7 +6,7 @@
   "hero": {
     "badge": "Program",
     "headline": "Diabetes Reversal Shared Medical Appointments",
-    "subheadline": "Evidence-based shared medical appointments designed to help you improve blood sugars, reduce medications, and work toward diabetes remission — led by a board-certified lifestyle medicine physician and covered by insurance."
+    "subheadline": "Evidence-based shared medical appointments designed to help you improve blood sugars, reduce medications, and work toward diabetes remission, led by a board-certified lifestyle medicine physician and covered by insurance."
   },
   "about": {
     "title": "About This Program",
@@ -93,7 +93,7 @@
     "items": [
       {
         "question": "Is this covered by insurance?",
-        "answer": "Yes. These are billed as standard office visits through your insurance — the same way a regular A1c check or medication visit would be billed. Prisma accepts all insurance. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
+        "answer": "Yes. These are billed as standard office visits through your insurance, the same way a regular A1c check or medication visit would be billed. Prisma accepts all insurance. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
       },
       {
         "question": "Do I need a referral from my doctor?",

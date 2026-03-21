@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "About Beth Motley, MD, FACLM — Lifestyle Medicine Physician",
+    "title": "About Beth Motley, MD, FACLM | Lifestyle Medicine Physician",
     "description": "Learn about Dr. Motley's journey from biomedical engineering to lifestyle medicine. Board-certified family and lifestyle medicine physician in Greenville, SC."
   },
   "hero": {
@@ -10,12 +10,12 @@
   },
   "story": {
     "image": "/images/headshots/beth-motley-blue-top.jpg",
-    "imageAlt": "Beth Motley, MD, FACLM — Lifestyle Medicine Physician",
+    "imageAlt": "Beth Motley, MD, FACLM | Lifestyle Medicine Physician",
     "title": "From Engineering to Medicine",
     "paragraphs": [
       "Dr. Motley did not take the typical path to medicine. She began her career studying biomedical engineering at the University of Virginia, where she learned to approach complex systems with precision, data, and a relentless focus on outcomes. That analytical foundation would become one of her greatest strengths as a physician.",
-      "During her medical training at EVMS / Old Dominion University, she noticed a pattern that troubled her: patients with type 2 diabetes, hypertension, and heart disease were being managed with escalating medications, but the underlying causes — poor nutrition, inactivity, chronic stress, inadequate sleep — were rarely addressed in any meaningful way. The standard model treated symptoms. She wanted to treat the source.",
-      "That realization led her to lifestyle medicine, a rapidly growing medical specialty built on a straightforward premise: the leading causes of chronic disease are largely driven by lifestyle, and they can be reversed by changing it. The evidence was compelling, the outcomes were measurable, and the approach aligned perfectly with her engineering instincts — identify the root cause, intervene at the source, and measure the results.",
+      "During her medical training at EVMS / Old Dominion University, she noticed a pattern that troubled her: patients with type 2 diabetes, hypertension, and heart disease were being managed with escalating medications, but the underlying causes (poor nutrition, inactivity, chronic stress, inadequate sleep) were rarely addressed in any meaningful way. The standard model treated symptoms. She wanted to treat the source.",
+      "That realization led her to lifestyle medicine, a rapidly growing medical specialty built on a straightforward premise: the leading causes of chronic disease are largely driven by lifestyle, and they can be reversed by changing it. The evidence was compelling, the outcomes were measurable, and the approach aligned perfectly with her engineering instincts: identify the root cause, intervene at the source, and measure the results.",
       "After completing her family medicine residency at Prisma Health in Greenville, SC, Dr. Motley built a practice that integrates traditional primary care with intensive lifestyle interventions. Her Diabetes Reversal Shared Medical Appointments bring together small groups of patients who share a common diagnosis and walk through a structured curriculum together, combining medical care, education, and group discussion in each session.",
       "The results have been striking. Patients in her program routinely lower their A1C, reduce or eliminate medications, lose weight, and report dramatic improvements in energy and quality of life. She is a Fellow of the American College of Lifestyle Medicine and is committed to advancing the field through clinical practice, medical education, and public speaking."
     ]
@@ -64,7 +64,7 @@
     "items": [
       {
         "title": "Evidence-Based",
-        "description": "Every recommendation is grounded in peer-reviewed research and aligned with the American College of Lifestyle Medicine clinical guidelines. No fads, no guesswork — just science that has been validated in clinical trials and real-world practice."
+        "description": "Every recommendation is grounded in peer-reviewed research and aligned with the American College of Lifestyle Medicine clinical guidelines. No fads, no guesswork: just science that has been validated in clinical trials and real-world practice."
       },
       {
         "title": "Patient-Centered",

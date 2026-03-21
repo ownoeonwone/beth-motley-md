@@ -6,7 +6,7 @@
   "hero": {
     "badge": "Evidence-Based Resources",
     "headline": "Tools & Guides",
-    "subheadline": "Free, vetted resources organized around the six pillars of lifestyle medicine — curated by Dr. Beth."
+    "subheadline": "Free, vetted resources organized around the six pillars of lifestyle medicine, curated by Dr. Beth."
   },
   "pillars": [
     {
@@ -34,7 +34,7 @@
           "type": "Starter guide",
           "href": "https://nutritionfacts.org/blog/explore-nutritionfacts-org-resources/",
           "bethPick": false,
-          "description": "A comprehensive hub of free guides, videos, and tools from NutritionFacts.org — organized by health topic and backed by peer-reviewed research."
+          "description": "A comprehensive hub of free guides, videos, and tools from NutritionFacts.org, organized by health topic and backed by peer-reviewed research."
         },
         {
           "title": "Full Plate Living",
@@ -44,7 +44,7 @@
           "description": "A free, ACLM-certified program focused on adding more high-fiber whole foods to meals you already eat. Not strictly WFPB, but an excellent, evidence-backed starting point for patients earlier in their journey."
         },
         {
-          "title": "Forks Over Knives — Recipes & Guides",
+          "title": "Forks Over Knives: Recipes & Guides",
           "type": "Starter guide",
           "href": "https://www.forksoverknives.com",
           "bethPick": false,
@@ -55,7 +55,7 @@
           "type": "Starter guide",
           "href": "https://www.cdc.gov/healthy-eating/adults/index.html",
           "bethPick": false,
-          "description": "Plain-language, government-backed guidance on building a healthy eating pattern — useful for patients who want foundational, no-fuss nutrition information."
+          "description": "Plain-language, government-backed guidance on building a healthy eating pattern, useful for patients who want foundational, no-fuss nutrition information."
         }
       ]
     },
@@ -66,14 +66,14 @@
       "color": "amber",
       "resources": [
         {
-          "title": "Move Your Way — U.S. Physical Activity Guidelines",
+          "title": "Move Your Way: U.S. Physical Activity Guidelines",
           "type": "Starter guide",
           "href": "https://odphp.health.gov/moveyourway",
           "bethPick": false,
           "description": "The federal campaign translating U.S. Physical Activity Guidelines into practical, personalized tools. Great for patients wanting to understand the minimum effective dose of movement."
         },
         {
-          "title": "Exercise is Medicine — ACSM",
+          "title": "Exercise is Medicine - ACSM",
           "type": "Tool / app",
           "href": "https://www.exerciseismedicine.org/",
           "bethPick": false,
@@ -84,14 +84,14 @@
           "type": "Starter guide",
           "href": "https://www.cdc.gov/physical-activity-basics/about/index.html",
           "bethPick": false,
-          "description": "Clear, evidence-based guidance on how much physical activity adults need and how to get started — straightforward and jargon-free."
+          "description": "Clear, evidence-based guidance on how much physical activity adults need and how to get started, straightforward and jargon-free."
         },
         {
-          "title": "NutritionFacts.org — Exercise Topic",
+          "title": "NutritionFacts.org: Exercise Topic",
           "type": "Key evidence",
           "href": "https://nutritionfacts.org/topics/exercise/",
           "bethPick": false,
-          "description": "An accessible, research-based review of the exercise literature — covering walking targets, resistance training, and more."
+          "description": "An accessible, research-based review of the exercise literature, covering walking targets, resistance training, and more."
         }
       ]
     },
@@ -109,18 +109,18 @@
           "description": "Government-backed guides on sleep health, sleep disorders, and the relationship between sleep and chronic disease."
         },
         {
-          "title": "NHLBI — Healthy Sleep",
+          "title": "NHLBI: Healthy Sleep",
           "type": "Starter guide",
           "href": "https://www.nhlbi.nih.gov/health/sleep",
           "bethPick": false,
-          "description": "The National Heart, Lung, and Blood Institute's comprehensive resource on sleep health — covering why sleep matters, how much you need, and what disrupts it."
+          "description": "The National Heart, Lung, and Blood Institute's comprehensive resource on sleep health, covering why sleep matters, how much you need, and what disrupts it."
         },
         {
-          "title": "Sleep Foundation — CBT-I Guide",
+          "title": "Sleep Foundation: CBT-I Guide",
           "type": "Starter guide",
           "href": "https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-insomnia",
           "bethPick": true,
-          "description": "A clear, patient-friendly guide to Cognitive Behavioral Therapy for Insomnia — the first-line, non-medication treatment for chronic insomnia with strong clinical evidence."
+          "description": "A clear, patient-friendly guide to Cognitive Behavioral Therapy for Insomnia, the first-line, non-medication treatment for chronic insomnia with strong clinical evidence."
         },
         {
           "title": "CBT-i Coach App",
@@ -152,18 +152,18 @@
           "description": "The largest free meditation library available. Ideal for patients who want guided practice without a subscription commitment."
         },
         {
-          "title": "MentalHealth.gov — Coping with Stress",
+          "title": "MentalHealth.gov: Coping with Stress",
           "type": "Starter guide",
           "href": "https://www.mentalhealth.gov/what-to-look-for/stress",
           "bethPick": false,
           "description": "Plain-language, government-backed guidance on recognizing stress and building healthy coping strategies."
         },
         {
-          "title": "NIH — Stress & Your Health",
+          "title": "NIH: Stress & Your Health",
           "type": "Key evidence",
           "href": "https://www.nccih.nih.gov/health/stress",
           "bethPick": false,
-          "description": "The National Center for Complementary and Integrative Health's evidence summary on stress — covering mind-body approaches with strong research support."
+          "description": "The National Center for Complementary and Integrative Health's evidence summary on stress, covering mind-body approaches with strong research support."
         }
       ]
     },
@@ -174,7 +174,7 @@
       "color": "slate",
       "resources": [
         {
-          "title": "Rethinking Drinking — NIAAA",
+          "title": "Rethinking Drinking - NIAAA",
           "type": "Tool / app",
           "href": "https://rethinkingdrinking.niaaa.nih.gov/",
           "bethPick": false,
@@ -188,18 +188,18 @@
           "description": "A comprehensive smoking cessation platform with personalized quit plans, text support, and evidence-based apps for iOS and Android."
         },
         {
-          "title": "CDC — Alcohol & Public Health",
+          "title": "CDC: Alcohol & Public Health",
           "type": "Key evidence",
           "href": "https://www.cdc.gov/alcohol/about-alcohol-use/index.html",
           "bethPick": false,
-          "description": "The CDC's evidence summary on alcohol use and public health — covering consumption patterns, health risks, and recommended limits."
+          "description": "The CDC's evidence summary on alcohol use and public health, covering consumption patterns, health risks, and recommended limits."
         },
         {
-          "title": "SAMHSA — Find Treatment",
+          "title": "SAMHSA: Find Treatment",
           "type": "Tool / app",
           "href": "https://findtreatment.gov/",
           "bethPick": false,
-          "description": "A government-run locator for substance use treatment programs across the U.S. — free, confidential, and available 24/7."
+          "description": "A government-run locator for substance use treatment programs across the U.S., free, confidential, and available 24/7."
         }
       ]
     },
@@ -214,10 +214,10 @@
           "type": "Key evidence",
           "href": "https://www.hhs.gov/surgeongeneral/reports-and-publications/connection/index.html",
           "bethPick": true,
-          "description": "The U.S. Surgeon General's landmark report on the loneliness epidemic — includes downloadable fact cards, individual recommendations, and a National Strategy to Advance Social Connection."
+          "description": "The U.S. Surgeon General's landmark report on the loneliness epidemic, includes downloadable fact cards, individual recommendations, and a National Strategy to Advance Social Connection."
         },
         {
-          "title": "Blue Zones — Dan Buettner",
+          "title": "Blue Zones - Dan Buettner",
           "type": "Starter guide",
           "href": "https://www.bluezones.com/",
           "bethPick": false,
@@ -228,14 +228,14 @@
           "type": "Tool / app",
           "href": "https://www.viacharacter.org/",
           "bethPick": false,
-          "description": "A validated, free assessment helping patients identify their core strengths — a useful entry point for conversations about purpose, meaning, and wellbeing."
+          "description": "A validated, free assessment helping patients identify their core strengths, a useful entry point for conversations about purpose, meaning, and wellbeing."
         },
         {
-          "title": "MedlinePlus — Social Health",
+          "title": "MedlinePlus: Social Health",
           "type": "Starter guide",
           "href": "https://medlineplus.gov/socialhealth.html",
           "bethPick": false,
-          "description": "NIH's plain-language overview of social health — covering loneliness, social connection, and their effects on physical and mental wellbeing."
+          "description": "NIH's plain-language overview of social health, covering loneliness, social connection, and their effects on physical and mental wellbeing."
         }
       ]
     }
@@ -273,16 +273,16 @@
         "href": "https://drive.google.com/drive/u/0/folders/149MSQkGk_QkDZ3RS28T-QmHXiC7sRTDE",
         "cta": "Open Google Drive",
         "icon": "folder",
-        "description": "A curated collection of patient handouts and teaching materials available for public use — free to download and adapt for your own practice."
+        "description": "A curated collection of patient handouts and teaching materials available for public use, free to download and adapt for your own practice."
       },
       {
         "id": "training",
         "title": "Getting Into Lifestyle Medicine",
-        "platform": "Vimeo — ACLM Interview",
+        "platform": "Vimeo - ACLM Interview",
         "href": "https://vimeo.com/564252346",
         "cta": "Watch the interview",
         "icon": "video",
-        "description": "Dr. Beth's interview with the American College of Lifestyle Medicine covering pathways into the field, how she structured her practice, and what to expect — essential viewing for students and residents considering a lifestyle medicine career."
+        "description": "Dr. Beth's interview with the American College of Lifestyle Medicine covering pathways into the field, how she structured her practice, and what to expect, essential viewing for students and residents considering a lifestyle medicine career."
       }
     ]
   },

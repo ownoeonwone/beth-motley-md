@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Beth Motley, MD — Lifestyle Medicine Physician | Greenville, SC",
+    "title": "Beth Motley, MD | Lifestyle Medicine Physician | Greenville, SC",
     "description": "Dr. Motley is a board-certified family and lifestyle medicine physician in Greenville, SC. She helps patients reverse chronic disease through evidence-based lifestyle interventions."
   },
   "hero": {
     "badge": "Lifestyle Medicine in Greenville, SC",
     "headline": "Reverse Disease. Restore Health. Reclaim Your Life.",
-    "subheadline": "Board-certified lifestyle medicine physician helping patients prevent, treat, and reverse chronic disease through evidence-based lifestyle interventions — not just more prescriptions.",
+    "subheadline": "Board-certified lifestyle medicine physician helping patients prevent, treat, and reverse chronic disease through evidence-based lifestyle interventions, not just more prescriptions.",
     "primaryCta": {
       "text": "Diabetes Reversal Program",
       "href": "/programs/diabetes-reversal"
@@ -61,7 +61,7 @@
     "subtitle": "Structured, physician-led programs designed to produce measurable results. Both programs accept insurance.",
     "items": [
       {
-        "title": "Diabetes Reversal — Shared Medical Appointments",
+        "title": "Diabetes Reversal: Shared Medical Appointments",
         "description": "A physician-led shared medical appointment program designed to help individuals improve blood sugars, reduce medications, and work toward diabetes remission through evidence-based Lifestyle Medicine.",
         "href": "/programs/diabetes-reversal",
         "icon": "heart",
@@ -93,7 +93,7 @@
     "imageAlt": "Beth Motley, MD",
     "paragraphs": [
       "Dr. Motley brings a unique combination of engineering precision and clinical compassion to medicine. After earning her biomedical engineering degree from the University of Virginia, she pursued her MD and discovered that the most powerful treatments are often the simplest: what we eat, how we move, and the way we live.",
-      "Today, she practices family and lifestyle medicine at Prisma Health in Greenville, SC, where she helps patients reverse type 2 diabetes, lower blood pressure, and reduce their dependence on medications — using evidence-based lifestyle interventions that address the root causes of chronic disease."
+      "Today, she practices family and lifestyle medicine at Prisma Health in Greenville, SC, where she helps patients reverse type 2 diabetes, lower blood pressure, and reduce their dependence on medications, using evidence-based lifestyle interventions that address the root causes of chronic disease."
     ],
     "badges": [
       "MD",
@@ -120,7 +120,7 @@
         "role": "Patient"
       },
       {
-        "quote": "Dr. Motley has been my primary physician for the last seven years, and my wife's for the past four. If you need a physician who not only cares about your lifestyle — but also lives it out — then Dr. Motley is your doctor. Highly recommended.",
+        "quote": "Dr. Motley has been my primary physician for the last seven years, and my wife's for the past four. If you need a physician who not only cares about your lifestyle (but also lives it out), then Dr. Motley is your doctor. Highly recommended.",
         "name": "Dr. Motley",
         "role": "Patient"
       },
@@ -135,12 +135,12 @@
     "tag": "Online Community",
     "title": "Join Pear Down",
     "description": "Get direct access to Dr. Motley, join a community of people healing together, and get exclusive content on lifestyle medicine, plant-based nutrition, and chronic disease reversal.",
-    "subdescription": "Lifestyle medicine education, coaching, and a supportive community — all in one place.",
+    "subdescription": "Lifestyle medicine education, coaching, and a supportive community: all in one place.",
     "ctaText": "Join the Community",
     "ctaHref": "https://www.skool.com/pear-down/about"
   },
   "newsletter": {
     "title": "Stay Connected",
-    "description": "Get evidence-based health insights, program updates, and practical lifestyle medicine tips delivered to your inbox. No spam, no gimmicks — just science you can use."
+    "description": "Get evidence-based health insights, program updates, and practical lifestyle medicine tips delivered to your inbox. No spam, no gimmicks: just science you can use."
   }
 }

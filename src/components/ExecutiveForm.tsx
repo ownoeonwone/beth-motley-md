@@ -98,7 +98,7 @@ export default function ExecutiveForm() {
 
       <div>
         <label htmlFor="exec-goals" className="label-text">What does optimal health look like for you? *</label>
-        <textarea id="exec-goals" required rows={3} value={form.goals} onChange={(e) => update('goals', e.target.value)} className="input-field resize-y" placeholder="Describe what you'd like to achieve — energy, performance, longevity, specific conditions..." />
+        <textarea id="exec-goals" required rows={3} value={form.goals} onChange={(e) => update('goals', e.target.value)} className="input-field resize-y" placeholder="Describe what you'd like to achieve: energy, performance, longevity, specific conditions..." />
       </div>
 
       <button type="submit" disabled={status === 'loading'} className="btn-primary disabled:opacity-60">

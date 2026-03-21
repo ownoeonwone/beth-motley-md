@@ -17,7 +17,7 @@
     "title": "ACLM National Conference 2019",
     "location": "Orlando, FL",
     "talkTitle": "How Providers Can Integrate Lifestyle Medicine into Their Existing Practice",
-    "description": "A standing-ovation keynote on practical tools for bringing lifestyle medicine into any clinical setting — without building a separate practice from scratch."
+    "description": "A standing-ovation keynote on practical tools for bringing lifestyle medicine into any clinical setting, without building a separate practice from scratch."
   },
   "topics": {
     "title": "Speaking Topics",
@@ -66,7 +66,7 @@
       { "quote": "She is an amazing presenter. Very informative and useful. Will implement in my practice.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
       { "quote": "Excellent engaging speaker who offered real advice on how to incorporate LM into practice. Practical advice on coding. Love that she has given us her own resources for free! Impressed that she has mastered this area so early in her career.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
       { "quote": "This was fantastic and very helpful. I hope to incorporate info from this session into my practice as a future NP.", "name": "ACLM 2019 Attendee", "role": "Nurse Practitioner Student" },
-      { "quote": "Absolutely by far my favorite session. She needs to come to every conference — allow more time!", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
+      { "quote": "Absolutely by far my favorite session. She needs to come to every conference, allow more time!", "name": "ACLM 2019 Attendee", "role": "Medical Professional" },
       { "quote": "Best speaker of the conference. What is your secret to unlimited energy? You just radiate energy.", "name": "ACLM 2019 Attendee", "role": "Medical Professional" }
     ]
   },
@@ -75,8 +75,8 @@
     "subtitle": "Selected talks and interviews",
     "primary": {
       "embedId": "Ts1LKLXqvCo",
-      "title": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — US Department of Defense",
-      "caption": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition — CME presentation for the US Department of Defense"
+      "title": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition - US Department of Defense",
+      "caption": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition - CME presentation for the US Department of Defense"
     },
     "secondary": [
       {
@@ -86,7 +86,7 @@
       },
       {
         "embedId": "39y6CHHCTxM",
-        "title": "Beth Motley, MD — Personal Favorite Talk",
+        "title": "Beth Motley, MD - Personal Favorite Talk",
         "caption": "Dr. Motley on Lifestyle Medicine"
       }
     ]
