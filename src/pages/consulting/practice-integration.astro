@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
+import PracticeIntegrationForm from '../../components/PracticeIntegrationForm.tsx';
 
 const seo = {
   title: 'Lifestyle Medicine Practice Integration | Dr. Beth Motley, MD, FACLM',
@@ -530,100 +531,9 @@ const faqItems = [
             />
           </div>
         </div>
-        <div>
-          <!--
-            GHL FORM PLACEHOLDER
-            Replace this comment block with the GoHighLevel
-            embed code for the Practice Integration form.
-
-            The form should capture:
-            - First name, last name
-            - Email address
-            - Phone number
-            - Practice name
-            - Practice type (Family Medicine / Internal Medicine /
-              Other - dropdown)
-            - Practice size (Solo / 2–3 physicians / 4–6 physicians /
-              Health system - dropdown)
-            - Primary goal (dropdown):
-              Add new revenue streams / Improve chronic disease outcomes /
-              Both / Still exploring
-            - Prior SMA experience (Yes / No / Heard of them - dropdown)
-            - Implementation timeline (dropdown):
-              Ready now / 3–6 months / Just exploring
-            - Open text: "Tell us about your practice and what
-              brought you here" (4-line textarea)
-
-            Form submit button text: "Submit My Application"
-
-            After submission, redirect to a thank-you page or
-            show inline message:
-            "Application received. Dr. Motley reviews every submission
-            personally and will be in touch within 3 business days
-            if there is a strong fit."
-          -->
-          <div class="card border-brand-200">
-            <h3 class="text-h4 font-serif text-brand-900 mb-2">Practice Integration Application</h3>
-            <p class="text-small text-neutral-500 mb-6">GHL form embed will be placed here. See HTML comment above for field specifications.</p>
-            <div class="space-y-4">
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="label-text">First Name</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
-                </div>
-                <div>
-                  <label class="label-text">Last Name</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
-                </div>
-              </div>
-              <div>
-                <label class="label-text">Email Address</label>
-                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
-              </div>
-              <div>
-                <label class="label-text">Phone Number</label>
-                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
-              </div>
-              <div>
-                <label class="label-text">Practice Name</label>
-                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="label-text">Practice Type</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
-                </div>
-                <div>
-                  <label class="label-text">Practice Size</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
-                </div>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="label-text">Primary Goal</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
-                </div>
-                <div>
-                  <label class="label-text">Prior SMA Experience</label>
-                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
-                </div>
-              </div>
-              <div>
-                <label class="label-text">Implementation Timeline</label>
-                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
-              </div>
-              <div>
-                <label class="label-text">Tell us about your practice and what brought you here</label>
-                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed h-24">Placeholder</div>
-              </div>
-              <button class="btn-primary w-full text-center opacity-50 cursor-not-allowed" disabled>
-                Submit My Application
-              </button>
-              <p class="text-small text-neutral-400 text-center">
-                Replace this placeholder with the GHL embed code for the Practice Integration pipeline.
-              </p>
-            </div>
-          </div>
+        <div class="card border-brand-200">
+          <h3 class="text-h4 font-serif text-brand-900 mb-6">Practice Integration Application</h3>
+          <PracticeIntegrationForm client:visible />
         </div>
       </div>
     </div>

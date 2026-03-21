@@ -16,6 +16,7 @@ const GHL_WEBHOOK_URL =
 const FORM_DISPLAY_NAMES: Record<string, string> = {
   contact: 'Contact Inquiry',
   speaking: 'Speaking Inquiry',
+  'practice-integration': 'Practice Integration Application',
 };
 
 const FIELD_MAPS: Record<string, Record<string, string>> = {
@@ -35,6 +36,18 @@ const FIELD_MAPS: Record<string, Record<string, string>> = {
     location: 'event_location',
     attendees: 'expected_attendees',
     details: 'event_details',
+  },
+  'practice-integration': {
+    name: 'name',
+    email: 'email',
+    phone: 'phone',
+    practiceName: 'practice_name',
+    practiceType: 'practice_type',
+    practiceSize: 'practice_size',
+    primaryGoal: 'primary_goal',
+    smaExperience: 'sma_experience',
+    timeline: 'implementation_timeline',
+    message: 'message',
   },
 };
 
@@ -56,6 +69,12 @@ export function buildGhlPayload(
     event_location: '',
     expected_attendees: '',
     event_details: '',
+    practice_name: '',
+    practice_type: '',
+    practice_size: '',
+    primary_goal: '',
+    sma_experience: '',
+    implementation_timeline: '',
   };
 
   const mapping = FIELD_MAPS[formName] || {};
