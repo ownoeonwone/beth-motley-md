@@ -1,0 +1,631 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const seo = {
+  title: 'Lifestyle Medicine Practice Integration | Dr. Beth Motley, MD, FACLM',
+  description: 'Dr. Beth Motley works with a small number of primary care practices each quarter to build fully operational lifestyle medicine programs. Three levels of engagement — from a single strategy session to full on-site implementation. Applications reviewed personally.',
+};
+
+const faqItems = [
+  {
+    question: 'Do you work with practices outside South Carolina?',
+    answer: 'Yes. The Blueprint Session and Practice Transformation Program are fully virtual and available to practices nationwide. The On-Site Intensive includes travel and is available anywhere in the contiguous United States.',
+  },
+  {
+    question: 'What specialties is this designed for?',
+    answer: 'The program is built around primary care — family medicine and internal medicine. It can be adapted for endocrinology, cardiology, and other specialties managing significant chronic disease volume. If you\'re in a different specialty and curious whether this applies, mention it in your application and we\'ll be honest about fit.',
+  },
+  {
+    question: 'Why isn\'t pricing listed for Tiers 2 and 3?',
+    answer: 'Because the right program depends on your practice size, payer mix, geographic location, and where you are in the implementation process. A 1-physician solo practice and a 10-physician group need different things, and pricing reflects that. We discuss investment on the discovery call after reviewing your application — so the conversation is useful from the first minute.',
+  },
+  {
+    question: 'Do you help with billing and coding?',
+    answer: 'Yes — and this is one of the highest-leverage parts of every engagement. Understanding how to bill for shared medical appointments and lifestyle medicine services is where most practices leave significant money on the table. Every program includes a billing and coding guide specific to your payer mix and services.',
+  },
+  {
+    question: 'How long until we see our first shared medical appointment running?',
+    answer: 'Most practices complete their first SMA within 60–90 days of starting The Practice Transformation Program. The On-Site Intensive is designed to compress that significantly — many practices schedule their first SMA before Dr. Motley\'s visit is over.',
+  },
+  {
+    question: 'Can this work inside a large health system?',
+    answer: 'Yes. Dr. Motley built her own program inside Prisma Health and understands the administrative, compliance, and credentialing landscape that comes with health system work. The On-Site Intensive is typically the right fit for health system engagements. Mention your system affiliation in your application.',
+  },
+  {
+    question: 'What if I\'m not sure which program is right?',
+    answer: 'Start with the application. Dr. Motley reviews every submission personally and will recommend the right level of engagement based on what you share — including whether The Blueprint Session is the appropriate first step.',
+  },
+];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+>
+  <!-- HERO SECTION -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-20 md:py-32">
+    <div class="container-page">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="mb-6 inline-block inline-flex items-center px-3 py-1 rounded-full text-small font-medium border bg-brand-50 text-brand-700 border-brand-100">
+            For Physicians &amp; Practice Leaders
+          </span>
+          <h1 class="font-serif text-brand-900 text-h1 md:text-display">
+            Most Practices Never Build This.<br />
+            The Few That Do Change Everything.
+          </h1>
+          <p class="mt-6 text-body-lg text-neutral-600 max-w-xl">
+            Dr. Beth Motley works with a small number of primary care practices each quarter to build fully operational lifestyle medicine programs — new revenue streams, better patient outcomes, and a practice you're proud of again. Applications are reviewed personally.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#apply" class="btn-primary">Apply for a Discovery Call</a>
+            <a href="#programs" class="btn-secondary">See the Programs</a>
+          </div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80"
+            alt="Physician in a professional clinical consultation setting"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY BAR -->
+  <section class="bg-brand-700 py-5">
+    <div class="container-page">
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-small font-medium text-brand-100">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          FACLM — Fellow, American College of Lifestyle Medicine
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          2019 ACLM National Conference — Featured Speaker
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          Practicing Physician — Prisma Health, Greenville SC
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-lime-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          Lifestyle Medicine Programs Across 3 Locations
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE PROBLEM -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        tag="The Gap"
+        title="You Already Know Lifestyle Medicine Works. Building It Into a Real Practice Is a Different Problem."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Workflow Problem</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Your schedule is already full. Adding a new service line without a clear system — and without disrupting your existing practice — feels like a problem you don't have time to solve.
+          </p>
+        </div>
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-lime-100 text-lime-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Revenue Problem</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            You've heard about shared medical appointments and lifestyle billing codes, but you're not sure what actually reimbursable looks like for your payer mix — or whether it pencils out.
+          </p>
+        </div>
+        <div class="card text-center border border-brand-100">
+          <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+            </svg>
+          </div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-2">The Roadmap Problem</h3>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            The clinical evidence is settled. A practical, field-tested implementation guide built for real practices — not academic theory — is much harder to find.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHY DR. MOTLEY -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        tag="Why This Works"
+        title="She Built What She's Teaching."
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-5xl mx-auto">
+        <div class="prose-brand">
+          <p class="text-body-lg text-neutral-700 mb-6">
+            Dr. Beth Motley didn't learn lifestyle medicine practice integration from a textbook. She built a functioning lifestyle medicine program inside one of South Carolina's largest health systems, designed and launched a Diabetes Reversal Shared Medical Appointment program now running across multiple locations, and presented her practice integration framework at the 2019 American College of Lifestyle Medicine national conference — one of the field's most competitive stages.
+          </p>
+          <p class="text-body text-neutral-600 mb-8">
+            When she works with your practice, you're getting a blueprint that has already been stress-tested in the real world. Billing figured out. Staff training built. Workflows mapped. Patient outcomes documented. Not a framework borrowed from a conference slide deck. A proven system, adapted for your specific practice, delivered by the physician who built it.
+          </p>
+          <div class="space-y-3">
+            <p class="text-small text-brand-700 font-medium flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Board-certified Family Medicine &amp; Lifestyle Medicine
+            </p>
+            <p class="text-small text-brand-700 font-medium flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              FACLM — Fellow, American College of Lifestyle Medicine
+            </p>
+            <p class="text-small text-brand-700 font-medium flex items-center gap-2">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              2019 ACLM Conference Featured Speaker
+            </p>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+          <img
+            src="/images/headshots/beth-motley-blue-top.jpg"
+            alt="Dr. Beth Motley, MD, FACLM"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE ROI CALLOUT -->
+  <section class="section-padding bg-brand-50">
+    <div class="container-page">
+      <SectionHeading
+        tag="The Business Case"
+        title="What This Actually Looks Like on a P&L"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
+        <div class="text-center">
+          <p class="text-display font-serif text-brand-900 mb-2">$80K–$125K</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Estimated new annual revenue from a single twice-weekly shared medical appointment program (10 patients per group, standard reimbursement)
+          </p>
+        </div>
+        <div class="text-center">
+          <p class="text-display font-serif text-brand-900 mb-2">60–90 Days</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Typical time from kickoff to first shared medical appointment running in your practice
+          </p>
+        </div>
+        <div class="text-center">
+          <p class="text-display font-serif text-brand-900 mb-2">6 Pillars</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Evidence-based lifestyle medicine domains integrated into a complete, billable clinical program
+          </p>
+        </div>
+      </div>
+      <p class="text-small text-neutral-500 text-center max-w-3xl mx-auto">
+        Revenue projections are illustrative and based on typical insurance reimbursement rates for shared medical appointments. Actual results vary by payer mix, practice size, and implementation. Results discussed during discovery call.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: WHO THIS IS FOR -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        tag="Is This Right For You?"
+        title="We Work With a Small Number of Practices Each Quarter. Here Is How We Decide."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Designed For -->
+        <div class="card">
+          <h3 class="text-h4 font-serif text-brand-900 mb-5">This Is Designed For:</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Primary care physicians (family medicine, internal medicine) who are already convinced lifestyle medicine works and are ready to build</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Practices with a meaningful chronic disease patient panel — diabetes, hypertension, obesity, metabolic syndrome — who would benefit immediately from a structured program</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Physicians who want to lead this clinically, not just delegate it to staff</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Groups with at least one physician prepared to be the internal champion and see this through</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Practices looking for a durable service line — not a one-time wellness event</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Not the Right Fit -->
+        <div class="card">
+          <h3 class="text-h4 font-serif text-brand-900 mb-5">This Is Probably Not the Right Fit If:</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>You are still researching whether lifestyle medicine produces real clinical results</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>Your practice has minimal chronic disease volume</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>You are looking for a fully automated program that requires no physician involvement</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>You need something operational in under 30 days</span>
+            </li>
+            <li class="flex gap-3 text-body text-neutral-600">
+              <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>You want a generic template, not a custom-built program</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 max-w-3xl mx-auto">
+        <div class="card bg-brand-50 border-brand-200 text-center">
+          <p class="text-body text-brand-800">
+            Not sure which category you fall into? That is exactly what the discovery call is for. <a href="#apply" class="text-brand-700 font-semibold underline underline-offset-2 hover:text-brand-900">Apply below</a> and Dr. Motley will personally review your intake before scheduling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: THE PROGRAMS -->
+  <section id="programs" class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        tag="Programs"
+        title="Three Levels of Engagement. One Standard of Work."
+        subtitle="Dr. Motley accepts 4–6 new practice integration clients per quarter. Every engagement includes her direct involvement — not a team of associates. Current availability: Q2–Q3 2026."
+      />
+      <!-- Note: Update availability each quarter -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- CARD 1: THE BLUEPRINT SESSION -->
+        <div class="card border border-brand-100 flex flex-col">
+          <div class="mb-4">
+            <span class="badge">Single 90-Minute Virtual Session</span>
+          </div>
+          <h3 class="text-h3 font-serif text-brand-900 mb-1">The Blueprint Session</h3>
+          <p class="text-h3 font-serif text-brand-700 mb-3">$1,500</p>
+          <p class="text-small text-neutral-500 mb-5 italic">
+            For practices doing serious due diligence before committing to full implementation
+          </p>
+          <ul class="space-y-3 mb-6 flex-1">
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Practice intake and gap analysis (completed before the call)</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>90-minute deep-dive strategy session with Dr. Motley</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Written post-session summary: top 3 revenue opportunities, billing and coding quick-start guide, staffing recommendations, and priority next steps</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>30-day email follow-up access for implementation questions</span>
+            </li>
+          </ul>
+          <a href="#apply" class="btn-primary w-full text-center">Book the Blueprint — $1,500</a>
+          <p class="text-small text-neutral-400 text-center mt-3">
+            This is the only program with pricing listed here. For Tiers 2 and 3, pricing is discussed on the discovery call after Dr. Motley reviews your practice profile.
+          </p>
+        </div>
+
+        <!-- CARD 2: THE PRACTICE TRANSFORMATION PROGRAM -->
+        <div class="card border-2 border-brand-300 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="inline-flex items-center px-4 py-1 rounded-full text-small font-semibold bg-lime-400 text-brand-950">
+              Most Requested
+            </span>
+          </div>
+          <div class="mb-4 mt-2">
+            <span class="badge">90-Day Virtual Consulting Engagement</span>
+          </div>
+          <h3 class="text-h3 font-serif text-brand-900 mb-1">The Practice Transformation Program</h3>
+          <p class="text-small text-neutral-500 mb-5 italic">
+            For practices ready to build and launch a full lifestyle medicine service line
+          </p>
+          <ul class="space-y-3 mb-6 flex-1">
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Everything in The Blueprint Session</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Four additional 60-minute strategy calls over 90 days</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Custom LM practice integration playbook — workflow design, SMA structure, staff roles and scripts, billing and coding guide, patient communication templates</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Two live virtual staff training sessions (up to 8 staff each)</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Revenue model worksheet with practice-specific projections</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>90-day async support with 48-hour response commitment</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>6-month check-in call</span>
+            </li>
+          </ul>
+          <a href="#apply" class="btn-primary w-full text-center">Apply for This Program</a>
+          <p class="text-small text-neutral-400 text-center mt-3">
+            Investment and availability discussed on discovery call. Applications reviewed within 3 business days.
+          </p>
+        </div>
+
+        <!-- CARD 3: THE ON-SITE INTENSIVE -->
+        <div class="card border border-brand-100 flex flex-col">
+          <div class="mb-4">
+            <span class="badge">Full On-Site Day + 90-Day Virtual Support</span>
+          </div>
+          <h3 class="text-h3 font-serif text-brand-900 mb-1">The On-Site Intensive</h3>
+          <p class="text-small text-neutral-500 mb-5 italic">
+            For multi-physician groups and health systems ready to move fast and go deep
+          </p>
+          <ul class="space-y-3 mb-6 flex-1">
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Two-week pre-visit planning and intake with Dr. Motley</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Full on-site day: morning clinical leadership session, full staff training, afternoon working session to design and schedule your first SMA</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Custom practice playbook delivered within one week post-visit</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Everything in The Practice Transformation Program (full 90-day virtual support included)</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>6-month and 12-month strategic check-ins</span>
+            </li>
+            <li class="flex gap-2 text-small text-neutral-600">
+              <svg class="w-4 h-4 text-lime-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>Optional: patient education event or physician grand rounds lecture for your practice or health system</span>
+            </li>
+          </ul>
+          <a href="#apply" class="btn-primary w-full text-center">Apply for an On-Site Engagement</a>
+          <p class="text-small text-neutral-400 text-center mt-3">
+            Limited availability. Travel expenses billed separately. Custom pricing for groups of 5+ physicians. Contact to discuss.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: À LA CARTE SERVICES -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        tag="Additional Services"
+        title="Standalone Offerings"
+      />
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div class="card">
+          <h3 class="text-body font-semibold text-brand-900 mb-2">Additional Staff Training Session</h3>
+          <p class="text-small text-neutral-600 leading-relaxed mb-3">Virtual, up to 8 staff. Available as a standalone or added to any program.</p>
+          <p class="text-body font-semibold text-brand-700">$750/session</p>
+        </div>
+        <div class="card">
+          <h3 class="text-body font-semibold text-brand-900 mb-2">Custom SMA Curriculum Development</h3>
+          <p class="text-small text-neutral-600 leading-relaxed mb-3">A complete 6-session shared medical appointment curriculum built for one condition (diabetes, hypertension, or obesity).</p>
+          <p class="text-body font-semibold text-brand-700">$2,000</p>
+        </div>
+        <div class="card">
+          <h3 class="text-body font-semibold text-brand-900 mb-2">CME Grand Rounds Lecture</h3>
+          <p class="text-small text-neutral-600 leading-relaxed mb-3">Dr. Motley delivers a CME-eligible lecture on lifestyle medicine practice integration for your practice or health system.</p>
+          <p class="text-body font-semibold text-brand-700">$3,500 + travel</p>
+        </div>
+        <div class="card">
+          <h3 class="text-body font-semibold text-brand-900 mb-2">Annual Practice Check-Up</h3>
+          <p class="text-small text-neutral-600 leading-relaxed mb-3">60-minute annual strategy call to review your program's performance and plan the next phase.</p>
+          <p class="text-body font-semibold text-brand-700">$1,500/year</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: SOCIAL PROOF -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        tag="In Practice"
+        title="Built for Real Practices. Not Academic Theory."
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
+        <div>
+          <!-- Replace placeholder testimonial with real physician testimonial once first client completes the program -->
+          <blockquote class="border-l-4 border-brand-300 pl-6 py-2">
+            <p class="text-body-lg text-neutral-600 italic leading-relaxed mb-4">
+              "Testimonial from a physician client will go here once the program launches. This space is reserved for a real quote from a practice leader who has completed the program."
+            </p>
+            <footer class="text-small text-neutral-500">
+              <span class="font-semibold text-brand-800">— Name, MD</span><br />
+              Specialty &middot; Location
+            </footer>
+          </blockquote>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&q=80"
+            alt="Medical team collaborating in a professional office setting"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: FAQ -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        tag="Common Questions"
+        title="Before You Apply"
+      />
+      <div class="max-w-3xl mx-auto">
+        <FAQ items={faqItems} />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: APPLICATION / FINAL CTA -->
+  <section id="apply" class="section-padding bg-gradient-to-b from-brand-50 to-white">
+    <div class="container-page">
+      <SectionHeading
+        tag="Apply"
+        title="A Small Number of Spots. A High Standard for Both Sides."
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-5xl mx-auto">
+        <div>
+          <p class="text-body-lg text-neutral-700 mb-6">
+            Dr. Motley reviews every application personally. If there is a strong fit, you will hear back within 3 business days to schedule a no-obligation 30-minute discovery call. That call is not a sales pitch — it is a working conversation to determine whether your practice is ready and whether this is the right engagement for where you are.
+          </p>
+          <p class="text-body text-neutral-600 mb-8">
+            If it is not the right time, she will tell you that too — and tell you what would need to be true before it is.
+          </p>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              alt="Professional physician consultation in a warm office setting"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div>
+          <!--
+            GHL FORM PLACEHOLDER
+            Replace this comment block with the GoHighLevel
+            embed code for the Practice Integration form.
+
+            The form should capture:
+            - First name, last name
+            - Email address
+            - Phone number
+            - Practice name
+            - Practice type (Family Medicine / Internal Medicine /
+              Other — dropdown)
+            - Practice size (Solo / 2–3 physicians / 4–6 physicians /
+              Health system — dropdown)
+            - Primary goal (dropdown):
+              Add new revenue streams / Improve chronic disease outcomes /
+              Both / Still exploring
+            - Prior SMA experience (Yes / No / Heard of them — dropdown)
+            - Implementation timeline (dropdown):
+              Ready now / 3–6 months / Just exploring
+            - Open text: "Tell us about your practice and what
+              brought you here" (4-line textarea)
+
+            Form submit button text: "Submit My Application"
+
+            After submission, redirect to a thank-you page or
+            show inline message:
+            "Application received. Dr. Motley reviews every submission
+            personally and will be in touch within 3 business days
+            if there is a strong fit."
+          -->
+          <div class="card border-brand-200">
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">Practice Integration Application</h3>
+            <p class="text-small text-neutral-500 mb-6">GHL form embed will be placed here. See HTML comment above for field specifications.</p>
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="label-text">First Name</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
+                </div>
+                <div>
+                  <label class="label-text">Last Name</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
+                </div>
+              </div>
+              <div>
+                <label class="label-text">Email Address</label>
+                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
+              </div>
+              <div>
+                <label class="label-text">Phone Number</label>
+                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
+              </div>
+              <div>
+                <label class="label-text">Practice Name</label>
+                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Placeholder</div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="label-text">Practice Type</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
+                </div>
+                <div>
+                  <label class="label-text">Practice Size</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="label-text">Primary Goal</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
+                </div>
+                <div>
+                  <label class="label-text">Prior SMA Experience</label>
+                  <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
+                </div>
+              </div>
+              <div>
+                <label class="label-text">Implementation Timeline</label>
+                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed">Select...</div>
+              </div>
+              <div>
+                <label class="label-text">Tell us about your practice and what brought you here</label>
+                <div class="input-field bg-neutral-50 text-neutral-400 cursor-not-allowed h-24">Placeholder</div>
+              </div>
+              <button class="btn-primary w-full text-center opacity-50 cursor-not-allowed" disabled>
+                Submit My Application
+              </button>
+              <p class="text-small text-neutral-400 text-center">
+                Replace this placeholder with the GHL embed code for the Practice Integration pipeline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
