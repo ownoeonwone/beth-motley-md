@@ -93,7 +93,7 @@
     "items": [
       {
         "question": "Is this covered by insurance?",
-        "answer": "Yes. Our group visits are billed as medical visits, not wellness coaching, which means most commercial insurance plans, Medicare, and many Medicaid plans cover them. We verify your benefits before you begin so there are no surprises. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
+        "answer": "Yes. These are billed as standard office visits through your insurance — the same way a regular A1c check or medication visit would be billed. Prisma accepts all insurance. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
       },
       {
         "question": "Do I need a referral from my doctor?",
@@ -104,8 +104,8 @@
         "answer": "Patients on insulin are welcome and often see significant results. Dr. Motley monitors your blood glucose closely throughout the program and adjusts medications as your numbers improve. Safety is our top priority, and medication changes are always made under direct physician supervision."
       },
       {
-        "question": "How is this different from a diet program?",
-        "answer": "This is not a diet program. It is a physician-led medical program that uses evidence-based lifestyle interventions as the primary treatment for type 2 diabetes. You receive real medical care including lab work, medication management, and ongoing physician oversight. The lifestyle changes we teach are grounded in peer-reviewed research from the American College of Lifestyle Medicine."
+        "question": "How is this different from typical diabetes management programs?",
+        "answer": "This program is fundamentally different from the traditional approach to \"controlling\" diabetes. Rather than simply managing blood sugars with medications or avoiding carbohydrates to work around insulin resistance, this model focuses on addressing the root cause: insulin resistance itself. We do this through an evidence-based, plant-forward approach, aligned with the recommendations of the American College of Lifestyle Medicine. The goal is not better numbers; it's getting diabetes off your diagnosis list."
       },
       {
         "question": "Can I keep seeing my current doctor while doing this?",
