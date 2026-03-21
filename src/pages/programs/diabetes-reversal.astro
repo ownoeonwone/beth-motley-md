@@ -51,6 +51,17 @@ const whoColors = [
             '<strong class="text-brand-800">The goal is not better numbers; it is getting diabetes off your diagnosis list.</strong>'
           )} />
         </p>
+        {d.about.groupVisitHeading && (
+          <h3 class="text-h4 font-serif text-brand-900 mt-10 mb-4">{d.about.groupVisitHeading}</h3>
+        )}
+        {d.about.groupVisitParagraphs && d.about.groupVisitParagraphs.map((p, i) => (
+          <p class:list={[
+            'text-body text-neutral-600 leading-relaxed',
+            i < d.about.groupVisitParagraphs.length - 1 ? 'mb-4' : '',
+          ]}>
+            {p}
+          </p>
+        ))}
       </div>
     </div>
   </section>
@@ -103,8 +114,51 @@ const whoColors = [
     </div>
   </section>
 
-  <!-- Schedule -->
+  <!-- Why Group Visits Work -->
   <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        tag="The Evidence"
+        title="Why Group Visits Work"
+        subtitle="The research is clear. Here is what happens in the room."
+      />
+      <div class="max-w-3xl mx-auto space-y-10">
+        <div class="prose-brand">
+          <p class="text-body font-semibold text-brand-900 mb-2">You get more time with your physician.</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Not just more time than a typical visit, but dramatically more. A traditional diabetes appointment gives you perhaps 7 minutes of real physician time. Each session here runs 75 minutes. Over the full program that is more direct physician time than most patients get from their diabetes provider in two years.
+          </p>
+        </div>
+        <div class="prose-brand">
+          <p class="text-body font-semibold text-brand-900 mb-2">You learn more because of the people around you.</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Research consistently shows this and it surprises people every time. In studies of group medical visits for diabetes, 92% of patients reported learning more about managing their condition than they ever had in traditional one-on-one care. Someone else in the room asks the question you were afraid to ask. Someone else's experience unlocks a realization you could not have reached alone. The group does not dilute the education; it multiplies it.
+          </p>
+        </div>
+        <div class="prose-brand">
+          <p class="text-body font-semibold text-brand-900 mb-2">The accountability is built in, and it works.</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Setting a goal with your doctor in a private appointment is one thing. Setting it in front of 10 other people who will ask you about it in two weeks is another. In published research on lifestyle medicine group programs, 97% of participants achieved or nearly achieved every health goal they set. That figure reflects what happens when accountability is structural rather than optional.
+          </p>
+        </div>
+        <div class="prose-brand">
+          <p class="text-body font-semibold text-brand-900 mb-2">Something shifts when you are not alone in it.</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Diabetes carries a weight that is hard to explain to someone who does not have it: the fatigue, the frustration, the feeling that you have already tried everything. One of the most consistent findings in the research on group medical visits is that patients report a profound sense of not being alone for the first time. That shift, from isolated patient to engaged member of a group, is not a soft benefit. It shows up in the lab values.
+          </p>
+        </div>
+        <div class="prose-brand">
+          <p class="text-body font-semibold text-brand-900 mb-2">Most patients are skeptical before their first session.</p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            That is completely normal and worth naming directly. Research shows that initial hesitation about the group format is nearly universal, and that it almost always dissolves after a single session. If you are uncertain, that uncertainty is part of the process. Come once. The program does the rest.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
         title={d.schedule.title}
@@ -122,7 +176,7 @@ const whoColors = [
   </section>
 
   <!-- What to Expect / Session Curriculum -->
-  <section class="section-padding bg-white">
+  <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
         title={d.curriculum.title}
@@ -145,7 +199,7 @@ const whoColors = [
   </section>
 
   <!-- Eligibility -->
-  <section class="section-padding bg-brand-50/40">
+  <section class="section-padding bg-white">
     <div class="container-page">
       <SectionHeading
         title={d.eligibility.title}
@@ -165,7 +219,7 @@ const whoColors = [
   </section>
 
   <!-- Billing -->
-  <section class="section-padding bg-white">
+  <section class="section-padding bg-brand-50/40">
     <div class="container-page">
       <SectionHeading
         title={d.billing.title}
@@ -184,19 +238,22 @@ const whoColors = [
     <div class="container-page">
       <div class="text-center mb-12">
         <h2 class="text-h2 font-serif text-white">{d.results.title}</h2>
-        <p class="mt-3 text-body-lg text-brand-200 max-w-xl mx-auto">
+        <p class="mt-3 text-body-lg text-brand-200 max-w-2xl mx-auto">
           {d.results.subtitle}
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {d.results.stats.map((stat) => (
           <div class="text-center p-6 rounded-xl bg-brand-800/50">
             <div class="text-display font-serif text-lime-400">{stat.value}</div>
-            <p class="text-small text-brand-200 mt-2">{stat.label}</p>
+            <p class="text-small font-semibold text-brand-100 mt-2">{stat.label}</p>
+            {stat.description && (
+              <p class="text-small text-brand-300 mt-3 leading-relaxed">{stat.description}</p>
+            )}
           </div>
         ))}
       </div>
-      <p class="text-center text-small text-brand-300 mt-8 max-w-lg mx-auto">
+      <p class="text-center text-small text-brand-300 mt-8 max-w-2xl mx-auto">
         {d.results.disclaimer}
       </p>
     </div>

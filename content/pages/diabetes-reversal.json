@@ -6,13 +6,19 @@
   "hero": {
     "badge": "Program",
     "headline": "Diabetes Reversal Shared Medical Appointments",
-    "subheadline": "Evidence-based shared medical appointments designed to help you improve blood sugars, reduce medications, and work toward diabetes remission, led by a board-certified lifestyle medicine physician and covered by insurance."
+    "subheadline": "Evidence-based shared medical appointments designed to help you improve blood sugars, reduce medications, and work toward diabetes remission \u2014 led by a board-certified lifestyle medicine physician, covered by insurance, and built around a model of care that research consistently shows outperforms the traditional 15-minute appointment."
   },
   "about": {
     "title": "About This Program",
     "subtitle": "A fundamentally different approach to diabetes care",
     "intro": "This program is fundamentally different from the traditional approach to \"controlling\" diabetes. Rather than simply managing blood sugars with medications or avoiding carbohydrates to work around insulin resistance, this model focuses on addressing the root cause: insulin resistance itself.",
-    "body": "We do this through an evidence-based, plant-forward approach, aligned with the recommendations of the American College of Lifestyle Medicine. The goal is not better numbers; it is getting diabetes off your diagnosis list."
+    "body": "We do this through an evidence-based, plant-forward approach, aligned with the recommendations of the American College of Lifestyle Medicine. The goal is not better numbers; it is getting diabetes off your diagnosis list.",
+    "groupVisitHeading": "Why a group visit \u2014 and why it works better than you\u2019d expect",
+    "groupVisitParagraphs": [
+      "Most diabetes care happens in 15-minute appointments. By the time check-in is done and the chart is reviewed, there are perhaps 7 minutes left to address a condition that took years to develop and requires real change to reverse. No physician, no matter how skilled, can do that work in 7 minutes.",
+      "This program gives you 75 minutes, six times, with a physician who has one goal: helping you reverse insulin resistance. And it surrounds you with 8 to 12 other people working toward the exact same thing.",
+      "That structure is not a compromise. It is the mechanism. Research on group medical visits consistently shows that patients learn more, change more, and stay more accountable when they go through this process together. In published studies of lifestyle medicine group programs, 97% of patients achieved or nearly achieved every health goal they set. That result is not achievable in solo care; there is simply not enough time or accountability built into a quarterly 15-minute appointment."
+    ]
   },
   "whoIsThisFor": {
     "title": "Who Is This For?",
@@ -72,15 +78,36 @@
     "description": "These are billed as standard office visits through your insurance, just like when you go in for an A1c check and have medication adjusted."
   },
   "results": {
-    "title": "Real Results, Real Patients",
-    "subtitle": "Outcomes from lifestyle medicine group visit programs across the country consistently show meaningful improvements.",
+    "title": "What the Research Shows",
+    "subtitle": "Outcomes from published peer-reviewed studies on lifestyle medicine group visit programs \u2014 the same evidence-based model we use.",
     "stats": [
-      { "value": "1.5%", "label": "Average A1c Reduction" },
-      { "value": "62%", "label": "Patients Reducing Medications" },
-      { "value": "15 lbs", "label": "Average Weight Loss" },
-      { "value": "97%", "label": "Patient Satisfaction" }
+      {
+        "value": "0.5\u20132.2%",
+        "label": "A1c reduction in published studies",
+        "description": "Across multiple peer-reviewed studies and meta-analyses, shared medical appointment programs have produced A1c reductions ranging from 0.5% in average-risk populations to over 2% in high-risk patients, reductions that rival adding a new medication."
+      },
+      {
+        "value": "5+ mmHg",
+        "label": "Systolic blood pressure improvement",
+        "description": "Published research consistently shows group lifestyle medicine programs improve blood pressure alongside blood sugar, addressing the cardiovascular risk that makes diabetes so dangerous over time."
+      },
+      {
+        "value": "2\u00d7",
+        "label": "Rate of medication reduction vs. standard care",
+        "description": "In published research, patients in lifestyle medicine group programs reduced or eliminated diabetes medications at twice the rate of patients in standard care, because the program addresses the cause, not just the symptom."
+      },
+      {
+        "value": "90\u201395%",
+        "label": "Patient satisfaction rate",
+        "description": "Across multiple studies, 90\u201395% of patients rate shared medical appointment programs as excellent or very good, consistently describing it as the best medical experience they have had."
+      },
+      {
+        "value": "92%",
+        "label": "Patients who learned more than in traditional care",
+        "description": "92% of patients in diabetes group visit research reported learning more about managing their condition than they ever had in any traditional one-on-one appointment."
+      }
     ],
-    "disclaimer": "Statistics reflect published outcomes from lifestyle medicine group visit programs nationally. Individual results vary based on adherence, baseline health, and other factors."
+    "disclaimer": "Statistics reflect outcomes from published peer-reviewed research on lifestyle medicine and shared medical appointment programs. Sources include meta-analyses published in CMAJ, the Journal of General Internal Medicine, and Frontiers in Endocrinology. Individual results vary. Sources available upon request."
   },
   "video": {
     "title": "Dr. Motley on Diabetes Reversal",
@@ -91,6 +118,10 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Common questions about the Diabetes Reversal Shared Medical Appointments",
     "items": [
+      {
+        "question": "Will I be comfortable talking about my health in front of other people?",
+        "answer": "This is the question most people have and very few ask directly. The honest answer is: probably not at first, and that is completely fine.<br><br>The group is small (8\u201312 people), everyone in the room shares the same diagnosis, and Dr. Motley runs the sessions in a way that makes participation entirely voluntary. You never have to share anything you do not want to share. You can spend the first session just listening.<br><br>What the research consistently shows, and what patients in this program report, is that the discomfort is almost entirely front-loaded. After one session, most patients describe it as the best medical appointment they have ever had. The sense of being understood by people going through the same thing, combined with the depth of time and education in each session, tends to make the privacy concern feel much smaller than it did before walking in.<br><br>If you are still uncertain, come to one session. You are not committed to the full program after one visit. Come once, see how it feels, and decide from there."
+      },
       {
         "question": "Is this covered by insurance?",
         "answer": "Yes. These are billed as standard office visits through your insurance, the same way a regular A1c check or medication visit would be billed. Prisma accepts all insurance. You will be responsible for any applicable copays or coinsurance, just as you would for a standard office visit."
@@ -120,6 +151,6 @@
   "ctaForm": {
     "title": "Ready to Get Started?",
     "subtitle": "Space is limited. Please contact the office directly to enroll or request a referral from your PCP.",
-    "note": "Please do NOT enroll if you are not serious about participation."
+    "note": "This program works best for patients who are ready to engage, not just attend. If you are at the point where you want to genuinely reverse this disease rather than manage it indefinitely, this program is designed for you."
   }
 }
