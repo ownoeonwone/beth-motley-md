@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Color Comparison | Internal"
+  description="Internal color comparison page"
+  noindex={true}
+>
+  <section class="py-12">
+    <div class="container-page">
+      <h1 class="text-h1 font-serif text-brand-900 text-center mb-4">Color Palette Comparison</h1>
+      <p class="text-body text-neutral-500 text-center mb-12">Current site (left) vs. One Medical-inspired (right)</p>
+
+      <!-- HERO COMPARISON -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-b from-brand-50 to-white p-10">
+            <span class="badge mb-4 inline-block">Current Palette</span>
+            <h2 class="text-h2 font-serif text-brand-900 mb-3">Diabetes Reversal Program</h2>
+            <p class="text-body text-neutral-600 mb-6">Evidence-based shared medical appointments designed to help you improve blood sugars and work toward remission.</p>
+            <div class="flex gap-3">
+              <button class="btn-primary">Get Started</button>
+              <button class="btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- One Medical Inspired -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="p-10" style="background: linear-gradient(180deg, #F5F3EF 0%, #FFFFFF 100%);">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-small font-medium border mb-4" style="background: #EEF6F4; color: #005450; border-color: #D4EEEC;">One Medical Inspired</span>
+            <h2 class="text-h2 mb-3" style="font-family: 'Playfair Display', Georgia, serif; color: #005450;">Diabetes Reversal Program</h2>
+            <p class="text-body mb-6" style="color: #2A2927;">Evidence-based shared medical appointments designed to help you improve blood sugars and work toward remission.</p>
+            <div class="flex gap-3">
+              <button class="inline-flex items-center justify-center px-7 py-3.5 font-sans font-semibold text-body rounded-brand transition-all" style="background: #068466; color: white;">Get Started</button>
+              <button class="inline-flex items-center justify-center px-7 py-3.5 font-sans font-medium text-body rounded-brand border-2 transition-all" style="border-color: #005450; color: #005450;">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DARK SECTION COMPARISON -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current Dark -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="bg-brand-900 p-10">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-small font-medium border bg-brand-800 text-brand-200 border-brand-600 mb-4">Current Dark</span>
+            <h2 class="text-h2 font-serif text-white mb-3">What the Research Shows</h2>
+            <p class="text-body text-brand-200 mb-6">Outcomes from published peer-reviewed studies.</p>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center p-4 rounded-xl bg-brand-800/50">
+                <div class="text-h2 font-serif text-lime-400">0.5-2.2%</div>
+                <p class="text-small text-brand-200 mt-1">A1c reduction</p>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-brand-800/50">
+                <div class="text-h2 font-serif text-lime-400">92%</div>
+                <p class="text-small text-brand-200 mt-1">Learned more</p>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-brand-800/50">
+                <div class="text-h2 font-serif text-lime-400">2&times;</div>
+                <p class="text-small text-brand-200 mt-1">Med reduction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- One Medical Dark -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="p-10" style="background: #005450;">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-small font-medium border mb-4" style="background: rgba(6,132,102,0.3); color: #abcc76; border-color: rgba(171,204,118,0.3);">One Medical Dark</span>
+            <h2 class="text-h2 mb-3" style="font-family: 'Playfair Display', Georgia, serif; color: white;">What the Research Shows</h2>
+            <p class="text-body mb-6" style="color: #c8e0dd;">Outcomes from published peer-reviewed studies.</p>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center p-4 rounded-xl" style="background: rgba(0,0,0,0.15);">
+                <div class="text-h2 font-serif" style="color: #abcc76;">0.5-2.2%</div>
+                <p class="text-small mt-1" style="color: #c8e0dd;">A1c reduction</p>
+              </div>
+              <div class="text-center p-4 rounded-xl" style="background: rgba(0,0,0,0.15);">
+                <div class="text-h2 font-serif" style="color: #abcc76;">92%</div>
+                <p class="text-small mt-1" style="color: #c8e0dd;">Learned more</p>
+              </div>
+              <div class="text-center p-4 rounded-xl" style="background: rgba(0,0,0,0.15);">
+                <div class="text-h2 font-serif" style="color: #abcc76;">2&times;</div>
+                <p class="text-small mt-1" style="color: #c8e0dd;">Med reduction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD COMPARISON -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current Cards -->
+        <div class="rounded-2xl overflow-hidden bg-white p-10 border border-neutral-100">
+          <h3 class="text-h4 font-serif text-brand-900 mb-6">Current Cards</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="card text-center border border-brand-100">
+              <div class="w-12 h-12 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h4 class="text-body font-semibold text-brand-900 mb-1">75 Minutes</h4>
+              <p class="text-small text-neutral-600">Per session</p>
+            </div>
+            <div class="card text-center border border-brand-100">
+              <div class="w-12 h-12 rounded-full bg-lime-100 text-lime-700 flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <h4 class="text-body font-semibold text-brand-900 mb-1">8-12 Patients</h4>
+              <p class="text-small text-neutral-600">Per cohort</p>
+            </div>
+          </div>
+        </div>
+        <!-- One Medical Cards -->
+        <div class="rounded-2xl overflow-hidden p-10 border" style="background: #FAFAF7; border-color: #E8E6E1;">
+          <h3 class="text-h4 font-serif mb-6" style="color: #005450;">One Medical Cards</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-6 rounded-brand text-center border shadow-sm" style="background: white; border-color: #E8E6E1;">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style="background: #EEF6F4; color: #068466;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h4 class="text-body font-semibold mb-1" style="color: #005450;">75 Minutes</h4>
+              <p class="text-small" style="color: #5A5856;">Per session</p>
+            </div>
+            <div class="p-6 rounded-brand text-center border shadow-sm" style="background: white; border-color: #E8E6E1;">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style="background: #F0F5E8; color: #5A7A2E;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <h4 class="text-body font-semibold mb-1" style="color: #005450;">8-12 Patients</h4>
+              <p class="text-small" style="color: #5A5856;">Per cohort</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREDENTIAL BAR COMPARISON -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="bg-brand-700 py-5 px-6">
+            <p class="text-small font-medium text-brand-100 text-center">Current: Credential Bar</p>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-3 text-small font-medium text-brand-100">
+              <span>FACLM</span>
+              <span>2019 ACLM Speaker</span>
+              <span>Prisma Health</span>
+            </div>
+          </div>
+        </div>
+        <!-- One Medical -->
+        <div class="rounded-2xl overflow-hidden">
+          <div class="py-5 px-6" style="background: #004D49;">
+            <p class="text-small font-medium text-center" style="color: #c8e0dd;">One Medical: Credential Bar</p>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-3 text-small font-medium" style="color: #c8e0dd;">
+              <span>FACLM</span>
+              <span>2019 ACLM Speaker</span>
+              <span>Prisma Health</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUTTON COMPARISON -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current Buttons -->
+        <div class="rounded-2xl p-10 bg-white border border-neutral-100">
+          <h3 class="text-h4 font-serif text-brand-900 mb-6">Current Buttons</h3>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn-primary">Primary CTA</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-accent">Accent</button>
+          </div>
+          <div class="mt-4">
+            <span class="badge">Badge / Tag</span>
+          </div>
+        </div>
+        <!-- One Medical Buttons -->
+        <div class="rounded-2xl p-10 border" style="background: #FAFAF7; border-color: #E8E6E1;">
+          <h3 class="text-h4 font-serif mb-6" style="color: #005450;">One Medical Buttons</h3>
+          <div class="flex flex-wrap gap-3">
+            <button class="inline-flex items-center justify-center px-7 py-3.5 font-sans font-semibold text-body rounded-brand" style="background: #068466; color: white;">Primary CTA</button>
+            <button class="inline-flex items-center justify-center px-7 py-3.5 font-sans font-medium text-body rounded-brand border-2" style="border-color: #005450; color: #005450;">Secondary</button>
+            <button class="inline-flex items-center justify-center px-7 py-3.5 font-sans font-semibold text-body rounded-brand" style="background: #abcc76; color: #005450;">Accent</button>
+          </div>
+          <div class="mt-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-small font-medium border" style="background: #EEF6F4; color: #005450; border-color: #D4EEEC;">Badge / Tag</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SWATCH COMPARISON -->
+      <h2 class="text-h2 font-serif text-brand-900 text-center mb-8">Color Swatches</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <!-- Current Swatches -->
+        <div>
+          <h3 class="text-h4 font-serif text-brand-900 mb-4 text-center">Current Palette</h3>
+          <div class="space-y-2">
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 bg-brand-50 flex items-center justify-center text-small">50</div>
+              <div class="flex-1 bg-brand-100 flex items-center justify-center text-small">100</div>
+              <div class="flex-1 bg-brand-200 flex items-center justify-center text-small">200</div>
+              <div class="flex-1 bg-brand-300 flex items-center justify-center text-small text-white">300</div>
+              <div class="flex-1 bg-brand-400 flex items-center justify-center text-small text-white">400</div>
+              <div class="flex-1 bg-brand-500 flex items-center justify-center text-small text-white">500</div>
+              <div class="flex-1 bg-brand-600 flex items-center justify-center text-small text-white">600</div>
+              <div class="flex-1 bg-brand-700 flex items-center justify-center text-small text-white">700</div>
+              <div class="flex-1 bg-brand-800 flex items-center justify-center text-small text-white">800</div>
+              <div class="flex-1 bg-brand-900 flex items-center justify-center text-small text-white">900</div>
+            </div>
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 bg-lime-50 flex items-center justify-center text-small">50</div>
+              <div class="flex-1 bg-lime-100 flex items-center justify-center text-small">100</div>
+              <div class="flex-1 bg-lime-200 flex items-center justify-center text-small">200</div>
+              <div class="flex-1 bg-lime-300 flex items-center justify-center text-small">300</div>
+              <div class="flex-1 bg-lime-400 flex items-center justify-center text-small">400</div>
+              <div class="flex-1 bg-lime-500 flex items-center justify-center text-small">500</div>
+              <div class="flex-1 bg-lime-600 flex items-center justify-center text-small text-white">600</div>
+              <div class="flex-1 bg-lime-700 flex items-center justify-center text-small text-white">700</div>
+              <div class="flex-1 bg-lime-800 flex items-center justify-center text-small text-white">800</div>
+              <div class="flex-1 bg-lime-900 flex items-center justify-center text-small text-white">900</div>
+            </div>
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 bg-neutral-50 flex items-center justify-center text-small">50</div>
+              <div class="flex-1 bg-neutral-100 flex items-center justify-center text-small">100</div>
+              <div class="flex-1 bg-neutral-200 flex items-center justify-center text-small">200</div>
+              <div class="flex-1 bg-neutral-300 flex items-center justify-center text-small">300</div>
+              <div class="flex-1 bg-neutral-400 flex items-center justify-center text-small text-white">400</div>
+              <div class="flex-1 bg-neutral-500 flex items-center justify-center text-small text-white">500</div>
+              <div class="flex-1 bg-neutral-600 flex items-center justify-center text-small text-white">600</div>
+              <div class="flex-1 bg-neutral-700 flex items-center justify-center text-small text-white">700</div>
+              <div class="flex-1 bg-neutral-800 flex items-center justify-center text-small text-white">800</div>
+              <div class="flex-1 bg-neutral-900 flex items-center justify-center text-small text-white">900</div>
+            </div>
+          </div>
+        </div>
+        <!-- One Medical Swatches -->
+        <div>
+          <h3 class="text-h4 font-serif text-center mb-4" style="color: #005450;">One Medical Inspired</h3>
+          <div class="space-y-2">
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #EEF6F4;">50</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #D4EEEC;">100</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #A3DCD5;">200</div>
+              <div class="flex-1 flex items-center justify-center text-small color: white;" style="background: #68C4BA; color: white;">300</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #2CA89E; color: white;">400</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #068466; color: white;">500</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #056E55; color: white;">600</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #005D4A; color: white;">700</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #005450; color: white;">800</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #003D3A; color: white;">900</div>
+            </div>
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #F7FAF0;">50</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #EEF5DD;">100</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #DDEABB;">200</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #C8DE91;">300</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #abcc76;">400</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #8FB85E;">500</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #7AA34A; color: white;">600</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #5A7A2E; color: white;">700</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #4A6424; color: white;">800</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #3A4E1C; color: white;">900</div>
+            </div>
+            <div class="flex gap-1 h-12 rounded-xl overflow-hidden">
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #F5F3EF;">50</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #E8E6E1;">100</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #D4D1CC;">200</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #B0ADA8;">300</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #8B8884; color: white;">400</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #6B6864; color: white;">500</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #5A5856; color: white;">600</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #44423F; color: white;">700</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #2A2927; color: white;">800</div>
+              <div class="flex-1 flex items-center justify-center text-small" style="background: #1A1918; color: white;">900</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKGROUND COMPARISON -->
+      <h2 class="text-h2 font-serif text-brand-900 text-center mb-8">Page Background Feel</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <div class="rounded-2xl overflow-hidden border border-neutral-200">
+          <div class="p-6 bg-white text-center text-small text-neutral-500">Current: white (#FFFFFF)</div>
+          <div class="p-6 bg-brand-50/40 text-center text-small text-neutral-500">Current: brand-50/40</div>
+          <div class="p-6 bg-brand-50 text-center text-small text-neutral-500">Current: brand-50</div>
+          <div class="p-6 bg-white text-center text-small text-neutral-500">Current: white</div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border" style="border-color: #E8E6E1;">
+          <div class="p-6 text-center text-small" style="background: #FFFFFF; color: #6B6864;">OM: white (#FFFFFF)</div>
+          <div class="p-6 text-center text-small" style="background: #F5F3EF; color: #6B6864;">OM: warm cream (#F5F3EF)</div>
+          <div class="p-6 text-center text-small" style="background: #EEF6F4; color: #6B6864;">OM: light teal (#EEF6F4)</div>
+          <div class="p-6 text-center text-small" style="background: #FFFFFF; color: #6B6864;">OM: white (#FFFFFF)</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 mb-4">
+        <p class="text-small text-neutral-400">This page is for internal comparison only and will not be indexed.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

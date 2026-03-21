@@ -92,11 +92,19 @@ const footerLinks = {
     </div>
 
     <!-- Bottom bar -->
-    <div class="mt-12 pt-8 border-t border-brand-800 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-xs text-brand-300">&copy; {currentYear} Beth Motley, MD. All rights reserved.</p>
-      <p class="text-xs text-brand-300 max-w-xl text-center md:text-right">
-        This website is for informational purposes only and does not constitute medical advice. Always consult your physician for personal medical decisions.
-      </p>
+    <div class="mt-12 pt-8 border-t border-brand-800">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-brand-300">&copy; {currentYear} Beth Motley, MD. All rights reserved.</p>
+        <p class="text-xs text-brand-300 max-w-xl text-center md:text-right">
+          This website is for informational purposes only and does not constitute medical advice. Always consult a qualified physician for personal medical decisions. In case of emergency, call 911.
+        </p>
+      </div>
+      <div class="mt-4 pt-4 border-t border-brand-800/50 flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <a href="/privacy-policy" class="text-xs text-brand-400 hover:text-brand-200 transition-colors">Privacy Policy</a>
+        <a href="/notice-of-privacy-practices" class="text-xs text-brand-400 hover:text-brand-200 transition-colors">Notice of Privacy Practices</a>
+        <a href="/terms" class="text-xs text-brand-400 hover:text-brand-200 transition-colors">Terms of Use</a>
+        <a href="/accessibility" class="text-xs text-brand-400 hover:text-brand-200 transition-colors">Accessibility</a>
+      </div>
     </div>
   </div>
 </footer>

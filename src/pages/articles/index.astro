@@ -27,7 +27,7 @@ const articles = (await getCollection('articles'))
             <a href={`/articles/${article.slug}`} class="card group block hover:border-brand-200">
               {article.data.image && (
                 <div class="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4 bg-neutral-100">
-                  <img src={article.data.image} alt="" class="w-full h-full object-cover" loading="lazy" />
+                  <img src={article.data.image} alt={article.data.title} class="w-full h-full object-cover" loading="lazy" />
                 </div>
               )}
               <div class="flex flex-wrap gap-2 mb-3">

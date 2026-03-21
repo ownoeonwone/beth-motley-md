@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+const seo = {
+  title: 'Notice of Privacy Practices | Beth Motley, MD',
+  description: 'HIPAA Notice of Privacy Practices for Beth Motley, MD. Describes how your protected health information may be used and disclosed and your rights regarding that information.',
+};
+
+const tocItems = [
+  { id: 'who-follows', label: 'Who Follows This Notice' },
+  { id: 'our-pledge', label: 'Our Pledge Regarding Your Health Information' },
+  { id: 'how-we-may-use', label: 'How We May Use and Disclose Your Health Information' },
+  { id: 'your-rights', label: 'Your Rights Regarding Your Health Information' },
+  { id: 'changes', label: 'Changes to This Notice' },
+  { id: 'complaints', label: 'Complaints' },
+  { id: 'contact', label: 'Contact Information' },
+];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-14 md:py-20">
+    <div class="max-w-[680px] mx-auto px-5 md:px-8">
+      <span class="badge mb-4 inline-block">Legal / HIPAA</span>
+      <h1 class="text-h1 md:text-display font-serif text-brand-900">Notice of Privacy Practices</h1>
+      <p class="mt-3 text-body text-neutral-500">Effective Date: March 21, 2026</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section-padding bg-white">
+    <div class="max-w-[680px] mx-auto px-5 md:px-8">
+
+      <!-- Required HIPAA Header Statement -->
+      <div class="bg-brand-50 border border-brand-200 rounded-brand p-6 mb-10" role="alert">
+        <p class="text-body font-semibold text-brand-900 leading-relaxed">
+          THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.
+        </p>
+      </div>
+
+      <TableOfContents items={tocItems} />
+
+      <div class="prose-brand space-y-12">
+
+        <!-- Section 1 -->
+        <div>
+          <h2 id="who-follows" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">1. Who Follows This Notice</h2>
+          <p>This Notice of Privacy Practices ("Notice") applies to Beth Motley, MD and all personnel, staff, volunteers, and contractors who provide services on behalf of this practice. It describes the privacy practices of the practice and anyone who may have access to your protected health information (PHI).</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div>
+          <h2 id="our-pledge" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">2. Our Pledge Regarding Your Health Information</h2>
+          <p>We understand that your health information is personal and private. We are required by law to:</p>
+          <ul>
+            <li>Maintain the privacy of your protected health information</li>
+            <li>Provide you with this Notice of our legal duties and privacy practices regarding your health information</li>
+            <li>Follow the terms of the Notice currently in effect</li>
+            <li>Notify you in the event of a breach of your unsecured protected health information</li>
+          </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div>
+          <h2 id="how-we-may-use" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">3. How We May Use and Disclose Your Health Information</h2>
+          <p>We may use and disclose your protected health information for the following purposes without your written authorization:</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">a. Treatment</h3>
+          <p>We may use your health information to provide, coordinate, or manage your care. For example, we may share your information with other physicians, specialists, or healthcare providers involved in your treatment.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">b. Payment</h3>
+          <p>We may use and disclose your health information to bill and collect payment for your treatment and services. This may include sending claims to your insurance company, verifying coverage, or communicating with billing services.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">c. Health Care Operations</h3>
+          <p>We may use your information for activities necessary to operate the practice, including quality improvement, training, compliance, auditing, and administrative functions.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">d. Appointment Reminders and Health-Related Communications</h3>
+          <p>We may contact you to provide appointment reminders, information about treatment alternatives, or other health-related services that may be of interest to you.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">e. As Required by Law</h3>
+          <p>We may disclose your health information when required by federal, state, or local law.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">f. Public Health Activities</h3>
+          <p>We may disclose your health information for public health activities, such as reporting certain diseases, injuries, or vital events to public health authorities.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">g. Health Oversight Activities</h3>
+          <p>We may disclose your health information to health oversight agencies for activities authorized by law, such as audits, investigations, and inspections.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">h. Judicial and Administrative Proceedings</h3>
+          <p>We may disclose your health information in response to a court or administrative order, or in response to a subpoena, discovery request, or other lawful process.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">i. Law Enforcement</h3>
+          <p>We may disclose your health information to law enforcement officials under certain limited circumstances, such as reporting certain types of wounds or injuries, or in response to a court order or warrant.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">j. To Avert a Serious Threat to Health or Safety</h3>
+          <p>We may use and disclose your health information when necessary to prevent a serious and imminent threat to your health or safety, or the health or safety of the public or another person.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">k. Shared Medical Appointments</h3>
+          <p>If you participate in a shared medical appointment (group visit) program, other participants in the session may see or hear health-related information discussed during the visit. By enrolling in a shared medical appointment program, you acknowledge this aspect of the group visit format. We take reasonable steps to protect your privacy within the group setting and will not disclose your medical records to other participants outside of the shared visit.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">l. Other Uses</h3>
+          <p>Uses and disclosures not described in this Notice will be made only with your written authorization. You may revoke an authorization at any time by notifying our office in writing. Revocation will not apply to information already disclosed in reliance on the authorization.</p>
+        </div>
+
+        <!-- Section 4 -->
+        <div>
+          <h2 id="your-rights" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">4. Your Rights Regarding Your Health Information</h2>
+          <p>You have the following rights with respect to your protected health information:</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">a. Right to Inspect and Copy</h3>
+          <p>You have the right to inspect and obtain a copy of your health information maintained by this practice, including medical and billing records. Requests must be submitted in writing. We may charge a reasonable, cost-based fee for copies.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">b. Right to Amend</h3>
+          <p>You have the right to request an amendment to your health information if you believe it is incorrect or incomplete. Requests must be submitted in writing and include the reason for the amendment. We may deny the request under certain circumstances and will provide a written explanation if we do.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">c. Right to an Accounting of Disclosures</h3>
+          <p>You have the right to request a list (accounting) of certain disclosures of your health information made by this practice. This does not include disclosures for treatment, payment, or healthcare operations, or disclosures you authorized in writing.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">d. Right to Request Restrictions</h3>
+          <p>You have the right to request restrictions on how we use or disclose your health information for treatment, payment, or healthcare operations. We are not required to agree to your request, except in the case of a disclosure to a health plan for payment or healthcare operations when you have paid for the service in full out of pocket.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">e. Right to Request Confidential Communications</h3>
+          <p>You have the right to request that we communicate with you about health matters in a certain way or at a certain location. For example, you may ask that we contact you only by mail or at a specific phone number. We will accommodate reasonable requests.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">f. Right to a Paper Copy of This Notice</h3>
+          <p>You have the right to obtain a paper copy of this Notice at any time, even if you received it electronically. Contact our office to request a copy.</p>
+
+          <h3 class="text-h4 font-serif text-brand-900 mt-6 mb-2">g. Right to Be Notified of a Breach</h3>
+          <p>You have the right to be notified if there is a breach of your unsecured protected health information.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <div>
+          <h2 id="changes" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">5. Changes to This Notice</h2>
+          <p>We reserve the right to change this Notice at any time. Changes will apply to health information we already hold as well as information received in the future. The revised Notice will be posted on our website and available at our office. The effective date will be updated accordingly.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div>
+          <h2 id="complaints" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">6. Complaints</h2>
+          <p>If you believe your privacy rights have been violated, you may file a complaint with our practice or with the U.S. Department of Health and Human Services Office for Civil Rights.</p>
+          <ul>
+            <li>To file a complaint with this practice, contact us using the information below.</li>
+            <li>To file a complaint with the Office for Civil Rights, visit <a href="https://www.hhs.gov/ocr/complaints" target="_blank" rel="noopener">www.hhs.gov/ocr/complaints</a> or call 1-800-368-1019.</li>
+          </ul>
+          <p class="mt-4">You will not be retaliated against for filing a complaint.</p>
+        </div>
+
+        <!-- Section 7 -->
+        <div>
+          <h2 id="contact" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">7. Contact Information</h2>
+          <p>For questions about this Notice or to exercise any of your rights, please contact:</p>
+          <p class="mt-4">
+            <strong>Beth Motley, MD</strong><br />
+            Privacy Officer<br />
+            Email: <a href="mailto:info@bethmotleymd.com">info@bethmotleymd.com</a><br />
+            Phone: <a href="tel:+18642717761">(864) 271-7761</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

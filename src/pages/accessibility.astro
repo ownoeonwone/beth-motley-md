@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+const seo = {
+  title: 'Accessibility Statement | Beth Motley, MD',
+  description: 'Our commitment to web accessibility and steps taken to conform to WCAG 2.1 Level AA.',
+};
+
+const tocItems = [
+  { id: 'commitment', label: 'Our Commitment' },
+  { id: 'conformance-status', label: 'Conformance Status' },
+  { id: 'measures-taken', label: 'Measures Taken' },
+  { id: 'known-limitations', label: 'Known Limitations' },
+  { id: 'feedback', label: 'Feedback' },
+  { id: 'enforcement', label: 'Enforcement Procedures' },
+];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-50 to-white py-14 md:py-20">
+    <div class="max-w-[680px] mx-auto px-5 md:px-8">
+      <span class="badge mb-4 inline-block">Accessibility</span>
+      <h1 class="text-h1 md:text-display font-serif text-brand-900">Accessibility Statement</h1>
+      <p class="mt-3 text-body text-neutral-500">Last Updated: March 21, 2026</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section-padding bg-white">
+    <div class="max-w-[680px] mx-auto px-5 md:px-8">
+      <TableOfContents items={tocItems} />
+
+      <div class="prose-brand space-y-12">
+
+        <!-- Section 1 -->
+        <div>
+          <h2 id="commitment" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Our Commitment</h2>
+          <p>Beth Motley, MD is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to ensure we provide equal access to all users.</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div>
+          <h2 id="conformance-status" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Conformance Status</h2>
+          <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</strong>. These guidelines explain how to make web content more accessible for people with disabilities and more user-friendly for everyone.</p>
+          <p class="mt-4">While we strive for full conformance, we recognize that some areas of the Site may not yet fully meet every Level AA success criterion. We are actively working to identify and resolve any accessibility barriers.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div>
+          <h2 id="measures-taken" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Measures Taken</h2>
+          <p>Beth Motley, MD has taken the following measures to ensure accessibility of this website:</p>
+          <ul>
+            <li><strong>Semantic HTML:</strong> We use proper heading hierarchy, landmark regions, and semantic elements to ensure assistive technologies can navigate the site effectively.</li>
+            <li><strong>Keyboard navigation:</strong> All interactive elements are accessible via keyboard, with visible focus indicators on all focusable elements.</li>
+            <li><strong>Color contrast:</strong> Text and interactive elements maintain sufficient contrast ratios as defined by WCAG 2.1 Level AA (minimum 4.5:1 for normal text, 3:1 for large text).</li>
+            <li><strong>Alternative text:</strong> All meaningful images include descriptive alternative text. Decorative images are appropriately marked.</li>
+            <li><strong>Form accessibility:</strong> All form fields include associated labels, clear instructions, and descriptive error messages.</li>
+            <li><strong>Responsive design:</strong> The site is designed to be usable across a range of devices, screen sizes, and orientations, and supports text resizing up to 200% without loss of functionality.</li>
+            <li><strong>ARIA attributes:</strong> Where necessary, we use ARIA (Accessible Rich Internet Applications) attributes to enhance the accessibility of dynamic content and interactive components.</li>
+            <li><strong>Skip navigation:</strong> A "skip to main content" mechanism is available for keyboard users.</li>
+          </ul>
+        </div>
+
+        <!-- Section 4 -->
+        <div>
+          <h2 id="known-limitations" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Known Limitations</h2>
+          <p>Despite our best efforts, some content on the Site may not yet be fully accessible. Known limitations include:</p>
+          <ul>
+            <li><strong>Third-party content:</strong> Some embedded forms, videos, or third-party widgets may not fully conform to WCAG 2.1 Level AA. We work with our vendors to improve accessibility where possible.</li>
+            <li><strong>PDF documents:</strong> Some downloadable documents may not yet be fully accessible. We are working to remediate these documents and can provide alternative formats upon request.</li>
+          </ul>
+          <p class="mt-4">We are committed to resolving these limitations and welcome your feedback to help us improve.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <div>
+          <h2 id="feedback" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Feedback</h2>
+          <p>We welcome your feedback on the accessibility of this website. If you encounter an accessibility barrier or have suggestions for improvement, please contact us:</p>
+          <p class="mt-4">
+            <strong>Beth Motley, MD</strong><br />
+            Email: <a href="mailto:info@bethmotleymd.com">info@bethmotleymd.com</a><br />
+            Phone: <a href="tel:+18642717761">(864) 271-7761</a>
+          </p>
+          <p class="mt-4">We try to respond to accessibility feedback within 5 business days. If you need information from this Site in an alternative format, please let us know and we will work to accommodate your request.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div>
+          <h2 id="enforcement" class="text-h2 font-serif text-brand-900 mb-4 pt-4 border-t border-neutral-100">Enforcement Procedures</h2>
+          <p>If you are not satisfied with our response to your accessibility concern, you may contact the <a href="https://www.ada.gov/file-a-complaint/" target="_blank" rel="noopener">U.S. Department of Justice ADA Information Line</a> at 1-800-514-0301 (voice) or 1-833-610-1264 (TTY).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

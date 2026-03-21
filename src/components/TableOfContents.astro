@@ -1,0 +1,23 @@
+---
+interface Props {
+  items: { id: string; label: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="border border-neutral-200 rounded-brand p-6 mb-12" aria-label="Table of contents">
+  <p class="text-small font-semibold text-brand-900 uppercase tracking-wide mb-3">On This Page</p>
+  <ol class="space-y-2">
+    {items.map((item, i) => (
+      <li>
+        <a
+          href={`#${item.id}`}
+          class="text-body text-brand-600 hover:text-brand-800 underline underline-offset-2"
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>
