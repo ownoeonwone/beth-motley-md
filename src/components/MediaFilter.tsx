@@ -7,6 +7,7 @@ interface MediaItem {
   date: string;
   href: string;
   embedId?: string;
+  image?: string;
 }
 
 const typeColors: Record<string, string> = {
@@ -68,6 +69,15 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
                   allowFullScreen
                   loading="lazy"
                   className="w-full h-full"
+                />
+              </div>
+            ) : item.image ? (
+              <div className="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ) : (

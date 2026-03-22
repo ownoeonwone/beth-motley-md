@@ -37,28 +37,16 @@
         "type": "podcast",
         "source": "Next Gen LM Podcast (ACLM)",
         "date": "February 2025",
-        "href": "https://lifestylemedicine.org/project/episode-1/"
+        "href": "https://podcasts.apple.com/us/podcast/plant-based-medicine-dr-beth-motleys-journey-to-lifestyle/id1795530614?i=1000691113235",
+        "image": "/images/media/next-gen-lm-podcast.jpg"
       },
       {
         "title": "Make These 1% Changes to Create Long-Lasting Health",
         "type": "podcast",
         "source": "PLANTSTRONG Podcast with Rip Esselstyn",
         "date": "August 2024",
-        "href": "https://www.plantstrongpodcast.com/blog/beth-motley-md"
-      },
-      {
-        "title": "Plant-Based Lifestyle Medicine with Beth Motley, MD",
-        "type": "podcast",
-        "source": "The Jazzy Vegetarian",
-        "date": "March 2023",
-        "href": "https://jazzyvegetarian.com/"
-      },
-      {
-        "title": "Meet Dr. Beth Motley: The Country's Youngest Board-Certified Lifestyle Medicine Physician",
-        "type": "podcast",
-        "source": "Veggie Doctor Radio",
-        "date": "March 2018",
-        "href": "https://veggiedoctor.com/"
+        "href": "https://www.plantstrongpodcast.com/blog/beth-motley-md",
+        "image": "/images/media/plantstrong-podcast.jpg"
       },
       {
         "title": "Preventing and Reversing Chronic Disease with Plant-Powered Nutrition",
@@ -137,35 +125,24 @@
         "type": "article",
         "source": "Woman's World Magazine",
         "date": "October 2025",
-        "href": "https://www.womansworld.com/wellness/diabetes/best-blood-sugar-friendly-foods-at-costco-safe-for-diabetics"
+        "href": "https://www.womansworld.com/wellness/diabetes/best-blood-sugar-friendly-foods-at-costco-safe-for-diabetics",
+        "image": "/images/media/womans-world-grocery.jpg"
       },
       {
         "title": "Plant Power: One of Greenville's First Lifestyle Medicine Physicians",
         "type": "article",
         "source": "TOWN Magazine",
         "date": "January 2019",
-        "href": "https://towncarolina.com/plant-power/"
+        "href": "https://towncarolina.com/plant-power/",
+        "image": "/images/press/town-magazine.jpg"
       },
       {
         "title": "Building a Thriving Lifestyle Medicine Practice within a Primary Care Clinic",
         "type": "article",
         "source": "American Journal of Lifestyle Medicine",
         "date": "March 2020",
-        "href": "https://pubmed.ncbi.nlm.nih.gov/"
-      },
-      {
-        "title": "Experts Weigh In on the Protein Craze and How Much Our Bodies Need",
-        "type": "article",
-        "source": "WYFF4 News",
-        "date": "November 2025",
-        "href": "https://www.wyff4.com/"
-      },
-      {
-        "title": "Shifting Toward SC Crops and Orchards Could Help Curb Our Bird Flu Crisis",
-        "type": "article",
-        "source": "SC Daily Gazette",
-        "date": "February 2025",
-        "href": "https://scdailygazette.com/"
+        "href": "https://journals.sagepub.com/doi/10.1177/1559827620904868",
+        "image": "/images/media/ajlm-journal-cover.jpg"
       }
     ]
   },
