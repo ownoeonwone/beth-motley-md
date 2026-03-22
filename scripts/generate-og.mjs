@@ -9,7 +9,7 @@ const W = 1200;
 const H = 630;
 
 // 1. Resize headshot to fill right half
-const headshotBuf = await sharp(join(root, 'public/images/headshots/beth-motley-black-blazer.jpg'))
+const headshotBuf = await sharp(join(root, 'public/images/headshots/beth-motley-hallway.png'))
   .resize(560, 630, { fit: 'cover', position: 'top' })
   .toBuffer();
 
