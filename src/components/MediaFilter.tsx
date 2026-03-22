@@ -8,6 +8,7 @@ interface MediaItem {
   href: string;
   embedId?: string;
   image?: string;
+  imageFit?: 'cover' | 'contain';
 }
 
 const typeColors: Record<string, string> = {
@@ -77,7 +78,7 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-contain"
+                  className={`w-full h-full ${item.imageFit === 'cover' ? 'object-cover' : 'object-contain'}`}
                 />
               </div>
             ) : (

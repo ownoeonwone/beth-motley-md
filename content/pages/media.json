@@ -133,7 +133,9 @@
         "type": "article",
         "source": "TOWN Magazine",
         "date": "January 2019",
-        "href": "https://towncarolina.com/plant-power/"
+        "href": "https://towncarolina.com/plant-power/",
+        "image": "/images/press/town-magazine.jpg",
+        "imageFit": "cover"
       },
       {
         "title": "Building a Thriving Lifestyle Medicine Practice within a Primary Care Clinic",
