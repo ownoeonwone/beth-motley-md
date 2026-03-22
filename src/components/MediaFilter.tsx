@@ -72,12 +72,12 @@ export default function MediaFilter({ items }: { items: MediaItem[] }) {
                 />
               </div>
             ) : item.image ? (
-              <div className="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4">
+              <div className={`rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4 bg-neutral-100 flex items-center justify-center ${item.type === 'podcast' ? 'aspect-square' : 'aspect-video'}`}>
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ) : (
