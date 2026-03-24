@@ -30,31 +30,39 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
-      <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-      <input
-        id="newsletter-email"
-        type="email"
-        required
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className={`flex-1 px-4 py-3 rounded-brand text-body transition-all ${
-          dark
-            ? 'bg-brand-800 border border-brand-700 text-white placeholder:text-brand-400 focus:border-lime-400 focus:ring-2 focus:ring-lime-400/20'
-            : 'input-field'
-        }`}
-      />
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="btn-accent whitespace-nowrap disabled:opacity-60"
-      >
-        {status === 'loading' ? 'Joining...' : 'Subscribe'}
-      </button>
+    <div className="flex flex-col gap-2 max-w-md">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+        <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+        <input
+          id="newsletter-email"
+          type="email"
+          required
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={`flex-1 px-4 py-3 rounded-brand text-body transition-all ${
+            dark
+              ? 'bg-brand-800 border border-brand-700 text-white placeholder:text-brand-300 focus:border-lime-400 focus:ring-2 focus:ring-lime-400/20'
+              : 'input-field'
+          }`}
+        />
+        <button
+          type="submit"
+          disabled={status === 'loading'}
+          className="btn-accent whitespace-nowrap disabled:opacity-60"
+        >
+          {status === 'loading' ? 'Joining...' : 'Subscribe'}
+        </button>
+      </form>
       {status === 'error' && (
-        <p className="text-sm text-red-400 mt-1">Something went wrong. Please try again.</p>
+        <p className="text-sm text-red-400">Something went wrong. Please try again.</p>
       )}
-    </form>
+      <p className={`text-xs flex items-center gap-1 ${dark ? 'text-brand-300' : 'text-neutral-500'}`}>
+        <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        We respect your privacy. Unsubscribe anytime.
+      </p>
+    </div>
   );
 }
