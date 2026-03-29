@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: '49pgcfbm',
     dataset: 'production',
   },
+  studioHost: 'beth-motley-md',
 })
