@@ -4,9 +4,12 @@ import Hero from '../../components/Hero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
 import DiabetesForm from '../../components/DiabetesForm.tsx';
+import EventsCalendar from '../../components/EventsCalendar';
 import { getDiabetesReversalPage } from '../../lib/sanity';
 
 const d = await getDiabetesReversalPage();
+const calendarId = import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID || '';
+const apiKey = import.meta.env.PUBLIC_GOOGLE_API_KEY || '';
 
 const whoIcons = [
   `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,11 +167,33 @@ const whoColors = [
         title={d.schedule.title}
         subtitle={d.schedule.subtitle}
       />
-      <div class="max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto space-y-6">
         <div class="card">
           <div class="space-y-3 text-body text-neutral-700">
             <p><strong class="text-brand-900">Dates:</strong> {d.schedule.dates}</p>
             <p><strong class="text-brand-900">Class times:</strong> {d.schedule.classTimes}</p>
+          </div>
+        </div>
+
+        <!-- Live upcoming cohort dates from Google Calendar -->
+        <div>
+          <h3 class="font-serif text-h4 text-brand-900 mb-4">Upcoming Cohort Dates</h3>
+          <EventsCalendar
+            calendarId={calendarId}
+            apiKey={apiKey}
+            limit={3}
+            showFeatured={false}
+            showMonthHeaders={false}
+            compact={true}
+            client:visible
+          />
+          <div class="text-center mt-4">
+            <a href="/events" class="inline-flex items-center text-small font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+              View all upcoming events
+              <svg class="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
