@@ -13,11 +13,15 @@ const { variant = 'horizontal', dark = false, class: className } = Astro.props;
     src="/images/logo/icon-blue.png"
     alt="Beth Motley MD logo"
     class:list={["h-10 w-10", className]}
+    width="40"
+    height="40"
   />
 ) : (
   <img
     src={dark ? "/images/logo/beth-motley-md-white-tagline.svg" : "/images/logo/beth-motley-md-colour-tagline.svg"}
     alt="Beth Motley, MD - Lifestyle Medicine"
     class:list={["h-12", className]}
+    width="200"
+    height="48"
   />
 )}
