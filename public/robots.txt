@@ -1,4 +1,41 @@
 User-agent: *
 Allow: /
 
+# Block AI training crawlers
+# OpenAI
+User-agent: GPTBot
+Disallow: /
+
+# OpenAI (image/content)
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Google AI training
+User-agent: Google-Extended
+Disallow: /
+
+# Common Crawl (used by many LLM datasets)
+User-agent: CCBot
+Disallow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Disallow: /
+
+# Meta
+User-agent: FacebookBot
+Disallow: /
+
+# Bytedance
+User-agent: Bytespider
+Disallow: /
+
+# Amazon Alexa
+User-agent: Amazonbot
+Disallow: /
+
+# Apple Applebot (AI training via Siri/Apple AI)
+User-agent: Applebot-Extended
+Disallow: /
+
 Sitemap: https://www.bethmotleymd.com/sitemap-index.xml
