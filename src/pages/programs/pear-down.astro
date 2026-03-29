@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+
+const pillars = [
+  {
+    number: '01',
+    title: 'Whole-Food Nutrition',
+    description: 'Learn how to eat in a way that actually reverses disease rather than managing it. Real food, real results, no rigid meal plans.',
+    color: 'bg-lime-100 text-lime-700',
+  },
+  {
+    number: '02',
+    title: 'Physical Activity',
+    description: 'Movement as medicine — practical, sustainable, and tailored to where you are right now. Not a fitness program. A longevity strategy.',
+    color: 'bg-brand-100 text-brand-700',
+  },
+  {
+    number: '03',
+    title: 'Restorative Sleep',
+    description: 'Most chronic disease is made dramatically worse by poor sleep. We fix the root, not just the symptoms.',
+    color: 'bg-lime-100 text-lime-700',
+  },
+  {
+    number: '04',
+    title: 'Stress Management',
+    description: 'Chronic stress elevates cortisol, drives inflammation, and keeps you sick. The community teaches you how to interrupt the cycle.',
+    color: 'bg-brand-100 text-brand-700',
+  },
+  {
+    number: '05',
+    title: 'Avoidance of Risky Substances',
+    description: 'Honest, non-judgmental conversations about alcohol, tobacco, and other substances — and what the science actually says about long-term risk.',
+    color: 'bg-lime-100 text-lime-700',
+  },
+  {
+    number: '06',
+    title: 'Positive Social Connection',
+    description: 'Loneliness is as dangerous to your health as smoking 15 cigarettes a day. The Pear Down community is itself the sixth pillar in action.',
+    color: 'bg-brand-100 text-brand-700',
+  },
+];
+
+const included = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>`,
+    title: 'Direct Access to Dr. Motley',
+    description: 'Ask questions, get answers, and stay connected with a board-certified lifestyle medicine physician — even when the waitlist is long.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>`,
+    title: 'A Community That Gets It',
+    description: 'Connect with others who are navigating the same frustrations — too many medications, not enough answers, and a system that treats symptoms instead of causes.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>`,
+    title: 'Evidence-Based Education',
+    description: 'Courses, posts, and live sessions rooted in lifestyle medicine research — not wellness trends, not supplements, not shortcuts.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+    title: 'Deprescribing Guidance',
+    description: 'Learn how to have the medication conversation with your doctor. Understand which drugs are often unnecessary, what the evidence says, and how to safely reduce.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5" /></svg>`,
+    title: 'SMA Cohort Priority Access',
+    description: 'Community members hear first when new Shared Medical Appointment cohorts open. The waitlist moves faster when you are already inside.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>`,
+    title: 'Practical Tools to Act Now',
+    description: 'You do not need to wait for an appointment to start improving your health. The community gives you what you need to make real progress today.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pear Down Community | Beth Motley, MD"
+  description="The Pear Down community is for patients who want more — more time with their doctor, more answers, fewer medications, and real connection with others doing the same work. Led by Dr. Beth Motley in Greenville, SC."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-950 via-brand-900 to-brand-800 py-20 md:py-32">
+    <div class="container-page text-center max-w-4xl">
+      <span class="mb-6 inline-flex items-center px-3 py-1 rounded-full text-small font-medium border bg-brand-800 text-lime-400 border-brand-600">
+        Online Community
+      </span>
+      <h1 class="font-serif text-h1 md:text-display text-white">
+        Pear Down
+      </h1>
+      <p class="mt-4 text-small text-brand-300 uppercase tracking-widest font-medium">
+        Health · Community · The 6 Pillars · Deprescribing
+      </p>
+      <p class="mt-8 text-body-lg text-brand-200 max-w-2xl mx-auto">
+        The waitlist for a new patient appointment is long. But you shouldn't have to wait to start getting healthier — or to have a doctor in your corner. Pear Down is how you stay connected, keep learning, and begin doing the work right now.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://www.skool.com/pear-down/about"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Join Pear Down on Skool
+        </a>
+        <a href="/programs/diabetes-reversal" class="btn-secondary !border-brand-600 !text-brand-200 hover:!bg-brand-800">
+          Diabetes Reversal SMA →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The name explained -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="card">
+          <div class="text-4xl mb-4">🍐</div>
+          <h3 class="font-serif text-h4 text-brand-900 mb-2">Pear</h3>
+          <p class="text-body text-neutral-600">
+            A nod to the fruit — whole food, simple, nourishing. And a wink at the brand.
+          </p>
+        </div>
+        <div class="card border-brand-200 bg-brand-50/40">
+          <div class="text-4xl mb-4">💊</div>
+          <h3 class="font-serif text-h4 text-brand-900 mb-2">Pare Down</h3>
+          <p class="text-body text-neutral-600">
+            Most people are on far more medications than they need. This community teaches you how to safely reduce them.
+          </p>
+        </div>
+        <div class="card">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="font-serif text-h4 text-brand-900 mb-2">Pair Up</h3>
+          <p class="text-body text-neutral-600">
+            You make far more progress when you pair your effort with a community of people doing the same work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why it exists -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <div class="max-w-3xl mx-auto">
+        <SectionHeading
+          title="Why This Community Exists"
+          subtitle="The honest version."
+        />
+        <div class="prose-brand space-y-6">
+          <p class="text-body-lg text-neutral-700 leading-relaxed">
+            The waitlist to become a new patient is long. That's the reality of practicing lifestyle medicine in a system where most physicians don't. There are more people who need this kind of care than there are hours in the day to provide it one-on-one.
+          </p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            But that doesn't mean you should sit and wait. The Shared Medical Appointment program and the Pear Down community exist precisely because the best medicine isn't always one doctor, one patient, one 7-minute visit. The research on group learning, peer accountability, and social connection is unambiguous: people do better together.
+          </p>
+          <p class="text-body text-neutral-600 leading-relaxed">
+            Pear Down is where patients, future patients, and anyone motivated to take their health seriously can learn from Dr. Motley, connect with each other, ask questions they've been afraid to ask, and start making real changes — without waiting for an appointment that may be months away.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="section-padding bg-white">
+    <div class="container-page">
+      <SectionHeading
+        title="What You Get Inside"
+        subtitle="Access, education, community, and the tools to start now."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {included.map((item) => (
+          <div class="card flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center flex-shrink-0">
+              <Fragment set:html={item.icon} />
+            </div>
+            <div>
+              <h3 class="font-serif text-h4 text-brand-900 mb-2">{item.title}</h3>
+              <p class="text-body text-neutral-600">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Deprescribing section -->
+  <section class="section-padding bg-brand-900">
+    <div class="container-page">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="mb-4 inline-flex items-center px-3 py-1 rounded-full text-small font-medium border bg-brand-800 text-brand-200 border-brand-600">Deprescribing</span>
+          <h2 class="text-h2 font-serif text-white max-w-2xl mx-auto">Most People Are on Too Many Medications</h2>
+          <p class="mt-3 text-body-lg text-brand-200 max-w-xl mx-auto">This is not a controversial opinion. It is a well-documented problem in medicine.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div>
+            <p class="text-body font-semibold text-lime-400 mb-2">The average American over 65 takes more than five prescription drugs.</p>
+            <p class="text-body text-brand-200 leading-relaxed">
+              Many of these were prescribed for a reason that no longer exists, or for a symptom that was itself a side effect of another drug, or based on guidelines that have since changed. Polypharmacy — being on many drugs simultaneously — dramatically increases the risk of falls, cognitive decline, hospitalizations, and drug interactions.
+            </p>
+          </div>
+          <div>
+            <p class="text-body font-semibold text-lime-400 mb-2">Deprescribing is not the same as stopping your medications.</p>
+            <p class="text-body text-brand-200 leading-relaxed">
+              It is a careful, evidence-based process of reviewing your medications with your physician, identifying what may no longer be necessary or may be causing harm, and developing a plan to reduce or eliminate them safely. Done right, it improves quality of life, reduces side effects, and saves money.
+            </p>
+          </div>
+          <div>
+            <p class="text-body font-semibold text-lime-400 mb-2">But most doctors don't have time to have that conversation.</p>
+            <p class="text-body text-brand-200 leading-relaxed">
+              Pear Down fills that gap. You'll learn what questions to ask, what the evidence says about common drug classes, and how to come to your next appointment ready to have a productive conversation about reducing your medication burden — safely and with your doctor's involvement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Pillars -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        title="The 6 Pillars of Lifestyle Medicine"
+        subtitle="Everything inside Pear Down is organized around these six evidence-based domains. Master them and most chronic disease follows."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {pillars.map((pillar) => (
+          <div class="card">
+            <div class:list={["w-10 h-10 rounded-full flex items-center justify-center font-bold text-small mb-4", pillar.color]}>
+              {pillar.number}
+            </div>
+            <h3 class="font-serif text-h4 text-brand-900 mb-2">{pillar.title}</h3>
+            <p class="text-body text-neutral-600">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-3xl">
+      <SectionHeading
+        title="Who Pear Down Is For"
+        subtitle="You don't need to be a patient to join. You need to be motivated."
+      />
+      <div class="space-y-4">
+        {[
+          "You're on the waitlist and want to start making progress now",
+          "You're a current or former patient who wants to stay connected and keep learning",
+          "You're managing a chronic condition and feel like your care is just symptom management, not actual healing",
+          "You're on multiple medications and want to understand whether all of them are truly necessary",
+          "You want access to a physician who actually has time for your questions",
+          "You believe — or are beginning to believe — that food, movement, sleep, and community are medicine",
+          "You want to be part of a group of people taking their health seriously",
+        ].map((item) => (
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-brand-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-body text-neutral-700">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-gradient-to-br from-brand-50 to-lime-50">
+    <div class="container-page max-w-3xl text-center">
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-sm mb-8 text-4xl">
+        🍐
+      </div>
+      <h2 class="font-serif text-h2 text-brand-900 mb-4">
+        Ready to Pear Down?
+      </h2>
+      <p class="text-body-lg text-neutral-600 max-w-xl mx-auto mb-8">
+        The community is on Skool — free to join, simple to use, and already full of people doing this work. Dr. Motley is in there. Your next step is too.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://www.skool.com/pear-down/about"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Join the Pear Down Community
+        </a>
+        <a href="/contact" class="btn-secondary">
+          Questions? Contact Dr. Motley
+        </a>
+      </div>
+      <p class="mt-6 text-small text-neutral-400">
+        Already a patient interested in the Diabetes Reversal SMA?{' '}
+        <a href="/programs/diabetes-reversal" class="text-brand-600 hover:text-brand-800 font-medium transition-colors">Learn about upcoming cohorts →</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
