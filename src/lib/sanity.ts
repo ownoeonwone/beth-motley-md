@@ -1,7 +1,15 @@
 import { createClient } from '@sanity/client'
 
+const projectId = import.meta.env.SANITY_PROJECT_ID
+if (!projectId) {
+  throw new Error(
+    'Missing SANITY_PROJECT_ID environment variable. ' +
+    'Add it in your Cloudflare Pages dashboard under Settings → Environment variables.'
+  )
+}
+
 export const sanityClient = createClient({
-  projectId: import.meta.env.SANITY_PROJECT_ID,
+  projectId,
   dataset: import.meta.env.SANITY_DATASET || 'production',
   apiVersion: '2024-01-01',
   useCdn: false, // fetch fresh data at build time
