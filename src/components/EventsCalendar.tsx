@@ -23,6 +23,12 @@ interface Props {
   showMonthHeaders?: boolean;
   /** Compact card style (for homepage embed) */
   compact?: boolean;
+  /**
+   * If set, only show events whose title contains this string (case-insensitive).
+   * Useful for showing only SMA cohort events on the diabetes page.
+   * Example: filterKeyword="SMA"
+   */
+  filterKeyword?: string;
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -357,6 +363,7 @@ export default function EventsCalendar({
   showFeatured = true,
   showMonthHeaders = true,
   compact = false,
+  filterKeyword,
 }: Props) {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -370,7 +377,8 @@ export default function EventsCalendar({
     }
 
     const now = new Date().toISOString();
-    const maxResults = limit || 20;
+    // Fetch more than needed when filtering so we always have enough after the filter
+    const maxResults = limit ? (filterKeyword ? limit * 5 : limit) : 20;
     const url =
       `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events` +
       `?key=${apiKey}` +
@@ -385,7 +393,15 @@ export default function EventsCalendar({
         return res.json();
       })
       .then((data) => {
-        setEvents(data.items || []);
+        let items: CalendarEvent[] = data.items || [];
+        if (filterKeyword) {
+          const kw = filterKeyword.toLowerCase();
+          items = items.filter((e) => e.summary?.toLowerCase().includes(kw));
+        }
+        if (limit) {
+          items = items.slice(0, limit);
+        }
+        setEvents(items);
         setLoading(false);
       })
       .catch((err) => {

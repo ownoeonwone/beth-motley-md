@@ -38,7 +38,16 @@ export async function getConsultingPage() {
 }
 
 export async function getDiabetesReversalPage() {
-  return sanityClient.fetch(`*[_type == "diabetesReversalPage"][0]`)
+  return sanityClient.fetch(`
+    *[_type == "diabetesReversalPage"][0] {
+      ...,
+      hero {
+        ...,
+        "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
+      }
+    }
+  `)
 }
 
 export async function getExecutiveMdPage() {
