@@ -4,9 +4,9 @@ import Hero from '../../components/Hero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
 import DiabetesForm from '../../components/DiabetesForm.tsx';
-import drData from '../../../content/pages/diabetes-reversal.json';
+import { getDiabetesReversalPage } from '../../lib/sanity';
 
-const d = drData;
+const d = await getDiabetesReversalPage();
 
 const whoIcons = [
   `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

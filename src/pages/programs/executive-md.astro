@@ -4,9 +4,9 @@ import Hero from '../../components/Hero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
 import ExecutiveForm from '../../components/ExecutiveForm.tsx';
-import execData from '../../../content/pages/executive-md.json';
+import { getExecutiveMdPage } from '../../lib/sanity';
 
-const d = execData;
+const d = await getExecutiveMdPage();
 
 const icons = [
   `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

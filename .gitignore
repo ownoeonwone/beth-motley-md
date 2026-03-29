@@ -5,5 +5,7 @@ dist/
 .DS_Store
 *.log
 
-# TinaCMS
-/tina/__generated__
+# Sanity Studio
+/studio/node_modules/
+/studio/dist/
+/studio/.sanity/
