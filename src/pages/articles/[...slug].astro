@@ -1,28 +1,43 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getArticleSlugs, getArticleBySlug } from '../../lib/sanity';
+import { toHTML } from '@portabletext/to-html';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles');
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
-  }));
+  const slugs = await getArticleSlugs();
+  return slugs.map(({ slug }) => ({ params: { slug } }));
 }
 
-const { article } = Astro.props;
-const { Content } = await article.render();
-const formattedDate = article.data.date.toLocaleDateString('en-US', {
-  year: 'numeric', month: 'long', day: 'numeric',
+const { slug } = Astro.params;
+const article = await getArticleBySlug(slug!);
+
+if (!article) return Astro.redirect('/articles');
+
+const formattedDate = new Date(article.publishedAt).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
 });
+
+const bodyHtml = article.body ? toHTML(article.body, {
+  components: {
+    types: {},
+    marks: {
+      link: ({ children, value }) => {
+        const target = value?.blank ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `<a href="${value?.href}"${target}>${children}</a>`;
+      },
+    },
+  },
+}) : '';
 ---
 
 <BaseLayout
-  title={article.data.title}
-  description={article.data.description}
-  image={article.data.image}
+  title={article.title}
+  description={article.description}
+  image={article.image}
   type="article"
-  publishedDate={article.data.date.toISOString()}
+  publishedDate={new Date(article.publishedAt).toISOString()}
 >
   <article class="section-padding">
     <div class="container-page max-w-3xl">
@@ -35,13 +50,13 @@ const formattedDate = article.data.date.toLocaleDateString('en-US', {
           Back to Articles
         </a>
         <div class="flex flex-wrap gap-2 mb-3">
-          {article.data.tags.map((tag: string) => (
+          {(article.tags || []).map((tag: string) => (
             <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">{tag}</span>
           ))}
         </div>
-        <h1 class="text-h1 md:text-display font-serif text-brand-900 mb-4">{article.data.title}</h1>
+        <h1 class="text-h1 md:text-display font-serif text-brand-900 mb-4">{article.title}</h1>
         <div class="flex items-center gap-3 text-small text-neutral-500">
-          <time datetime={article.data.date.toISOString()}>{formattedDate}</time>
+          <time datetime={new Date(article.publishedAt).toISOString()}>{formattedDate}</time>
           <span>&middot;</span>
           <span>Beth Motley, MD, FACLM</span>
         </div>
@@ -49,7 +64,7 @@ const formattedDate = article.data.date.toLocaleDateString('en-US', {
 
       <!-- Content -->
       <div class="prose-brand [&_h2]:text-h2 [&_h2]:font-serif [&_h2]:text-brand-900 [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-h3 [&_h3]:font-serif [&_h3]:text-brand-900 [&_h3]:mt-8 [&_h3]:mb-3">
-        <Content />
+        <Fragment set:html={bodyHtml} />
       </div>
 
       <!-- Footer -->

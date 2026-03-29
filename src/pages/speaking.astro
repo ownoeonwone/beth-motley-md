@@ -4,9 +4,9 @@ import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import SpeakingForm from '../components/SpeakingForm.tsx';
-import speakingData from '../../content/pages/speaking.json';
+import { getSpeakingPage } from '../lib/sanity';
 
-const d = speakingData;
+const d = await getSpeakingPage();
 ---
 
 <BaseLayout

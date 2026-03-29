@@ -6,7 +6,11 @@ import SectionHeading from '../components/SectionHeading.astro';
 import ProgramCard from '../components/ProgramCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import NewsletterForm from '../components/NewsletterForm';
-import homeData from '../../content/pages/home.json';
+import EventsCalendar from '../components/EventsCalendar';
+import { getHomePage } from '../lib/sanity';
+
+const calendarId = import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID || '';
+const apiKey = import.meta.env.PUBLIC_GOOGLE_API_KEY || '';
 
 const pillarIcons = [
   `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>`,
@@ -17,7 +21,7 @@ const pillarIcons = [
   `<svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>`,
 ];
 
-const d = homeData;
+const d = await getHomePage();
 ---
 
 <BaseLayout
@@ -188,6 +192,34 @@ const d = homeData;
             role={t.role}
           />
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-4xl">
+      <SectionHeading
+        title="Upcoming Events"
+        subtitle="Next diabetes reversal cohort dates, speaking engagements, and more."
+        tag="What's Coming Up"
+      />
+      <EventsCalendar
+        calendarId={calendarId}
+        apiKey={apiKey}
+        limit={3}
+        showFeatured={false}
+        showMonthHeaders={false}
+        compact={true}
+        client:visible
+      />
+      <div class="text-center mt-8">
+        <a href="/events" class="inline-flex items-center text-body font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+          View all events & programs
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>

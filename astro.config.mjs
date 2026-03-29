@@ -14,6 +14,6 @@ export default defineConfig({
     mdx(),
   ],
   image: {
-    domains: ['img.youtube.com'],
+    domains: ['img.youtube.com', 'cdn.sanity.io'],
   },
 });
