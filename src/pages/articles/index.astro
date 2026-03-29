@@ -1,11 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
-import { getCollection } from 'astro:content';
+import { getArticles } from '../../lib/sanity';
 
-const articles = (await getCollection('articles'))
-  .filter((a) => !a.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const articles = await getArticles();
 ---
 
 <BaseLayout
@@ -23,25 +21,25 @@ const articles = (await getCollection('articles'))
     <div class="container-page">
       {articles.length > 0 ? (
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {articles.map((article) => (
+          {articles.map((article: any) => (
             <a href={`/articles/${article.slug}`} class="card group block hover:border-brand-200">
-              {article.data.image && (
+              {article.image && (
                 <div class="aspect-video rounded-brand overflow-hidden mb-4 -mt-2 -mx-2 md:-mt-4 md:-mx-4 bg-neutral-100">
-                  <img src={article.data.image} alt={article.data.title} class="w-full h-full object-cover" loading="lazy" />
+                  <img src={article.image} alt={article.title} class="w-full h-full object-cover" loading="lazy" />
                 </div>
               )}
               <div class="flex flex-wrap gap-2 mb-3">
-                {article.data.tags.map((tag) => (
+                {(article.tags || []).map((tag: string) => (
                   <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">{tag}</span>
                 ))}
               </div>
               <time class="text-xs text-neutral-400 block mb-2">
-                {article.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {new Date(article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>
               <h2 class="text-h4 font-serif text-brand-900 mb-2 group-hover:text-brand-700 transition-colors">
-                {article.data.title}
+                {article.title}
               </h2>
-              <p class="text-small text-neutral-600">{article.data.description}</p>
+              <p class="text-small text-neutral-600">{article.description}</p>
             </a>
           ))}
         </div>

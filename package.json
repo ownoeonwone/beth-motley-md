@@ -5,23 +5,23 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "dev:tina": "tinacms dev -c \"astro dev\"",
     "build": "astro build",
-    "build:tina": "tinacms build && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "studio": "cd studio && npm run dev",
+    "studio:deploy": "cd studio && npm run deploy"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/react": "^4.1.0",
     "@astrojs/sitemap": "^3.2.0",
     "@astrojs/tailwind": "^5.1.0",
-    "@tinacms/cli": "2.1.9",
+    "@portabletext/to-html": "^2.0.0",
+    "@sanity/client": "^6.22.0",
     "astro": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.0",
-    "tinacms": "3.6.1"
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
     "@fontsource-variable/inter": "^5.2.8",

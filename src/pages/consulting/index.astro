@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import ContactForm from '../../components/ContactForm.tsx';
-import consultingData from '../../../content/pages/consulting.json';
+import { getConsultingPage } from '../../lib/sanity';
 
-const d = consultingData;
+const d = await getConsultingPage();
 
 const whoIHelpIcons = [
   `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

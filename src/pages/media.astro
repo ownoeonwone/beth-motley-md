@@ -3,9 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import MediaFilter from '../components/MediaFilter.tsx';
-import mediaData from '../../content/pages/media.json';
+import { getMediaPage, getMediaItems } from '../lib/sanity';
 
-const d = mediaData;
+const d = await getMediaPage();
+const mediaItems = await getMediaItems();
 ---
 
 <BaseLayout
@@ -28,7 +29,7 @@ const d = mediaData;
     <div class="container-page">
       <p class="text-center text-small font-semibold text-neutral-400 uppercase tracking-widest mb-8">As Featured In</p>
       <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-        {d.featuredLogos.map((logo) => (
+        {d.featuredLogos.map((logo: { src: string; alt: string }) => (
           <img src={logo.src} alt={logo.alt} class="h-16 md:h-20 w-auto object-contain" loading="lazy" />
         ))}
       </div>
@@ -72,7 +73,7 @@ const d = mediaData;
         title={d.allMedia.title}
         subtitle={d.allMedia.subtitle}
       />
-      <MediaFilter items={d.allMedia.items} client:load />
+      <MediaFilter items={mediaItems} client:load />
     </div>
   </section>
 
