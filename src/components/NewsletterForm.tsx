@@ -55,7 +55,7 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
       {status === 'error' && (
         <p className="text-sm text-red-400 mt-1">Something went wrong. Please try again.</p>
       )}
-      <p className={`text-xs mt-2 flex items-center gap-1 ${dark ? 'text-brand-400' : 'text-neutral-400'}`}>
+      <p className={`text-xs mt-2 flex items-center gap-1 ${dark ? 'text-brand-300' : 'text-neutral-500'}`}>
         <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
         We respect your privacy. Unsubscribe anytime.
       </p>

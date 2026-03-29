@@ -129,11 +129,47 @@ const currentPath = Astro.url.pathname;
   const iconOpen = document.getElementById('menu-icon-open');
   const iconClose = document.getElementById('menu-icon-close');
 
+  function openMenu() {
+    menu?.classList.remove('hidden');
+    iconOpen?.classList.add('hidden');
+    iconClose?.classList.remove('hidden');
+    btn?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    menu?.classList.add('hidden');
+    iconOpen?.classList.remove('hidden');
+    iconClose?.classList.add('hidden');
+    btn?.setAttribute('aria-expanded', 'false');
+  }
+
   btn?.addEventListener('click', () => {
-    const isOpen = menu?.classList.contains('hidden');
-    menu?.classList.toggle('hidden');
-    iconOpen?.classList.toggle('hidden');
-    iconClose?.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const isOpen = !menu?.classList.contains('hidden');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
+
+  // Swipe up to close mobile menu
+  let touchStartY = 0;
+  let touchStartX = 0;
+
+  menu?.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  menu?.addEventListener('touchend', (e) => {
+    const touchEndY = e.changedTouches[0].clientY;
+    const touchEndX = e.changedTouches[0].clientX;
+    const deltaY = touchStartY - touchEndY;
+    const deltaX = Math.abs(touchStartX - touchEndX);
+
+    // Swipe up: vertical distance > 50px and more vertical than horizontal
+    if (deltaY > 50 && deltaY > deltaX) {
+      closeMenu();
+    }
+  }, { passive: true });
 </script>
