@@ -21,8 +21,8 @@ export default defineConfig({
   name: 'beth-motley-md',
   title: 'Beth Motley MD',
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
-  dataset: process.env.SANITY_STUDIO_DATASET || 'production',
+  projectId: '49pgcfbm',
+  dataset: 'production',
 
   plugins: [
     structureTool({
