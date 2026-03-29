@@ -23,6 +23,14 @@ export const diabetesReversalPage = defineType({
         { name: 'badge', title: 'Badge', type: 'string' },
         { name: 'headline', title: 'Headline', type: 'string' },
         { name: 'subheadline', title: 'Subheadline', type: 'text', rows: 2 },
+        {
+          name: 'image',
+          title: 'Hero Image',
+          type: 'image',
+          description: 'Optional photo shown beside the headline (e.g. Dr. Motley with patients). Displays in a split layout on larger screens.',
+          options: { hotspot: true },
+          fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }],
+        },
       ],
     }),
     defineField({
