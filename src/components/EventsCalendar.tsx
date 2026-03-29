@@ -377,8 +377,9 @@ export default function EventsCalendar({
     }
 
     const now = new Date().toISOString();
-    // Fetch more than needed when filtering so we always have enough after the filter
-    const maxResults = limit ? (filterKeywords?.length ? limit * 5 : limit) : 20;
+    // When filtering by keyword, fetch a large batch so we don't miss matching events
+    // that fall later in the calendar after many non-matching ones.
+    const maxResults = filterKeywords?.length ? 100 : (limit || 20);
     const url =
       `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events` +
       `?key=${apiKey}` +
