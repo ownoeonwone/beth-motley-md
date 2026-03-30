@@ -61,14 +61,23 @@ const sources = [
   },
 ];
 
-// Unsplash CDN: w=600, h=300, q=75, auto=format (serves WebP to supporting browsers)
-const IMG = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&h=300&q=75`;
+// Per-recipe image: local WebP thumbnail fetched from the actual recipe page.
+// Run `npm run fetch-images` to download. Falls back to category SVG via onerror.
+const categoryFallbacks: Record<string, string> = {
+  breakfast: '/images/recipes/breakfast.svg',
+  lunch:     '/images/recipes/lunch.svg',
+  dinner:    '/images/recipes/dinner.svg',
+  snack:     '/images/recipes/snack.svg',
+};
+function recipeImage(slug: string, category: string): string {
+  return `/images/recipes/${slug}.webp`;
+}
 
 const recipes = [
   // ── BREAKFAST ───────────────────────────────────────────────────────────────
   {
     category: 'breakfast',
+    slug: 'overnight-oats',
     title: 'Overnight Oats — Full Collection',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-breakfast/easy-overnight-chia-oatmeal/',
@@ -76,10 +85,10 @@ const recipes = [
     tags: ['oil-free', 'no-cook', 'high-fiber'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1517673132405-a56a933b52d1'),
   },
   {
     category: 'breakfast',
+    slug: 'tofu-scramble',
     title: 'Tofu Scramble',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-breakfast/10-minute-tofu-scramble/',
@@ -87,10 +96,10 @@ const recipes = [
     tags: ['oil-free', 'high-protein'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1525351326368-efbb5cb6814d'),
   },
   {
     category: 'breakfast',
+    slug: 'banana-oat-pancakes',
     title: 'Banana Oat Pancakes',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/1-bowl-vegan-banana-oat-pancakes/',
@@ -98,10 +107,10 @@ const recipes = [
     tags: ['gluten-free option', 'no refined sugar'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1565299543923-37dd37887442'),
   },
   {
     category: 'breakfast',
+    slug: 'pcrm-breakfast',
     title: 'WFPB Breakfast Collection',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -109,10 +118,10 @@ const recipes = [
     tags: ['oil-free', 'clinically tested'],
     bethPick: false,
     isCollection: true,
-    image: IMG('1504674900247-0877df9cc836'),
   },
   {
     category: 'breakfast',
+    slug: 'rpl-breakfast-cookies',
     title: 'Healthy Breakfast Cookies',
     source: 'Rainbow Plant Life',
     href: 'https://rainbowplantlife.com/healthy-vegan-breakfast-cookies/',
@@ -120,10 +129,10 @@ const recipes = [
     tags: ['high-fiber', 'portable', 'meal-prep'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1490645935967-10de6ba17061'),
   },
   {
     category: 'breakfast',
+    slug: 'savory-oatmeal',
     title: 'Savory Loaded Lunchtime Oatmeal',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/loaded-lunchtime-oatmeal/',
@@ -131,12 +140,12 @@ const recipes = [
     tags: ['high-fiber', 'savory', 'iron-rich'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1478145046317-c8a31a5a99c4'),
   },
 
   // ── LUNCH ────────────────────────────────────────────────────────────────────
   {
     category: 'lunch',
+    slug: 'chickpea-noodle-soup',
     title: 'Chickpea Noodle Soup',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-soups-stews/30-minute-chickpea-noodle-soup-spinach/',
@@ -144,10 +153,10 @@ const recipes = [
     tags: ['oil-free', 'meal-prep', 'comfort food'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1547592166-23ac45744acd'),
   },
   {
     category: 'lunch',
+    slug: 'lentil-vegetable-soup',
     title: 'Lentil Vegetable Soup',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-soups-stews/lentil-vegetable-soup/',
@@ -155,10 +164,10 @@ const recipes = [
     tags: ['oil-free', 'blood sugar-friendly', 'high-protein'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1547592180-85f173990554'),
   },
   {
     category: 'lunch',
+    slug: 'roasted-buddha-bowl',
     title: 'Roasted Buddha Bowl',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/roasted-buddha-bowl/',
@@ -166,10 +175,10 @@ const recipes = [
     tags: ['meal-prep', 'customizable'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1546069901-ba9599a7e63c'),
   },
   {
     category: 'lunch',
+    slug: 'pcrm-lunch',
     title: 'WFPB Lunch Recipes',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -177,10 +186,10 @@ const recipes = [
     tags: ['oil-free', 'clinically tested'],
     bethPick: false,
     isCollection: true,
-    image: IMG('1512621776951-a57141f2eefd'),
   },
   {
     category: 'lunch',
+    slug: 'green-salad-lemon',
     title: 'Simple Green Salad with Lemon Vinaigrette',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/simple-green-salad-with-lemon-vinaigrette/',
@@ -188,10 +197,10 @@ const recipes = [
     tags: ['quick', '10 ingredients'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1540420828-f7be2426f908'),
   },
   {
     category: 'lunch',
+    slug: 'rpl-white-bean-soup',
     title: 'Creamy White Bean Soup with Kale',
     source: 'Rainbow Plant Life',
     href: 'https://rainbowplantlife.com/creamy-white-bean-soup-with-kale-and-gremolata/',
@@ -199,12 +208,12 @@ const recipes = [
     tags: ['high-protein', 'meal-prep', 'high-fiber'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1588166524941-3bf61a9c41db'),
   },
 
   // ── DINNER ───────────────────────────────────────────────────────────────────
   {
     category: 'dinner',
+    slug: 'lentil-bolognese',
     title: 'Lentil Bolognese',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-pasta-noodles/budget-friendly-lentil-bolognese/',
@@ -212,10 +221,10 @@ const recipes = [
     tags: ['oil-free', 'high-protein', 'family-friendly'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1621996346565-e3dbc646d9a9'),
   },
   {
     category: 'dinner',
+    slug: 'vegan-caesar-salad',
     title: 'Crowd-Pleasing Vegan Caesar Salad',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/crowd-pleasing-vegan-caesar-salad/',
@@ -223,10 +232,10 @@ const recipes = [
     tags: ['family-friendly', 'crowd-pleaser', 'high-protein'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1512621776951-a57141f2eefd'),
   },
   {
     category: 'dinner',
+    slug: 'red-lentil-curry-mb',
     title: 'Spicy Red Lentil Curry',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/spicy-red-lentil-curry/',
@@ -234,10 +243,10 @@ const recipes = [
     tags: ['30 minutes', '1 pot', 'blood sugar-friendly'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1585937421612-70a008356fbe'),
   },
   {
     category: 'dinner',
+    slug: 'pcrm-dinner',
     title: 'WFPB Dinner / Entrée Collection',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -245,10 +254,10 @@ const recipes = [
     tags: ['oil-free', 'clinically tested'],
     bethPick: false,
     isCollection: true,
-    image: IMG('1476224203421-74177e9911ea'),
   },
   {
     category: 'dinner',
+    slug: 'rpl-red-lentil-curry',
     title: 'Red Lentil Curry',
     source: 'Rainbow Plant Life',
     href: 'https://rainbowplantlife.com/vegan-red-lentil-curry/',
@@ -256,10 +265,10 @@ const recipes = [
     tags: ['1 pot', 'family-friendly', 'high-protein'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1565557539705-cccb1af16c14'),
   },
   {
     category: 'dinner',
+    slug: 'butternut-squash-soup',
     title: 'Butternut Squash Soup with Five Spice',
     source: 'The Full Helping',
     href: 'https://www.thefullhelping.com/creamy-butternut-squash-five-spice-soup/',
@@ -267,12 +276,12 @@ const recipes = [
     tags: ['seasonal', 'anti-inflammatory'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1476718406336-9d2f09be8928'),
   },
 
   // ── SNACKS ───────────────────────────────────────────────────────────────────
   {
     category: 'snack',
+    slug: 'rpl-white-bean-dip',
     title: 'Lemony White Bean Dip',
     source: 'Rainbow Plant Life',
     href: 'https://rainbowplantlife.com/lemony-white-bean-dip/',
@@ -280,10 +289,10 @@ const recipes = [
     tags: ['high-protein', '10 ingredients', 'quick'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1541519227354-08fa5d50c820'),
   },
   {
     category: 'snack',
+    slug: 'energy-bites',
     title: 'No-Bake Cookie Energy Bites',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/5-ingredient-no-bake-cookie-energy-bites/',
@@ -291,10 +300,10 @@ const recipes = [
     tags: ['no-cook', 'portable', 'blood sugar-friendly'],
     bethPick: false,
     isCollection: false,
-    image: IMG('1499028344343-cd173ffc68a9'),
   },
   {
     category: 'snack',
+    slug: 'fok-snacks',
     title: 'WFPB Snack Collection',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/',
@@ -302,10 +311,10 @@ const recipes = [
     tags: ['oil-free', 'variety'],
     bethPick: false,
     isCollection: true,
-    image: IMG('1498654896293-37aaf4c906ca'),
   },
   {
     category: 'snack',
+    slug: 'crispy-chickpeas',
     title: 'Actually Crispy Baked Chickpeas',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/actually-crispy-baked-chickpeas/',
@@ -313,10 +322,10 @@ const recipes = [
     tags: ['high-protein', 'crunchy', 'portable'],
     bethPick: true,
     isCollection: false,
-    image: IMG('1511690656952-34342bb7c2f2'),
   },
   {
     category: 'snack',
+    slug: 'pcrm-snacks',
     title: 'Healthy Snack Recipes',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -324,7 +333,6 @@ const recipes = [
     tags: ['oil-free', 'blood sugar-friendly'],
     bethPick: false,
     isCollection: true,
-    image: IMG('1505576399279-f19f4df9cb88'),
   },
 ];
 
@@ -416,13 +424,14 @@ const tagColors: Record<string, string> = {
             >
               <div class="relative w-full h-40 overflow-hidden bg-neutral-100">
                 <img
-                  src={recipe.image}
+                  src={recipeImage(recipe.slug, recipe.category)}
                   alt={recipe.title}
-                  width="600"
-                  height="300"
+                  width="640"
+                  height="400"
                   loading="lazy"
                   decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror={`this.onerror=null;this.src='${categoryFallbacks[recipe.category]}'`}
                 />
                 {recipe.bethPick && (
                   <span class="absolute top-2 right-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-amber-600 shadow-sm">
