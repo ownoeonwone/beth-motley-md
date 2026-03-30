@@ -7,6 +7,10 @@ dist/
 
 # Recipe thumbnails (fetched at build time by scripts/fetch-recipe-images.mjs)
 public/images/recipes/*.webp
+# Oh She Glows blocks automated fetch — commit these manually
+!public/images/recipes/savory-oatmeal.webp
+!public/images/recipes/roasted-buddha-bowl.webp
+!public/images/recipes/vegan-caesar-salad.webp
 
 # Sanity Studio
 /studio/node_modules/
