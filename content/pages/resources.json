@@ -152,9 +152,9 @@
           "description": "The largest free meditation library available. Ideal for patients who want guided practice without a subscription commitment."
         },
         {
-          "title": "MentalHealth.gov: Coping with Stress",
+          "title": "CDC: Managing Stress",
           "type": "Starter guide",
-          "href": "https://www.mentalhealth.gov/what-to-look-for/stress",
+          "href": "https://www.cdc.gov/mental-health/living-with/index.html",
           "bethPick": false,
           "description": "Plain-language, government-backed guidance on recognizing stress and building healthy coping strategies."
         },
@@ -246,17 +246,17 @@
     "items": [
       {
         "title": "ACLM Patient Resources",
-        "href": "https://lifestylemedicine.org/patients/",
+        "href": "https://lifestylemedicine.org/patient/",
         "description": "Educational materials and tools for patients interested in lifestyle medicine."
       },
       {
-        "title": "Find a Lifestyle Medicine Physician",
-        "href": "https://lifestylemedicine.org/find-a-physician/",
-        "description": "Search the ACLM directory for board-certified lifestyle medicine physicians near you."
+        "title": "Find a Lifestyle Medicine Clinician",
+        "href": "https://www.lifestylemedpros.org/home",
+        "description": "Search the ACLM certified clinicians directory for lifestyle medicine professionals near you."
       },
       {
-        "title": "Lifestyle Medicine Evidence",
-        "href": "https://lifestylemedicine.org/lifestyle-medicine/",
+        "title": "What is Lifestyle Medicine?",
+        "href": "https://lifestylemedicine.org/about-lifestyle-medicine/",
         "description": "The evidence base and clinical guidelines supporting lifestyle medicine interventions."
       }
     ]
