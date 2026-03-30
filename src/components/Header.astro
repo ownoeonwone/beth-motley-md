@@ -91,7 +91,7 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile menu -->
   <div
     id="mobile-menu"
-    class="lg:hidden hidden border-t border-neutral-100 bg-white"
+    class="lg:hidden hidden border-t border-neutral-100 bg-white max-h-[calc(100dvh-72px)] overflow-y-auto"
     role="dialog"
     aria-label="Mobile navigation"
   >
@@ -156,24 +156,8 @@ const currentPath = Astro.url.pathname;
     }
   });
 
-  // Swipe up to close mobile menu
-  let touchStartY = 0;
-  let touchStartX = 0;
-
-  menu?.addEventListener('touchstart', (e) => {
-    touchStartY = e.touches[0].clientY;
-    touchStartX = e.touches[0].clientX;
-  }, { passive: true });
-
-  menu?.addEventListener('touchend', (e) => {
-    const touchEndY = e.changedTouches[0].clientY;
-    const touchEndX = e.changedTouches[0].clientX;
-    const deltaY = touchStartY - touchEndY;
-    const deltaX = Math.abs(touchStartX - touchEndX);
-
-    // Swipe up: vertical distance > 50px and more vertical than horizontal
-    if (deltaY > 50 && deltaY > deltaX) {
-      closeMenu();
-    }
-  }, { passive: true });
+  // Close mobile menu when a link is tapped
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 </script>
