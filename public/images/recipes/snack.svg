@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="100%" style="stop-color:#fed7aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)" rx="0"/>
+  <!-- Small bowl for hummus/dip -->
+  <ellipse cx="170" cy="125" rx="45" ry="20" fill="#f5f0e1" stroke="#d4a574" stroke-width="1.5"/>
+  <ellipse cx="170" cy="120" rx="45" ry="20" fill="#fefce8"/>
+  <ellipse cx="170" cy="120" rx="38" ry="15" fill="#fef3c7"/>
+  <!-- Hummus/dip swirl -->
+  <ellipse cx="170" cy="118" rx="28" ry="11" fill="#d4a574" opacity="0.5"/>
+  <path d="M155 116 Q165 110 175 116 Q185 122 170 118" fill="#c9956b" opacity="0.3"/>
+  <!-- Chickpea on top -->
+  <circle cx="170" cy="115" r="3" fill="#f59e0b" opacity="0.5"/>
+  <!-- Herb sprinkle -->
+  <circle cx="163" cy="113" r="1" fill="#22c55e" opacity="0.6"/>
+  <circle cx="175" cy="112" r="1" fill="#22c55e" opacity="0.5"/>
+  <circle cx="168" cy="116" r="0.8" fill="#16a34a" opacity="0.5"/>
+  <!-- Energy balls cluster -->
+  <circle cx="260" cy="108" r="16" fill="#92400e" opacity="0.6"/>
+  <circle cx="240" cy="118" r="15" fill="#78350f" opacity="0.5"/>
+  <circle cx="275" cy="122" r="14" fill="#92400e" opacity="0.55"/>
+  <circle cx="255" cy="130" r="13" fill="#78350f" opacity="0.5"/>
+  <!-- Oat flake texture on balls -->
+  <circle cx="258" cy="105" r="1.5" fill="#d4a574" opacity="0.4"/>
+  <circle cx="264" cy="112" r="1" fill="#d4a574" opacity="0.4"/>
+  <circle cx="238" cy="115" r="1.5" fill="#d4a574" opacity="0.4"/>
+  <circle cx="244" cy="122" r="1" fill="#d4a574" opacity="0.4"/>
+  <circle cx="273" cy="118" r="1.5" fill="#d4a574" opacity="0.4"/>
+  <circle cx="278" cy="126" r="1" fill="#d4a574" opacity="0.4"/>
+  <!-- Carrot/veggie sticks -->
+  <rect x="118" y="90" width="5" height="40" rx="2" fill="#f97316" opacity="0.5" transform="rotate(-15 120 110)"/>
+  <rect x="126" y="88" width="4" height="38" rx="2" fill="#ea580c" opacity="0.45" transform="rotate(-8 128 107)"/>
+  <rect x="134" y="86" width="5" height="40" rx="2" fill="#f97316" opacity="0.5" transform="rotate(0 136 106)"/>
+</svg>
