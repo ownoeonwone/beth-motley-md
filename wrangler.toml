@@ -1,0 +1,13 @@
+name = "beth-motley-md"
+main = "worker/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+# Weekly maintenance: Sundays at 3 AM EST (8 AM UTC)
+[[triggers.crons]]
+crons = ["0 8 * * 0"]
