@@ -6,10 +6,6 @@ Allow: /
 User-agent: GPTBot
 Disallow: /
 
-# OpenAI (image/content)
-User-agent: OAI-SearchBot
-Disallow: /
-
 # Google AI training
 User-agent: Google-Extended
 Disallow: /
@@ -22,10 +18,6 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
-# Meta
-User-agent: FacebookBot
-Disallow: /
-
 # Bytedance
 User-agent: Bytespider
 Disallow: /
@@ -34,7 +26,7 @@ Disallow: /
 User-agent: Amazonbot
 Disallow: /
 
-# Apple Applebot (AI training via Siri/Apple AI)
+# Apple AI training (not the standard Applebot used for previews)
 User-agent: Applebot-Extended
 Disallow: /
 
