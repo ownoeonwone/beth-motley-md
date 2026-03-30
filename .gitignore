@@ -5,12 +5,9 @@ dist/
 .DS_Store
 *.log
 
-# Recipe thumbnails (fetched at build time by scripts/fetch-recipe-images.mjs)
-public/images/recipes/*.webp
-# Oh She Glows blocks automated fetch — commit these manually
-!public/images/recipes/savory-oatmeal.webp
-!public/images/recipes/roasted-buddha-bowl.webp
-!public/images/recipes/vegan-caesar-salad.webp
+# Recipe thumbnails — committed to git since many recipe sites block
+# build-time fetch from CI environments. Regenerate locally with:
+#   npm run fetch-images --force
 
 # Sanity Studio
 /studio/node_modules/
