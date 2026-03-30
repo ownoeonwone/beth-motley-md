@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { submitToGhl } from '../lib/utils';
 
 export default function ExecutiveForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -15,12 +16,7 @@ export default function ExecutiveForm() {
     e.preventDefault();
     setStatus('loading');
     try {
-      const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || '#';
-      await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, formName: 'executive-md' }),
-      });
+      await submitToGhl('executive-md', form);
       setStatus('success');
     } catch {
       setStatus('error');

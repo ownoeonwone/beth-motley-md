@@ -17,6 +17,8 @@ const FORM_DISPLAY_NAMES: Record<string, string> = {
   contact: 'Contact Inquiry',
   speaking: 'Speaking Inquiry',
   'practice-integration': 'Practice Integration Application',
+  'diabetes-reversal': 'Diabetes Program Application',
+  'executive-md': 'Executive MD Application',
 };
 
 const FIELD_MAPS: Record<string, Record<string, string>> = {
@@ -49,6 +51,28 @@ const FIELD_MAPS: Record<string, Record<string, string>> = {
     timeline: 'implementation_timeline',
     message: 'message',
   },
+  'diabetes-reversal': {
+    name: 'name',
+    email: 'email',
+    phone: 'phone',
+    referralSource: 'referral_source',
+    diagnosisType: 'diagnosis_type',
+    yearsWithDiagnosis: 'years_since_diagnosis',
+    currentMedications: 'current_medications',
+    goals: 'goals',
+    questions: 'questions',
+  },
+  'executive-md': {
+    name: 'name',
+    email: 'email',
+    phone: 'phone',
+    company: 'company',
+    title: 'title',
+    primaryConcerns: 'primary_concerns',
+    currentPhysician: 'current_physician',
+    goals: 'goals',
+    timeline: 'timeline',
+  },
 };
 
 export function buildGhlPayload(
@@ -75,6 +99,17 @@ export function buildGhlPayload(
     primary_goal: '',
     sma_experience: '',
     implementation_timeline: '',
+    referral_source: '',
+    diagnosis_type: '',
+    years_since_diagnosis: '',
+    current_medications: '',
+    goals: '',
+    questions: '',
+    company: '',
+    title: '',
+    primary_concerns: '',
+    current_physician: '',
+    timeline: '',
   };
 
   const mapping = FIELD_MAPS[formName] || {};
