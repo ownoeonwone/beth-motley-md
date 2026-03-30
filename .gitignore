@@ -5,6 +5,9 @@ dist/
 .DS_Store
 *.log
 
+# Recipe thumbnails (fetched at build time by scripts/fetch-recipe-images.mjs)
+public/images/recipes/*.webp
+
 # Sanity Studio
 /studio/node_modules/
 /studio/dist/
