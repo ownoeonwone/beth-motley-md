@@ -24,13 +24,13 @@ const sources = [
     dot: 'bg-blue-500',
   },
   {
-    name: 'Brand New Vegan',
-    url: 'https://www.brandnewvegan.com/recipes',
-    tagline: 'Strictly oil-free, whole-food, plant-based. Great for beginners transitioning off processed food.',
-    strictWFPB: true,
-    logo: 'BNV',
-    color: 'bg-green-50 border-green-200 text-green-800',
-    dot: 'bg-green-500',
+    name: 'Rainbow Plant Life',
+    url: 'https://rainbowplantlife.com/category/recipes/',
+    tagline: 'Nisha Vora\'s big-flavor plant-based recipes. James Beard-nominated and NYT bestselling cookbook author.',
+    strictWFPB: false,
+    logo: 'RPL',
+    color: 'bg-purple-50 border-purple-200 text-purple-800',
+    dot: 'bg-purple-500',
   },
   {
     name: 'Minimalist Baker',
@@ -61,17 +61,30 @@ const sources = [
   },
 ];
 
-const categoryImages: Record<string, string> = {
+// Per-recipe image: use WebP thumbnail if available, else fall back to category SVG
+const categoryFallbacks: Record<string, string> = {
   breakfast: '/images/recipes/breakfast.svg',
   lunch:     '/images/recipes/lunch.svg',
   dinner:    '/images/recipes/dinner.svg',
   snack:     '/images/recipes/snack.svg',
 };
+function recipeImage(slug: string, category: string): string {
+  // At build time Astro resolves public/ paths, so we check for the WebP first.
+  // After running `node scripts/fetch-recipe-images.mjs`, each slug.webp will exist.
+  try {
+    // Glob import for existence check isn't worth the complexity — just reference the
+    // path and let the browser fall back via onerror handled in the template.
+    return `/images/recipes/${slug}.webp`;
+  } catch {
+    return categoryFallbacks[category];
+  }
+}
 
 const recipes = [
   // ── BREAKFAST ───────────────────────────────────────────────────────────────
   {
     category: 'breakfast',
+    slug: 'overnight-oats',
     title: 'Overnight Oats — Full Collection',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-breakfast/easy-overnight-chia-oatmeal/',
@@ -82,6 +95,7 @@ const recipes = [
   },
   {
     category: 'breakfast',
+    slug: 'tofu-scramble',
     title: 'Tofu Scramble',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-breakfast/10-minute-tofu-scramble/',
@@ -92,6 +106,7 @@ const recipes = [
   },
   {
     category: 'breakfast',
+    slug: 'banana-oat-pancakes',
     title: 'Banana Oat Pancakes',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/1-bowl-vegan-banana-oat-pancakes/',
@@ -102,6 +117,7 @@ const recipes = [
   },
   {
     category: 'breakfast',
+    slug: 'pcrm-breakfast',
     title: 'WFPB Breakfast Collection',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -112,16 +128,18 @@ const recipes = [
   },
   {
     category: 'breakfast',
-    title: 'Oil-Free Breakfast Recipes',
-    source: 'Brand New Vegan',
-    href: 'https://www.brandnewvegan.com/recipes/breakfast-recipes',
-    description: 'Hash browns, oatmeal, breakfast burritos — all strictly oil-free and whole-food.',
-    tags: ['oil-free', 'comfort food'],
+    slug: 'rpl-breakfast-cookies',
+    title: 'Healthy Breakfast Cookies',
+    source: 'Rainbow Plant Life',
+    href: 'https://rainbowplantlife.com/healthy-vegan-breakfast-cookies/',
+    description: 'Oats, seeds, and almond butter — healthy enough for breakfast, delicious enough for dessert. 5g protein per cookie.',
+    tags: ['high-fiber', 'portable', 'meal-prep'],
     bethPick: false,
-    isCollection: true,
+    isCollection: false,
   },
   {
     category: 'breakfast',
+    slug: 'savory-oatmeal',
     title: 'Savory Loaded Lunchtime Oatmeal',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/loaded-lunchtime-oatmeal/',
@@ -134,6 +152,7 @@ const recipes = [
   // ── LUNCH ────────────────────────────────────────────────────────────────────
   {
     category: 'lunch',
+    slug: 'chickpea-noodle-soup',
     title: 'Chickpea Noodle Soup',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/30-minute-chickpea-noodle-soup-spinach/',
@@ -144,6 +163,7 @@ const recipes = [
   },
   {
     category: 'lunch',
+    slug: 'lentil-vegetable-soup',
     title: 'Lentil Soup Collection',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-soups-stews/lentil-vegetable-soup/',
@@ -154,6 +174,7 @@ const recipes = [
   },
   {
     category: 'lunch',
+    slug: 'roasted-buddha-bowl',
     title: 'Roasted Buddha Bowl',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/roasted-buddha-bowl/',
@@ -164,6 +185,7 @@ const recipes = [
   },
   {
     category: 'lunch',
+    slug: 'pcrm-lunch',
     title: 'WFPB Lunch Recipes',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -174,6 +196,7 @@ const recipes = [
   },
   {
     category: 'lunch',
+    slug: 'green-salad-lemon',
     title: 'Simple Green Salad with Lemon Vinaigrette',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/simple-green-salad-with-lemon-vinaigrette/',
@@ -184,18 +207,20 @@ const recipes = [
   },
   {
     category: 'lunch',
-    title: 'Oil-Free Soups & Stews',
-    source: 'Brand New Vegan',
-    href: 'https://www.brandnewvegan.com/recipes',
-    description: 'Soups, stews, and wraps built around whole grains and legumes. No oil, no compromise on flavor.',
-    tags: ['oil-free', 'budget-friendly'],
+    slug: 'rpl-white-bean-soup',
+    title: 'Creamy White Bean Soup with Kale',
+    source: 'Rainbow Plant Life',
+    href: 'https://rainbowplantlife.com/creamy-white-bean-soup-with-kale-and-gremolata/',
+    description: 'Nourishing and surprisingly creamy — 20g fiber and 17g protein per serving. Perfect for meal prep.',
+    tags: ['high-protein', 'meal-prep', 'high-fiber'],
     bethPick: false,
-    isCollection: true,
+    isCollection: false,
   },
 
   // ── DINNER ───────────────────────────────────────────────────────────────────
   {
     category: 'dinner',
+    slug: 'lentil-bolognese',
     title: 'Lentil Bolognese',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-pasta-noodles/budget-friendly-lentil-bolognese/',
@@ -206,6 +231,7 @@ const recipes = [
   },
   {
     category: 'dinner',
+    slug: 'vegan-caesar-salad',
     title: 'Crowd-Pleasing Vegan Caesar Salad',
     source: 'Oh She Glows',
     href: 'https://ohsheglows.com/crowd-pleasing-vegan-caesar-salad/',
@@ -216,6 +242,7 @@ const recipes = [
   },
   {
     category: 'dinner',
+    slug: 'red-lentil-curry-mb',
     title: 'Spicy Red Lentil Curry',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/spicy-red-lentil-curry/',
@@ -226,6 +253,7 @@ const recipes = [
   },
   {
     category: 'dinner',
+    slug: 'pcrm-dinner',
     title: 'WFPB Dinner / Entrée Collection',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -236,16 +264,18 @@ const recipes = [
   },
   {
     category: 'dinner',
-    title: 'Oil-Free Dinner Recipes',
-    source: 'Brand New Vegan',
-    href: 'https://www.brandnewvegan.com/recipe-index',
-    description: 'Once you know the oil-free stir fry formula, every vegetable becomes a quick weeknight dinner.',
-    tags: ['oil-free', 'quick', 'customizable'],
-    bethPick: false,
-    isCollection: true,
+    slug: 'rpl-red-lentil-curry',
+    title: 'Red Lentil Curry',
+    source: 'Rainbow Plant Life',
+    href: 'https://rainbowplantlife.com/vegan-red-lentil-curry/',
+    description: 'The most popular recipe on the site — 1,800+ five-star ratings. Ultra-creamy with coconut milk and almond butter.',
+    tags: ['1 pot', 'family-friendly', 'high-protein'],
+    bethPick: true,
+    isCollection: false,
   },
   {
     category: 'dinner',
+    slug: 'butternut-squash-soup',
     title: 'Butternut Squash Soup with Five Spice',
     source: 'The Full Helping',
     href: 'https://www.thefullhelping.com/creamy-butternut-squash-five-spice-soup/',
@@ -258,16 +288,18 @@ const recipes = [
   // ── SNACKS ───────────────────────────────────────────────────────────────────
   {
     category: 'snack',
-    title: 'Classic Hummus (Oil-Free)',
-    source: 'Brand New Vegan',
-    href: 'https://www.brandnewvegan.com/recipes/basic-oil-free-hummus',
-    description: 'Most store-bought hummus has added oil. This one doesn\'t. Just chickpeas, tahini, lemon, and garlic.',
-    tags: ['oil-free', 'high-protein', '5 ingredients'],
+    slug: 'rpl-white-bean-dip',
+    title: 'Lemony White Bean Dip',
+    source: 'Rainbow Plant Life',
+    href: 'https://rainbowplantlife.com/lemony-white-bean-dip/',
+    description: 'Garlicky, lemony, and creamy — a gourmet alternative to hummus. Quick to make and big on flavor.',
+    tags: ['high-protein', '10 ingredients', 'quick'],
     bethPick: true,
     isCollection: false,
   },
   {
     category: 'snack',
+    slug: 'energy-bites',
     title: 'No-Bake Cookie Energy Bites',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/5-ingredient-no-bake-cookie-energy-bites/',
@@ -278,6 +310,7 @@ const recipes = [
   },
   {
     category: 'snack',
+    slug: 'fok-snacks',
     title: 'WFPB Snack Collection',
     source: 'Forks Over Knives',
     href: 'https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/',
@@ -288,6 +321,7 @@ const recipes = [
   },
   {
     category: 'snack',
+    slug: 'crispy-chickpeas',
     title: 'Actually Crispy Baked Chickpeas',
     source: 'Minimalist Baker',
     href: 'https://minimalistbaker.com/actually-crispy-baked-chickpeas/',
@@ -298,6 +332,7 @@ const recipes = [
   },
   {
     category: 'snack',
+    slug: 'pcrm-snacks',
     title: 'Healthy Snack Recipes',
     source: 'Physicians Committee (PCRM)',
     href: 'https://www.pcrm.org/good-nutrition/plant-based-diets/recipes',
@@ -396,13 +431,14 @@ const tagColors: Record<string, string> = {
             >
               <div class="relative w-full h-32 overflow-hidden">
                 <img
-                  src={categoryImages[recipe.category]}
+                  src={recipeImage(recipe.slug, recipe.category)}
                   alt=""
-                  width="400"
-                  height="200"
+                  width="640"
+                  height="400"
                   loading="lazy"
                   decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onerror={`this.onerror=null;this.src='${categoryFallbacks[recipe.category]}'`}
                 />
                 {recipe.bethPick && (
                   <span class="absolute top-2 right-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-amber-600 shadow-sm">
