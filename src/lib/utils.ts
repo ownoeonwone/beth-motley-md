@@ -19,6 +19,7 @@ const FORM_DISPLAY_NAMES: Record<string, string> = {
   'practice-integration': 'Practice Integration Application',
   'diabetes-reversal': 'Diabetes Program Application',
   'executive-md': 'Executive MD Application',
+  'provider-tools-access': 'Provider Tools Access Request',
 };
 
 const FIELD_MAPS: Record<string, Record<string, string>> = {
@@ -72,6 +73,12 @@ const FIELD_MAPS: Record<string, Record<string, string>> = {
     currentPhysician: 'current_physician',
     goals: 'goals',
     timeline: 'timeline',
+  },
+  'provider-tools-access': {
+    name: 'name',
+    email: 'email',
+    organization: 'organization',
+    role: 'title',
   },
 };
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProviderToolsGate from '../../components/ProviderToolsGate';
 import { getResourcesPage } from '../../lib/sanity';
 
 const d = await getResourcesPage();
@@ -42,9 +43,10 @@ const allItems = [...(d.providers?.items || []), podcastItem];
     </div>
   </section>
 
-  <!-- Cards -->
+  <!-- Gated Cards -->
   <section class="section-padding bg-white">
     <div class="container-page max-w-4xl">
+      <ProviderToolsGate client:load>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         {allItems.map((item) => {
           const isVideo = item.icon === 'video';
@@ -94,6 +96,7 @@ const allItems = [...(d.providers?.items || []), podcastItem];
           );
         })}
       </div>
+      </ProviderToolsGate>
     </div>
   </section>
 </BaseLayout>
