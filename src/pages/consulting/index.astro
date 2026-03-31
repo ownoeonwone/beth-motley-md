@@ -119,30 +119,6 @@ const providerToolIcons = [
     </div>
   </section>
 
-  <!-- Provider Tools -->
-  <section class="section-padding bg-brand-50/40">
-    <div class="container-page">
-      <SectionHeading
-        title={d.providerTools.title}
-        subtitle={d.providerTools.subtitle}
-        tag={d.providerTools.tag}
-      />
-      <div class="max-w-3xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {d.providerTools.items.map((item, i) => (
-            <a href={item.href} target="_blank" rel="noopener" class="card text-center hover:border-brand-300 transition-colors group">
-              <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-200 transition-colors">
-                <Fragment set:html={providerToolIcons[i]} />
-              </div>
-              <h3 class="text-h4 font-serif text-brand-900 mb-2">{item.title}</h3>
-              <p class="text-small text-neutral-600">{item.description}</p>
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA / Contact Form -->
   <section id="consulting-form" class="section-padding bg-white">
     <div class="container-page max-w-2xl">

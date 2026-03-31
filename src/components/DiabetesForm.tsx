@@ -15,6 +15,7 @@ export default function DiabetesForm() {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
     name: '', email: '', phone: '',
+    dob: '',
     diagnosisType: '', yearsWithDiagnosis: '', currentMedications: '',
     referralSource: '', goals: '', questions: '',
   });
@@ -94,6 +95,10 @@ export default function DiabetesForm() {
 
       {step === 2 && (
         <div className="space-y-5">
+          <div>
+            <label htmlFor="dr-dob" className="label-text">Date of Birth *</label>
+            <input id="dr-dob" type="date" required value={form.dob} onChange={(e) => update('dob', e.target.value)} className="input-field" />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label htmlFor="dr-diagnosis" className="label-text">Diagnosis *</label>

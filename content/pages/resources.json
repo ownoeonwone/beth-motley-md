@@ -50,13 +50,6 @@
           "bethPick": false,
           "description": "Practical recipes and guides from the documentary that has introduced more people to plant-based eating than any other resource."
         },
-        {
-          "title": "CDC Healthy Eating for Adults",
-          "type": "Starter guide",
-          "href": "https://www.cdc.gov/healthy-eating/adults/index.html",
-          "bethPick": false,
-          "description": "Plain-language, government-backed guidance on building a healthy eating pattern, useful for patients who want foundational, no-fuss nutrition information."
-        }
       ]
     },
     {
@@ -92,6 +85,13 @@
           "href": "https://nutritionfacts.org/topics/exercise/",
           "bethPick": false,
           "description": "An accessible, research-based review of the exercise literature, covering walking targets, resistance training, and more."
+        },
+        {
+          "title": "Exercise is Medicine Greenville",
+          "type": "Tool / app",
+          "href": "https://eimgreenville.org/",
+          "bethPick": true,
+          "description": "A local Greenville initiative connecting healthcare providers with exercise professionals to prescribe physical activity as medicine. A model for community-based lifestyle medicine."
         }
       ]
     },
@@ -119,14 +119,14 @@
           "title": "Sleep Foundation: CBT-I Guide",
           "type": "Starter guide",
           "href": "https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-insomnia",
-          "bethPick": true,
+          "bethPick": false,
           "description": "A clear, patient-friendly guide to Cognitive Behavioral Therapy for Insomnia, the first-line, non-medication treatment for chronic insomnia with strong clinical evidence."
         },
         {
           "title": "CBT-i Coach App",
           "type": "Tool / app",
           "href": "https://mobile.va.gov/app/cbt-i-coach",
-          "bethPick": false,
+          "bethPick": true,
           "description": "A free VA-developed app guiding patients through CBT-I protocols on iOS and Android. Clinician-validated and a strong recommendation for anyone struggling with insomnia."
         }
       ]
@@ -213,7 +213,7 @@
           "title": "Surgeon General's Advisory on Loneliness",
           "type": "Key evidence",
           "href": "https://www.hhs.gov/surgeongeneral/reports-and-publications/connection/index.html",
-          "bethPick": true,
+          "bethPick": false,
           "description": "The U.S. Surgeon General's landmark report on the loneliness epidemic, includes downloadable fact cards, individual recommendations, and a National Strategy to Advance Social Connection."
         },
         {
@@ -231,11 +231,11 @@
           "description": "A validated, free assessment helping patients identify their core strengths, a useful entry point for conversations about purpose, meaning, and wellbeing."
         },
         {
-          "title": "MedlinePlus: Social Health",
-          "type": "Starter guide",
-          "href": "https://medlineplus.gov/socialhealth.html",
-          "bethPick": false,
-          "description": "NIH's plain-language overview of social health, covering loneliness, social connection, and their effects on physical and mental wellbeing."
+          "title": "Meetup.com",
+          "type": "Tool / app",
+          "href": "https://www.meetup.com/",
+          "bethPick": true,
+          "description": "Find local groups organized around shared interests — hiking, cooking, book clubs, and more. One of the simplest ways to build real social connection in your community."
         }
       ]
     }
