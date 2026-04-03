@@ -67,7 +67,7 @@ export default defineConfig({
                   .documentId('diabetesReversalPage'),
               ),
             S.listItem()
-              .title('Executive MD Program')
+              .title('Basecamp Health Assessment')
               .id('executiveMdPage')
               .child(
                 S.document().schemaType('executiveMdPage').documentId('executiveMdPage'),

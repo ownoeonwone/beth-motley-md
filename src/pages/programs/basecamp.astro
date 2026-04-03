@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import FAQ from '../../components/FAQ.astro';
+import BasecampForm from '../../components/BasecampForm.tsx';
+import { getBasecampPage } from '../../lib/sanity';
+
+const d = await getBasecampPage();
+
+const icons = [
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>`,
+  `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>`,
+];
+
+const iconColors = [
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+  'bg-brand-100 text-brand-700',
+  'bg-lime-100 text-lime-700',
+];
+---
+
+<BaseLayout
+  title={d.seo.title}
+  description={d.seo.description}
+>
+  <!-- Hero -->
+  <Hero
+    badge={d.hero.badge}
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
+    bgColor="bg-gradient-to-b from-brand-950 via-brand-900 to-brand-800"
+    dark
+  >
+    <p class="mt-4 text-small text-brand-300 uppercase tracking-widest font-medium">{d.hero.note}</p>
+  </Hero>
+
+  <!-- Important: Not a PCP program -->
+  <div class="bg-amber-50 border-b border-amber-200">
+    <div class="container-page max-w-3xl py-4 text-center">
+      <p class="text-small text-amber-800">
+        <strong>Please note:</strong> The Basecamp Health Assessment is a comprehensive health evaluation program — it is not a primary care or PCP relationship.
+        You will keep your current primary care physician.
+      </p>
+    </div>
+  </div>
+
+  <!-- The Problem -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-3xl text-center">
+      <SectionHeading
+        title={d.problem.title}
+      />
+      <div class="prose-brand max-w-2xl mx-auto">
+        <p class="text-body-lg text-neutral-700 leading-relaxed">
+          {d.problem.intro}
+        </p>
+        <p class="text-body text-neutral-600 mt-4 leading-relaxed">
+          {d.problem.body}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page">
+      <SectionHeading
+        title={d.included.title}
+        subtitle={d.included.subtitle}
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {d.included.items.map((item, i) => (
+          <div class="card border border-brand-100">
+            <div class={`w-12 h-12 rounded-lg ${iconColors[i]} flex items-center justify-center mb-4`}>
+              <Fragment set:html={icons[i]} />
+            </div>
+            <h3 class="text-h4 font-serif text-brand-900 mb-2">{item.title}</h3>
+            <p class="text-body text-neutral-600 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-3xl">
+      <SectionHeading
+        title={d.whoThisIsFor.title}
+        subtitle={d.whoThisIsFor.subtitle}
+      />
+      <div class="prose-brand max-w-2xl mx-auto">
+        {d.whoThisIsFor.paragraphs.map((text, i) => (
+          <p class={`${i === 0 ? 'text-body-lg text-neutral-700' : 'text-body text-neutral-600 mt-4'} leading-relaxed`}>
+            {text}
+          </p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-brand-50/40">
+    <div class="container-page max-w-3xl">
+      <SectionHeading
+        title={d.faq.title}
+        subtitle={d.faq.subtitle}
+      />
+      <FAQ items={d.faq.items} />
+    </div>
+  </section>
+
+  <!-- CTA / Application Form -->
+  <section class="section-padding bg-white">
+    <div class="container-page max-w-2xl">
+      <div class="border border-brand-200 rounded-2xl bg-brand-50/30 p-8 md:p-12">
+        <SectionHeading
+          title={d.ctaForm.title}
+          subtitle={d.ctaForm.subtitle}
+        />
+        <BasecampForm client:visible />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
