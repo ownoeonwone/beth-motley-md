@@ -5,8 +5,11 @@ import SectionHeading from '../../components/SectionHeading.astro';
 import FAQ from '../../components/FAQ.astro';
 import BasecampForm from '../../components/BasecampForm.tsx';
 import { getBasecampPage } from '../../lib/sanity';
+import localData from '../../../content/pages/executive-md.json';
 
-const d = await getBasecampPage();
+// Use local JSON content (already updated to Basecamp branding)
+// Sanity CMS still has old "Executive MD" text — this overrides it
+const d = localData;
 
 const icons = [
   `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
