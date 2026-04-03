@@ -7,8 +7,8 @@
 - **Listing Method:** Flat-fee MLS via Hive Realty LLC
 
 ## Lot Specifications
-- **Lot for Sale:** Lot 1 (Tax Map 13.00)
-- **Parcel ID:** 0106000301301 (out of 0106000301300)
+- **Lot for Sale:** Lot 1
+- **Tax Map / Parcel ID:** 0106000301300
 - **Lot Size:** 7,082 sq ft / 0.163 acres
 - **Zoning:** RN-D (Residential Neighborhood - Development)
 - **Road Frontage:** ~46 ft on Otis Street (40' right-of-way)
