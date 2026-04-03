@@ -2,8 +2,9 @@
  * Beth Motley MD — Cloudflare Worker
  *
  * Handles:
- * 1. Vapi.ai webhook for AI real estate phone agent (POST /api/vapi-webhook)
- * 2. Scheduled maintenance tasks via cron trigger
+ * 1. Retell.ai webhook for AI real estate phone agent (POST /api/retell-webhook)
+ * 2. Retell.ai custom function calls (POST /api/retell-functions)
+ * 3. Scheduled maintenance tasks via cron trigger
  *
  * Static asset requests are served automatically by the [assets] binding
  * configured in wrangler.toml.
@@ -11,12 +12,11 @@
  * Cron: Sundays at 3 AM EST (08:00 UTC) — see wrangler.toml
  */
 
-import { handleVapiWebhook } from './routes/vapi-webhook';
+import { handleRetellWebhook, handleRetellFunctions } from './routes/retell-webhook';
 
 interface Env {
   ASSETS: Fetcher;
-  VAPI_API_KEY?: string;
-  VAPI_WEBHOOK_SECRET?: string;
+  RETELL_API_KEY?: string;
 }
 
 // Key pages to health-check during maintenance
@@ -40,8 +40,13 @@ export default {
     const url = new URL(request.url);
 
     // API routes
-    if (url.pathname === '/api/vapi-webhook' && request.method === 'POST') {
-      return handleVapiWebhook(request, env);
+    if (request.method === 'POST') {
+      if (url.pathname === '/api/retell-webhook') {
+        return handleRetellWebhook(request, env);
+      }
+      if (url.pathname === '/api/retell-functions') {
+        return handleRetellFunctions(request, env);
+      }
     }
 
     // Pass all other requests through to the static assets binding

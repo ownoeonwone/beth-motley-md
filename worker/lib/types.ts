@@ -1,62 +1,64 @@
 /**
- * Vapi.ai Webhook & Lead Types
+ * Retell.ai Webhook & Lead Types
  *
- * Type definitions for Vapi server messages, function calls,
+ * Type definitions for Retell server messages, function calls,
  * and GoHighLevel lead data for the 170 Otis St property agent.
  */
 
-// --- Vapi Webhook Payloads ---
+// --- Retell Webhook Events ---
 
-export type VapiMessageType =
-  | 'assistant-request'
-  | 'function-call'
-  | 'end-of-call-report'
-  | 'speech-update'
-  | 'transcript'
-  | 'hang'
-  | 'status-update';
+export type RetellWebhookEventType =
+  | 'call_started'
+  | 'call_ended'
+  | 'call_analyzed';
 
-export interface VapiWebhookPayload {
-  message: {
-    type: VapiMessageType;
-    call?: VapiCall;
-    functionCall?: VapiFunctionCall;
-    artifact?: VapiArtifact;
-    /** end-of-call-report fields */
-    endedReason?: string;
-    transcript?: string;
-    summary?: string;
-    recordingUrl?: string;
-    cost?: number;
-    durationSeconds?: number;
-  };
+export interface RetellWebhookEvent {
+  event: RetellWebhookEventType;
+  call: RetellCall;
 }
 
-export interface VapiCall {
-  id: string;
-  orgId: string;
-  phoneNumberId?: string;
-  customer?: {
-    number?: string;
-  };
-  status: string;
-  startedAt?: string;
-  endedAt?: string;
-}
-
-export interface VapiFunctionCall {
-  name: string;
-  parameters: Record<string, unknown>;
-}
-
-export interface VapiArtifact {
+export interface RetellCall {
+  call_id: string;
+  agent_id: string;
+  call_status: 'registered' | 'ongoing' | 'ended' | 'error';
+  from_number?: string;
+  to_number?: string;
+  direction?: 'inbound' | 'outbound';
+  start_timestamp?: number;
+  end_timestamp?: number;
+  duration_ms?: number;
+  disconnection_reason?: string;
   transcript?: string;
-  messages?: Array<{
-    role: string;
-    message: string;
-    time: number;
+  transcript_object?: RetellTranscriptEntry[];
+  call_analysis?: RetellCallAnalysis;
+  recording_url?: string;
+  call_cost?: number;
+  custom_analysis_data?: Record<string, unknown>;
+}
+
+export interface RetellTranscriptEntry {
+  role: 'agent' | 'user';
+  content: string;
+  words?: Array<{
+    word: string;
+    start: number;
+    end: number;
   }>;
-  recordingUrl?: string;
+}
+
+export interface RetellCallAnalysis {
+  call_summary?: string;
+  user_sentiment?: 'Positive' | 'Negative' | 'Neutral' | 'Unknown';
+  call_successful?: boolean;
+  custom_analysis_data?: Record<string, unknown>;
+}
+
+// --- Retell Custom Function Call (sent to your server during a call) ---
+
+export interface RetellFunctionCallPayload {
+  call_id: string;
+  name: string;
+  args: Record<string, unknown>;
 }
 
 // --- Function Call Parameter Types ---
@@ -105,10 +107,4 @@ export interface LeadData {
   call_transcript?: string;
   call_duration_seconds?: number;
   notes?: string;
-}
-
-// --- Vapi Function Call Response ---
-
-export interface VapiFunctionResponse {
-  result: string;
 }

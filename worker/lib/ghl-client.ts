@@ -16,7 +16,7 @@ const GHL_WEBHOOK_URL =
 export async function submitLeadToGhl(lead: LeadData): Promise<void> {
   const payload = {
     form_name: 'Real Estate Lead - 170 Otis St',
-    source: 'AI Phone Agent - Vapi',
+    source: 'AI Phone Agent - Retell',
     name: lead.full_name,
     email: lead.email,
     phone: lead.phone,
@@ -56,7 +56,7 @@ export async function submitQualificationToGhl(
 ): Promise<void> {
   const payload = {
     form_name: 'Real Estate Qualification - 170 Otis St',
-    source: 'AI Phone Agent - Vapi',
+    source: 'AI Phone Agent - Retell',
     phone: callerPhone || 'Unknown',
     purchase_type: data.purchase_type,
     timeline: data.timeline,
@@ -86,7 +86,7 @@ export async function submitQualificationToGhl(
 export async function submitEscalationToGhl(data: EscalateToOwnerParams): Promise<void> {
   const payload = {
     form_name: 'Real Estate Escalation - 170 Otis St',
-    source: 'AI Phone Agent - Vapi',
+    source: 'AI Phone Agent - Retell',
     name: data.caller_name || 'Unknown',
     phone: data.caller_phone || 'Unknown',
     message: `ESCALATION (${data.urgency}): ${data.reason}`,
@@ -119,7 +119,7 @@ export async function submitCallReportToGhl(
 ): Promise<void> {
   const payload = {
     form_name: 'Real Estate Call Report - 170 Otis St',
-    source: 'AI Phone Agent - Vapi',
+    source: 'AI Phone Agent - Retell',
     phone: callerPhone || 'Unknown',
     message: transcript ? `Transcript:\n${transcript.substring(0, 5000)}` : 'No transcript available',
     notes: [
