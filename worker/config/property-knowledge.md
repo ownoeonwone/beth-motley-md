@@ -26,7 +26,7 @@
 - Lot is cleared and graded — red clay base, ready for construction
 - Mature trees along the perimeter provide natural screening
 - Flat to gently sloping topography
-- Established residential neighborhood with newer construction nearby
+- Located in the Greater Sullivan neighborhood with newer construction nearby
 - Adjacent to owner's retained lot (Lot 2, 6,524 sq ft / 0.150 acres)
 
 ## Split History
@@ -38,19 +38,19 @@
 ## Neighborhood & Comparable Sales
 - **102 Elm St, Greenville, SC 29605** — Sold 01/26/2026 for **$1,037,500**
   - 4 beds / 4 baths / 2,728 sq ft finished home
-  - Same zip code, same neighborhood character
+  - Same Greater Sullivan neighborhood
   - Demonstrates finished home values exceeding $1M in this area
-- Neighborhood features newer Craftsman-style and traditional homes
+- Greater Sullivan features newer Craftsman-style and traditional homes
 - Proximity to downtown Greenville — strong growth corridor
-- Mix of renovated historic homes and high-end new construction
+- Mix of renovated historic homes and high-end new construction in Greater Sullivan
 
 ## Value Proposition for Buyers
-1. **Build equity immediately** — lot at $325K + $400-500K build cost = $725-825K total investment for a home in a $1M+ neighborhood
+1. **Build equity immediately** — lot at $325K + $400-500K build cost = $725-825K total investment for a home in Greater Sullivan, a $1M+ neighborhood
 2. **All utilities at the street** — no expensive utility extensions needed
 3. **City-approved plat** — subdivision already approved, no permitting delays for the lot itself
 4. **Not in flood zone** — no flood insurance required, no elevation certificate needed
 5. **Cleared and ready** — no demolition or extensive site prep costs
-6. **Established neighborhood** — not a speculative development area; surrounded by existing homes
+6. **Established neighborhood** — Greater Sullivan is not a speculative development area; surrounded by existing homes
 7. **Greenville growth** — one of the fastest-growing cities in the Southeast
 
 ## What the Agent Should NOT Disclose
