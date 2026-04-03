@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const executiveMdPage = defineType({
   name: 'executiveMdPage',
-  title: 'Executive MD Program Page',
+  title: 'Basecamp Health Assessment Page',
   type: 'document',
   __experimental_actions: ['update', 'publish'],
   fields: [

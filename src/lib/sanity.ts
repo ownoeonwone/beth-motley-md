@@ -58,7 +58,7 @@ export async function getDiabetesReversalPage() {
   `)
 }
 
-export async function getExecutiveMdPage() {
+export async function getBasecampPage() {
   return sanityClient.fetch(`*[_type == "executiveMdPage"][0]`)
 }
 

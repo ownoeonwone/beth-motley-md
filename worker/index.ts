@@ -24,7 +24,7 @@ const HEALTH_CHECK_PATHS = [
   '/',
   '/about',
   '/programs/diabetes-reversal',
-  '/programs/executive-md',
+  '/programs/basecamp',
   '/speaking',
   '/consulting',
   '/media',

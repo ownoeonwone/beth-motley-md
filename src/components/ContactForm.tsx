@@ -6,7 +6,7 @@ const inquiryTypes = [
   'Podcast / media appearance',
   'Consulting inquiry',
   'Diabetes reversal program',
-  'Executive MD program',
+  'Basecamp Health Assessment',
   'General question',
 ];
 
