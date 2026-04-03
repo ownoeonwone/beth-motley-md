@@ -1,15 +1,22 @@
 /**
  * Beth Motley MD — Cloudflare Worker
  *
- * Handles scheduled maintenance tasks via cron trigger.
+ * Handles:
+ * 1. Vapi.ai webhook for AI real estate phone agent (POST /api/vapi-webhook)
+ * 2. Scheduled maintenance tasks via cron trigger
+ *
  * Static asset requests are served automatically by the [assets] binding
  * configured in wrangler.toml.
  *
  * Cron: Sundays at 3 AM EST (08:00 UTC) — see wrangler.toml
  */
 
+import { handleVapiWebhook } from './routes/vapi-webhook';
+
 interface Env {
   ASSETS: Fetcher;
+  VAPI_API_KEY?: string;
+  VAPI_WEBHOOK_SECRET?: string;
 }
 
 // Key pages to health-check during maintenance
@@ -29,8 +36,15 @@ const HEALTH_CHECK_PATHS = [
 const SITE_URL = 'https://www.bethmotleymd.com';
 
 export default {
-  // Pass all HTTP requests through to the static assets binding
   async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+
+    // API routes
+    if (url.pathname === '/api/vapi-webhook' && request.method === 'POST') {
+      return handleVapiWebhook(request, env);
+    }
+
+    // Pass all other requests through to the static assets binding
     return env.ASSETS.fetch(request);
   },
 
