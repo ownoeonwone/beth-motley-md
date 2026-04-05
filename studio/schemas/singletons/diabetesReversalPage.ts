@@ -80,17 +80,19 @@ export const diabetesReversalPage = defineType({
         { name: 'title', title: 'Section Title', type: 'string' },
         { name: 'subtitle', title: 'Subtitle', type: 'text', rows: 2 },
         {
-          name: 'items',
-          title: 'Format Details',
+          name: 'stats',
+          title: 'Stats (shown as cards)',
+          description: 'e.g. "6 sessions", "75 min each", "10 patients"',
           type: 'array',
           of: [{
             type: 'object',
             fields: [
-              { name: 'title', title: 'Title', type: 'string' },
-              { name: 'description', title: 'Description', type: 'text', rows: 2 },
+              { name: 'value', title: 'Value', type: 'string', description: 'e.g. "6"' },
+              { name: 'label', title: 'Label', type: 'string', description: 'e.g. "Sessions"' },
             ],
           }],
         },
+        { name: 'description', title: 'Description', type: 'text', rows: 4 },
       ],
     }),
     defineField({
